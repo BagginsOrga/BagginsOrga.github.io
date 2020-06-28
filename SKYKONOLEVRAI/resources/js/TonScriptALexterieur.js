@@ -158,6 +158,9 @@ function clickhealth() {
 
     var cacherspeed = document.getElementById("basic_stats_speed");
     var cacherspeedtitle = document.getElementById("player_profile_speed");
+
+    var cacherchance = document.getElementById("basic_stats_chance");
+    var cacherchancetitle = document.getElementById("player_profile_chance");
     
     if (cacherhealth.style.display === "none") {
 
@@ -172,6 +175,9 @@ function clickhealth() {
 
       cacherspeed.style.display = "none";
       cacherspeedtitle.style.display = "none";
+
+      cacherchance.style.display = "none";
+      cacherchancetitle.style.display = "none";
 
 
     } else {
@@ -238,6 +244,9 @@ function clickdefence() {
 
     var cacherspeed = document.getElementById("basic_stats_speed");
     var cacherspeedtitle = document.getElementById("player_profile_speed");
+
+    var cacherchance = document.getElementById("basic_stats_chance");
+    var cacherchancetitle = document.getElementById("player_profile_chance");
     
     if (cacherdef.style.display === "none") {
 
@@ -252,6 +261,9 @@ function clickdefence() {
 
       cacherspeed.style.display = "none";
       cacherspeedtitle.style.display = "none";
+
+      cacherchance.style.display = "none";
+      cacherchancetitle.style.display = "none";
 
 
     } else {
@@ -315,6 +327,9 @@ function clickstrength() {
     var cacherspeed = document.getElementById("basic_stats_speed");
     var cacherspeedtitle = document.getElementById("player_profile_speed");
 
+    var cacherchance = document.getElementById("basic_stats_chance");
+    var cacherchancetitle = document.getElementById("player_profile_chance");
+
     if (cacherstr.style.display === "none") {
 
       cacherstr.style.display = "block";
@@ -327,6 +342,9 @@ function clickstrength() {
 
       cacherspeed.style.display = "none";
       cacherspeedtitle.style.display = "none";
+
+      cacherchance.style.display = "none";
+      cacherchancetitle.style.display = "none";
 
 
     } else {
@@ -387,6 +405,11 @@ function clickspeed() {
     
     var cacherhealthtitle = document.getElementById("player_profile_health");
     var cacherhealth = document.getElementById("basic_stats_health");
+
+    var cacherchance = document.getElementById("basic_stats_chance");
+    var cacherchancetitle = document.getElementById("player_profile_chance");
+
+    
     
     if (cacherspeed.style.display === "none") {
 
@@ -400,6 +423,9 @@ function clickspeed() {
 
       cacherhealth.style.display = "none";
       cacherhealthtitle.style.display = "none";
+
+      cacherchance.style.display = "none";
+      cacherchancetitle.style.display = "none";
 
     } else {
       cacherspeed.style.display = "none";
@@ -454,6 +480,65 @@ function clickspeed() {
 
 
 function clickchance() {
+
+
+    var cacherchance = document.getElementById("basic_stats_chance");
+
+    var cacherspeedtitle = document.getElementById("player_profile_speed");
+    var cacherspeed = document.getElementById("basic_stats_speed");
+
+    var cacherstrtitle = document.getElementById("player_profile_str");
+    var cacherstr = document.getElementById("basic_stats_str");
+
+    var cacherdeftitle = document.getElementById("player_profile_def");
+    var cacherdef = document.getElementById("basic_stats_def");
+    
+    var cacherhealthtitle = document.getElementById("player_profile_health");
+    var cacherhealth = document.getElementById("basic_stats_health");
+    
+    if (cacherchance.style.display === "none") {
+
+      cacherchance.style.display = "block";
+
+      cacherspeedtitle.style.display = "none";
+      cacherspeed.style.display = "none";
+ 
+      cacherstr.style.display = "none";
+      cacherstrtitle.style.display = "none";
+
+      cacherdeftitle.style.display = "none";
+      cacherdef.style.display = "none";
+
+      cacherhealth.style.display = "none";
+      cacherhealthtitle.style.display = "none";
+
+    } else {
+      cacherchance.style.display = "none";
+    }
+
+  var cachertitre = document.getElementById("player_profile_chance");
+    if (cachertitre.style.display === "none" ) {
+      cachertitre.style.display = "block";
+    } else {
+      cachertitre.style.display = "none";
+    }
+
+  var leveldumec = document.getElementById("lvldumecITN").value;
+  var chance = document.getElementById("chanceITN").value;
+
+  //Défini le pourcentage en fonction du level qu'a tapé le mec
+  var sonmultiplicateurdelevel = pourcentparlevel[leveldumec -(1)]
+
+  //Chance
+  var newchance = {
+    resultbase: ((sonmultiplicateurdelevel/100) * chance ) + chance*1,
+    resultonestar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(10/100) + chance*1,
+    resulttwostar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(20/100) + chance*1,
+    resulttreestar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(30/100) + chance*1,
+    resultfourstar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(40/100) + chance*1,
+    resultfivestar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(50/100) + chance*1,
+    };
+
     document.getElementById("newChance1").innerHTML=newchance.resultonestar;
     document.getElementById("newChance2").innerHTML=newchance.resulttwostar;
     document.getElementById("newChance3").innerHTML=newchance.resulttreestar;
