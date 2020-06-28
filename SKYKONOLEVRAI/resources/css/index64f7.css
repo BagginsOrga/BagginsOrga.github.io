@@ -222,7 +222,6 @@ header{
 .social-button{
     display: block;
     margin-left: 5px;
-    vertical-align: middle;
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -2487,6 +2486,7 @@ a.additional-player-stat:hover{
 
 .sea-creatures{
 
+    border-radius: 0 !important;
 }
 
 .sea-creature{
