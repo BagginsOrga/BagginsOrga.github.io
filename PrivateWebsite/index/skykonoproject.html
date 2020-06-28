@@ -1,0 +1,346 @@
+<html class="  webp webp-alpha webp-animation webp-lossless" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <link rel="icon" href="../icone.png" type="image/x-icon">
+        <title>KonoCalculator - Dungeons items Calculator </title>
+        <meta property="twitter:description" content="thirtyvirus has been playing SkyBlock for 9 months and is fighting with a Spicy 51M Midas' Sword. Click to view more stats!">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta property="og:site_name" content="sky.lea.moe">
+        <meta property="og:type" content="object">
+    
+        <link rel="sitemap" href="../sitemap.xml">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../resources/css/index64f7.css?v107">
+        <link rel="stylesheet" href="../resources/css/inventory8e9a.css?v13">
+
+        <script type="text/javascript" src="../resources/js/TonScriptALexterieur.js"></script>
+    </head> 
+    
+
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><style type="text/css" id="dark-mode-custom-style"></style></head><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><style type="text/css" id="dark-mode-custom-style"></style>
+<body>
+    <header class="page-stats">
+        
+        <img src="../icone2.png" class="pride-flag">
+        <a href="../index.html" id="site_name">KonoCalculator - Dungeons items Calculator</a>
+        <input id="goto_target_username" type="button" value="Calcul" onclick="clickbuttfunc()">
+        
+            
+        <div id="lvldumec">
+            <input type="text" placeholder="Catacombs Level" id="lvldumecITN">
+        </div>
+        
+        
+    </header>
+    
+    
+    <script type="text/javascript"> //Etoiles et système de level par pourcentage
+        var pourcentparlevel = [4, 8, 12, 16, 20, 25, 30, 35, 40, 45, 51, 57, 63, 69, 75, 82, 89, 96, 103, 110, 118, 126, 134, 142, 150, 162, 174, 186, 198, 210, 226, 242, 258, 274, 290, 310, 330, 350, 370, 390, 414, 438, 462, 486, 510, 538, 566, 594, 622, 650]
+        var boutonactive = "no"
+        
+        //Calcul direct des étoiles
+         var onestar = 10/100;
+         var twostar = 20/100;
+         var treestar = 30/100;
+         var fourstar = 40/100;
+         var fivestar = 50/100;
+    
+        
+
+    
+        </script>
+    
+    
+        <div id="dimmer"></div>
+        <div id="bg_blur"></div>
+        <div id="stats_content">
+            <div class="item-name">
+                <div></div><span></span><div class="close-lore"></div></div>
+            <div class="item-lore"></div>
+            <div class="backpack-contents"></div>
+        </div>
+    
+        <div id="wrapper" data-sticky-container="">
+            
+            <div id="player_profile"><span class="text-stats-for">Stats for Dungeons items</span>
+                
+                
+            </div><div id="basic_stats">
+                
+    
+                    <div id="Strength">
+                    <input type="text" placeholder="Strength" id="StrengthITN">
+                    </div>
+                    
+                    <div id="Damages">
+                    <input type="text" placeholder="Damages" id="DamagesITN">
+                    </div>
+                    
+                    <div id="cd">
+                    <input type="text" placeholder="Critical Damage" id="cdITN">
+                    </div>
+                    
+                    <div id="chance">
+                    <input type="text" placeholder="Critical Chance" id="chanceITN">
+                    </div>
+                    
+                    <div id="mana">
+                    <input type="text" placeholder="Intelligence" id="manaITN">
+                    </div>
+                    
+                    <div id="spid">
+                    <input type="text" placeholder="Speed" id="spidITN">
+                    </div>
+                    
+                    <div id="life">
+                    <input type="text" placeholder="Health" id="lifeITN">
+                    </div>
+                
+                    <div id="def">
+                    <input type="text" placeholder="Defence" id="defITN">
+                    </div>
+    
+                    
+                    
+    
+                <div id="base_stats_container" onclick="titreoff()">
+                    
+        <div data-stat="health" class="basic-stat stat-health">
+            <span class="stat-name" onclick="clickbuttfunc(), clickhealth()">Dungeon Health: </span><span class="stat-value" id="newHealth"></span></div>
+    
+    
+                 
+        <div data-stat="defense" class="basic-stat stat-defense">
+            <span class="stat-name" onclick="clickbuttfunc(), clickdefence()">Dungeon Defense: </span><span class="stat-value" id="newdef"></span></div>
+    
+    
+                    
+        <div data-stat="strength" class="basic-stat stat-strength">
+            <span class="stat-name" onclick="clickbuttfunc(), clickstrength()">Dungeon Strength: </span><span class="stat-value" id="newstr"></span></div>
+    
+    
+                    
+        <div data-stat="speed" class="basic-stat stat-speed">
+            <span class="stat-name" onclick="clickbuttfunc(), clickspeed()">Dungeon Speed: </span><span class="stat-value" id="newspeed"></span></div>
+    
+    
+                    
+        <div data-stat="crit_chance" class="basic-stat stat-crit-chance">
+            <span class="stat-name" onclick="clickbuttfunc(), clickchance()">Dungeon Chance: </span><span class="stat-value" id="newchance"></span></div>
+    
+    
+                    
+        <div data-stat="crit_damage" class="basic-stat stat-crit-damage">
+            <span class="stat-name" onclick="clickbuttfunc(), clickcrit()">Dungeon Crit Damage: </span><span cclass="stat-value" id="newcrit"></span></div>
+    
+    
+                    
+        <div data-stat="intelligence" class="basic-stat stat-intelligence">
+            <span class="stat-name" onclick="clickbuttfunc(), clickmana()">Dungeon Intelligence: </span><span class="stat-value" id="newmana"></span></div>
+    
+    
+                    
+        <div data-stat="magic_find" class="basic-stat stat-magic-find">
+            <span class="stat-name" onclick="clickbuttfunc(), clickdamages()">Dungeon Damages: </span><span class="stat-value" id="newdamages"></span></div>
+    
+    
+                    
+    
+                    <!--<div data-stat="fairy_souls" class="basic-stat stat-fairy-souls">
+                        <span data-tippy-content="
+                            Collect Fairy Souls to gain Health, Defense, Strength and Speed.</div>
+                        "><span class="stat-name">Fairy Souls </span><span class="stat-value">196 / 194</span></span>
+                    </div>-->
+                    <div id="skin_display_mobile"></div>
+                    
+                </div>
+    
+    
+            </div><div><br><br></div>
+            
+            <div id="player_profile_health"><span class="text-stats-for_health">Stats with Stars for Dungeons items</span>
+                
+                
+            </div>
+            
+            
+        <div id="basic_stats_health">
+                
+    
+    
+
+                <div id="base_stats_container">
+                    
+        <div data-stat="health" class="basic-stat stat-health">
+            <span class="stat-name" >1 Star Health: </span><span class="stat-value" id="newHealth1"></span></div>
+
+        <div data-stat="health" class="basic-stat stat-health">
+             <span class="stat-name" >2 Stars Health: </span><span class="stat-value" id="newHealth2"></span></div>
+            
+        <div data-stat="health" class="basic-stat stat-health">
+            <span class="stat-name" >3 Stars Health: </span><span class="stat-value" id="newHealth3"></span></div>
+
+        <div data-stat="health" class="basic-stat stat-health">
+            <span class="stat-name" >4 Stars Health: </span><span class="stat-value" id="newHealth4"></span></div>
+
+        <div data-stat="health" class="basic-stat stat-health">
+            <span class="stat-name" >5 Stars Health: </span><span class="stat-value" id="newHealth5"></span></div>
+
+                    
+                </div>
+    
+    
+            </div>
+
+
+
+            <div id="player_profile_def"><span class="text-stats-for_health">Stats with Stars for Dungeons items</span>
+                
+                
+            </div>
+
+            <div id="basic_stats_def">
+                
+    
+    
+
+                <div id="base_stats_container">
+                    
+        <div data-stat="defense" class="basic-stat stat-defense">
+            <span class="stat-name" >1 Star Defence: </span><span class="stat-value" id="newDefence1"></span></div>
+
+        <div data-stat="defense" class="basic-stat stat-defense">
+             <span class="stat-name" >2 Stars Defence: </span><span class="stat-value" id="newDefence2"></span></div>
+            
+        <div data-stat="defense" class="basic-stat stat-defense">
+            <span class="stat-name" >3 Stars Defence: </span><span class="stat-value" id="newDefence3"></span></div>
+
+        <div data-stat="defense" class="basic-stat stat-defense">
+            <span class="stat-name" >4 Stars Defence: </span><span class="stat-value" id="newDefence4"></span></div>
+
+        <div data-stat="defense" class="basic-stat stat-defense">
+            <span class="stat-name" >5 Stars Defence: </span><span class="stat-value" id="newDefence5"></span></div>
+
+                    
+                </div>
+    
+            </div>
+
+
+
+            <div id="player_profile_str"><span class="text-stats-for_health">Stats with Stars for Dungeons items</span>
+                
+                
+            </div>
+
+            <div id="basic_stats_str">
+                
+    
+    
+
+                <div id="base_stats_container">
+                    
+        <div data-stat="strength" class="basic-stat stat-strength">
+            <span class="stat-name" >1 Star Strength: </span><span class="stat-value" id="newStrength1"></span></div>
+
+        <div data-stat="strength" class="basic-stat stat-strength">
+             <span class="stat-name" >2 Stars Strength: </span><span class="stat-value" id="newStrength2"></span></div>
+            
+        <div data-stat="strength" class="basic-stat stat-strength">
+            <span class="stat-name" >3 Stars Strength: </span><span class="stat-value" id="newStrength3"></span></div>
+
+        <div data-stat="strength" class="basic-stat stat-strength">
+            <span class="stat-name" >4 Stars Strength: </span><span class="stat-value" id="newStrength4"></span></div>
+
+        <div data-stat="strength" class="basic-stat stat-strength">
+            <span class="stat-name" >5 Stars Strength: </span><span class="stat-value" id="newStrength5"></span></div>
+
+                    
+                </div>
+    
+            </div>
+
+
+            <div id="player_profile_speed"><span class="text-stats-for_health">Stats with Stars for Dungeons items</span>
+                
+                
+            </div>
+
+            <div id="basic_stats_speed">
+                
+    
+    
+
+                <div id="base_stats_container">
+                    
+        <div data-stat="speed" class="basic-stat stat-speed">
+            <span class="stat-name" >1 Star Speed: </span><span class="stat-value" id="newSpeed1"></span></div>
+
+        <div data-stat="speed" class="basic-stat stat-speed">
+             <span class="stat-name" >2 Stars Speed: </span><span class="stat-value" id="newSpeed2"></span></div>
+            
+        <div data-stat="speed" class="basic-stat stat-speed">
+            <span class="stat-name" >3 Stars Speed: </span><span class="stat-value" id="newSpeed3"></span></div>
+
+        <div data-stat="speed" class="basic-stat stat-speed">
+            <span class="stat-name" >4 Stars Speed: </span><span class="stat-value" id="newSpeed4"></span></div>
+
+        <div data-stat="speed" class="basic-stat stat-speed">
+            <span class="stat-name" >5 Stars Speed: </span><span class="stat-value" id="newSpeed5"></span></div>
+
+                    
+                </div>
+    
+            </div>
+
+
+            <div id="player_profile_chance"><span class="text-stats-for_health">Stats with Stars for Dungeons items</span>
+                
+                
+            </div>
+
+
+
+            <div id="basic_stats_chance">
+
+               <div id="base_stats_container">
+                    
+                <div data-stat="crit_chance" class="basic-stat stat-crit-chance">
+                    <span class="stat-name" >1 Star Chance: </span><span class="stat-value" id="newChance1"></span></div>
+        
+                <div data-stat="crit_chance" class="basic-stat stat-crit-chance">
+                     <span class="stat-name" >2 Stars Chance: </span><span class="stat-value" id="newChance2"></span></div>
+                    
+                <div data-stat="crit_chance" class="basic-stat stat-crit-chance">
+                    <span class="stat-name" >3 Stars Chance: </span><span class="stat-value" id="newChance3"></span></div>
+        
+                <div data-stat="crit_chance" class="basic-stat stat-crit-chance">
+                    <span class="stat-name" >4 Stars Chance: </span><span class="stat-value" id="newChance4"></span></div>
+        
+                <div data-stat="crit_chance" class="basic-stat stat-crit-chance">
+                    <span class="stat-name" >5 Stars Chance: </span><span class="stat-value" id="newChance5"></span></div>
+        
+                            
+                </div>
+            
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+    
+        
+        
+    
+    
+    
+    
+    </body></html>
