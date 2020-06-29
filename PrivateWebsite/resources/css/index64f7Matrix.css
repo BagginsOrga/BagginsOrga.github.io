@@ -1572,7 +1572,6 @@ a.additional-player-stat:hover{
     color: rgba(255,255,255,1);
 }
 
-
 .nav-item::after{
     content: "";
     position: absolute;

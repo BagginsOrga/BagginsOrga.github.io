@@ -30,7 +30,6 @@ function clickbuttfunc() {
 
 }
 
-
 function info() {
 
     var help = document.getElementById("basic_stats_help");
