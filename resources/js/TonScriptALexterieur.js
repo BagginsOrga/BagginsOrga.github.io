@@ -572,7 +572,61 @@ function clickdamages() {
 }
 
 
-function titreoff() {
+  function lul() {
 
+
+
+    var newcaca = {
+      caca: 0
+    }
     
-}
+    document.getElementById("newHealth").innerHTML=newcaca.caca
+    document.getElementById("newdef").innerHTML=newcaca.caca
+    document.getElementById("newstr").innerHTML=newcaca.caca
+    document.getElementById("newspeed").innerHTML=newcaca.caca
+    document.getElementById("newchance").innerHTML=newcaca.caca
+    document.getElementById("newcrit").innerHTML=newcaca.caca
+    document.getElementById("newmana").innerHTML=newcaca.caca
+    document.getElementById("newdamages").innerHTML=newcaca.caca
+    document.getElementById("newDamages1").innerHTML=newcaca.caca
+    document.getElementById("newDamages2").innerHTML=newcaca.caca
+    document.getElementById("newDamages3").innerHTML=newcaca.caca
+    document.getElementById("newDamages4").innerHTML=newcaca.caca
+    document.getElementById("newDamages5").innerHTML=newcaca.caca
+    document.getElementById("newMana1").innerHTML=newcaca.caca
+    document.getElementById("newMana2").innerHTML=newcaca.caca
+    document.getElementById("newMana3").innerHTML=newcaca.caca
+    document.getElementById("newMana4").innerHTML=newcaca.caca
+    document.getElementById("newMana5").innerHTML=newcaca.caca
+    document.getElementById("newCrit1").innerHTML=newcaca.caca
+    document.getElementById("newCrit2").innerHTML=newcaca.caca
+    document.getElementById("newCrit3").innerHTML=newcaca.caca
+    document.getElementById("newCrit4").innerHTML=newcaca.caca
+    document.getElementById("newCrit5").innerHTML=newcaca.caca
+    document.getElementById("newChance1").innerHTML=newcaca.caca
+    document.getElementById("newChance2").innerHTML=newcaca.caca
+    document.getElementById("newChance3").innerHTML=newcaca.caca
+    document.getElementById("newChance4").innerHTML=newcaca.caca
+    document.getElementById("newChance5").innerHTML=newcaca.caca
+    document.getElementById("newSpeed1").innerHTML=newcaca.caca
+    document.getElementById("newSpeed2").innerHTML=newcaca.caca
+    document.getElementById("newSpeed3").innerHTML=newcaca.caca
+    document.getElementById("newSpeed4").innerHTML=newcaca.caca
+    document.getElementById("newSpeed5").innerHTML=newcaca.caca
+    document.getElementById("newStrength1").innerHTML=newcaca.caca
+    document.getElementById("newStrength2").innerHTML=newcaca.caca
+    document.getElementById("newStrength3").innerHTML=newcaca.caca
+    document.getElementById("newStrength4").innerHTML=newcaca.caca
+    document.getElementById("newStrength5").innerHTML=newcaca.caca
+    document.getElementById("newDefence1").innerHTML=newcaca.caca
+    document.getElementById("newDefence2").innerHTML=newcaca.caca
+    document.getElementById("newDefence3").innerHTML=newcaca.caca
+    document.getElementById("newDefence4").innerHTML=newcaca.caca
+    document.getElementById("newDefence5").innerHTML=newcaca.caca
+    document.getElementById("newHealth1").innerHTML=newcaca.caca
+    document.getElementById("newHealth2").innerHTML=newcaca.caca
+    document.getElementById("newHealth3").innerHTML=newcaca.caca
+    document.getElementById("newHealth4").innerHTML=newcaca.caca
+    document.getElementById("newHealth5").innerHTML=newcaca.caca
+
+  }
