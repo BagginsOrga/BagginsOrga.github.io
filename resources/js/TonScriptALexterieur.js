@@ -161,6 +161,9 @@ function clickhealth() {
 
     var cacherchance = document.getElementById("basic_stats_chance");
     var cacherchancetitle = document.getElementById("player_profile_chance");
+
+    var cachercrit = document.getElementById("basic_stats_crit");
+    var cachercrittitle = document.getElementById("player_profile_crit");
     
     if (cacherhealth.style.display === "none") {
 
@@ -178,6 +181,9 @@ function clickhealth() {
 
       cacherchance.style.display = "none";
       cacherchancetitle.style.display = "none";
+
+      cachercrit.style.display = "none"
+      cachercrittitle.style.display = "none"
 
 
     } else {
@@ -224,13 +230,6 @@ function clickhealth() {
 
 
 
-
-
-
-
-
-
-
 function clickdefence() {
 
 
@@ -248,6 +247,9 @@ function clickdefence() {
 
     var cacherchance = document.getElementById("basic_stats_chance");
     var cacherchancetitle = document.getElementById("player_profile_chance");
+
+    var cachercrit = document.getElementById("basic_stats_crit");
+    var cachercrittitle = document.getElementById("player_profile_crit");
     
     if (cacherdef.style.display === "none") {
 
@@ -266,6 +268,8 @@ function clickdefence() {
       cacherchance.style.display = "none";
       cacherchancetitle.style.display = "none";
 
+      cachercrit.style.display = "none"
+      cachercrittitle.style.display = "none"
 
     } else {
       cacherdef.style.display = "none";
@@ -304,14 +308,6 @@ function clickdefence() {
     document.getElementById("newDefence4").innerHTML=newdef.resultfourstar;
     document.getElementById("newDefence5").innerHTML=newdef.resultfivestar;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -388,12 +384,6 @@ function clickstrength() {
 
 
 
-
-
-
-
-
-
 function clickspeed() {
 
     var cacherspeed = document.getElementById("basic_stats_speed");
@@ -410,8 +400,10 @@ function clickspeed() {
     var cacherchance = document.getElementById("basic_stats_chance");
     var cacherchancetitle = document.getElementById("player_profile_chance");
 
-    
-    
+    var cachercrit = document.getElementById("basic_stats_crit");
+    var cachercrittitle = document.getElementById("player_profile_crit");
+
+  
     if (cacherspeed.style.display === "none") {
 
       cacherspeed.style.display = "block";
@@ -427,6 +419,9 @@ function clickspeed() {
 
       cacherchance.style.display = "none";
       cacherchancetitle.style.display = "none";
+
+      cachercrit.style.display = "none"
+      cachercrittitle.style.display = "none"
 
     } else {
       cacherspeed.style.display = "none";
@@ -469,17 +464,6 @@ function clickspeed() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 function clickchance() {
 
 
@@ -496,6 +480,9 @@ function clickchance() {
     
     var cacherhealthtitle = document.getElementById("player_profile_health");
     var cacherhealth = document.getElementById("basic_stats_health");
+
+    var cachercrit = document.getElementById("basic_stats_crit");
+    var cachercrittitle = document.getElementById("player_profile_crit");
     
     if (cacherchance.style.display === "none") {
 
@@ -512,6 +499,9 @@ function clickchance() {
 
       cacherhealth.style.display = "none";
       cacherhealthtitle.style.display = "none";
+
+      cachercrit.style.display = "none"
+      cachercrittitle.style.display = "none"
 
     } else {
       cacherchance.style.display = "none";
@@ -548,6 +538,74 @@ function clickchance() {
 }
 
 function clickcrit() {
+
+    var cachercrit = document.getElementById("basic_stats_crit");
+
+
+    var cacherchancetitle = document.getElementById("player_profile_chance");
+    var cacherchance = document.getElementById("basic_stats_chance");
+    
+    var cacherspeedtitle = document.getElementById("player_profile_speed");
+    var cacherspeed = document.getElementById("basic_stats_speed");
+
+    var cacherstrtitle = document.getElementById("player_profile_str");
+    var cacherstr = document.getElementById("basic_stats_str");
+
+    var cacherdeftitle = document.getElementById("player_profile_def");
+    var cacherdef = document.getElementById("basic_stats_def");
+    
+    var cacherhealthtitle = document.getElementById("player_profile_health");
+    var cacherhealth = document.getElementById("basic_stats_health");
+    
+    if (cachercrit.style.display === "none") {
+
+      cachercrit.style.display = "block"
+
+      cacherchance.style.display = "none";
+      cacherchancetitle.style.display = "none";
+
+      cacherspeedtitle.style.display = "none";
+      cacherspeed.style.display = "none";
+ 
+      cacherstr.style.display = "none";
+      cacherstrtitle.style.display = "none";
+
+      cacherdeftitle.style.display = "none";
+      cacherdef.style.display = "none";
+
+      cacherhealth.style.display = "none";
+      cacherhealthtitle.style.display = "none";
+
+    } else {
+      cachercrit.style.display = "none";
+    }
+
+
+
+  var cachertitre = document.getElementById("player_profile_crit");
+    if (cachertitre.style.display === "none" ) {
+      cachertitre.style.display = "block";
+    } else {
+      cachertitre.style.display = "none";
+    }
+
+   var leveldumec = document.getElementById("lvldumecITN").value;
+   var crit = document.getElementById("cdITN").value;
+
+
+   //Défini le pourcentage en fonction du level qu'a tapé le mec
+   var sonmultiplicateurdelevel = pourcentparlevel[leveldumec -(1)]
+
+   //Crit
+   var newcrit2 = {
+    resultbase: ((sonmultiplicateurdelevel/100) * crit ) + crit*1,
+    resultonestar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(10/100) + crit*1,
+    resulttwostar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(20/100) + crit*1,
+    resulttreestar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(30/100) + crit*1,
+    resultfourstar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(40/100) + crit*1,
+    resultfivestar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(50/100) + crit*1,
+    };
+
     document.getElementById("newCrit1").innerHTML=newcrit2.resultonestar;
     document.getElementById("newCrit2").innerHTML=newcrit2.resulttwostar;
     document.getElementById("newCrit3").innerHTML=newcrit2.resulttreestar;
@@ -571,6 +629,11 @@ function clickdamages() {
     document.getElementById("newDamages5").innerHTML=newdamages.resultfivestar;
 }
 
+
+function ehp() {
+
+
+}
 
   function lul() {
 

@@ -1110,6 +1110,13 @@ html.no-transform #info_box.opened{
     margin-bottom: 20px;
 }
 
+#player_profile_crit{
+    font-size: 36px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
 
 
 #stats_for_player, #stats_for_profile{
@@ -1426,6 +1433,14 @@ a.additional-player-stat:hover{
 }
 
 #basic_stats_chance{
+    width: 100%;
+    padding: 30px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.56);
+}
+
+#basic_stats_crit{
     width: 100%;
     padding: 30px;
     padding-bottom: 20px;
@@ -3287,6 +3302,11 @@ html.no-webp #error_box_wrapper{
         margin: 25px;
     }
 
+    #player_profile_crit{
+        font-size: 25px;
+        margin: 25px;
+    }
+
     #skin_display_mobile{
         left: 20px;
     }
@@ -3317,6 +3337,10 @@ html.no-webp #error_box_wrapper{
     }
 
     #player_profile_chance .text-stats-for{
+        display: none;
+    }
+
+    #player_profile_crit .text-stats-for{
         display: none;
     }
 
@@ -3390,6 +3414,11 @@ html.no-webp #error_box_wrapper{
         background-color: transparent;
     }
 
+    #basic_stats_crit{
+        text-align: center;
+        padding: 0;
+        background-color: transparent;
+    }
 
 
 

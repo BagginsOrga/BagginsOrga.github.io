@@ -329,6 +329,49 @@
 
 
 
+            <div id="player_profile_crit"><span class="text-stats-for_health">Stats with Stars for Dungeons items</span>
+                
+                
+            </div>
+
+
+
+            <div id="basic_stats_crit">
+
+               <div id="base_stats_crit">
+                    
+                <div data-stat="crit_damage" class="basic-stat stat-crit-damage">
+                    <span class="stat-name" >1 Star Chance: </span><span class="stat-value" id="newCrit1"></span></div>
+        
+                <div data-stat="crit_damage" class="basic-stat stat-crit-damage">
+                     <span class="stat-name" >2 Stars Chance: </span><span class="stat-value" id="newCrit2"></span></div>
+                    
+                <div data-stat="crit_damage" class="basic-stat stat-crit-damage">
+                    <span class="stat-name" >3 Stars Chance: </span><span class="stat-value" id="newCrit3"></span></div>
+        
+                <div data-stat="crit_damage" class="basic-stat stat-crit-damage">
+                    <span class="stat-name" >4 Stars Chance: </span><span class="stat-value" id="newCrit4"></span></div>
+        
+                <div data-stat="crit_damage" class="basic-stat stat-crit-damage">
+                    <span class="stat-name" >5 Stars Chance: </span><span class="stat-value" id="newCrit5"></span></div>
+        
+                            
+                </div>
+            
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -358,6 +401,9 @@
      var chance = document.getElementById("basic_stats_chance");
      var chancetitre = document.getElementById("player_profile_chance");
 
+     var crit = document.getElementById("basic_stats_crit");
+     var crittitre = document.getElementById("player_profile_crit");
+
 
      chance.style.display = "none";
      chancetitre.style.display = "none"
@@ -373,6 +419,9 @@
 
      health.style.display = "none";
      healthtitre.style.display = "none"
+
+     crit.style.display = "none";
+     crittitre.style.display = "none"
 
     
      lul()
