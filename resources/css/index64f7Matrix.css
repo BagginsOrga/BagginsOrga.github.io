@@ -1649,19 +1649,19 @@ a.additional-player-stat:hover{
 }
 
 .stat-health{
-    background-image: url(../img/icons/health.png);
+    /*! background-image: url(../img/icons/health.png); */
 }
 
 .stat-health .stat-name, .stat-effective-health .stat-name, .stat-strength .stat-name, .color-health, .color-effective-health, .color-strength{
-    color: #EF5350;
+    color: #888787;
 }
 
 .stat-defense{
-    background-image: url(../img/icons/defense.png);
+    /*! background-image: url(../img/icons/defense.png); */
 }
 
 .stat-defense .stat-name, .color-defense{
-    color: #66BB6A;
+    color: #888787;
 }
 
 .stat-effective-health{
@@ -1669,7 +1669,7 @@ a.additional-player-stat:hover{
 }
 
 .stat-strength{
-    background-image: url(../img/icons/strength.png);
+    /*! background-image: url(../img/icons/strength.png); */
 }
 
 .stat-speed{
@@ -1689,7 +1689,7 @@ a.additional-player-stat:hover{
 }
 
 .stat-crit-chance .stat-name, .stat-crit-damage .stat-name, .color-crit-chance, .color-crit-damage{
-    color: #9FA8DA;
+    color: #888787;
 }
 
 .stat-intelligence{
