@@ -20,6 +20,11 @@ html{
     user-select: text !important;
 }
 
+.stat-namel{
+    user-select: text !important;
+}
+
+
 html.no-webp{
     background-image: url(../img/bg1b26.png?v2);
 }
@@ -39,6 +44,14 @@ a.no-underline{
     color: rgba(255,255,255,0.85);
     text-transform: none;
 }
+
+.stat-namel{
+    color: rgba(255,255,255,0.85);
+    text-transform: none;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 
 .tippy-content{
     border-radius: 5px;
@@ -665,7 +678,7 @@ html.no-webp #bg_blur{
 }
 
 #base_stats_container{
-    width: 260px;
+    width: 2600px;
 }
 
 #base_stats_container, #skill_levels_container{
@@ -1117,6 +1130,19 @@ html.no-transform #info_box.opened{
     margin-bottom: 20px;
 }
 
+#player_profile_mana{
+    font-size: 36px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+#player_profile_dama{
+    font-size: 36px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
 
 
 #stats_for_player, #stats_for_profile{
@@ -1448,6 +1474,22 @@ a.additional-player-stat:hover{
     background-color: rgba(0,0,0,0.56);
 }
 
+#basic_stats_mana{
+    width: 100%;
+    padding: 30px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.56);
+}
+
+#basic_stats_dama{
+    width: 100%;
+    padding: 30px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.56);
+}
+
 #additional_stats_container{
     margin-top: -25px;
     font-size: 12px;
@@ -1467,6 +1509,10 @@ a.additional-player-stat:hover{
 }
 
 .stat-name, .stat-value{
+    line-height: 1.5;
+}
+
+.stat-namel{
     line-height: 1.5;
 }
 
@@ -1579,6 +1625,12 @@ a.additional-player-stat:hover{
 }
 
 .stat-name{
+    font-weight: bold;
+    color: rgba(255,255,255,0.6);
+    text-transform: capitalize;
+}
+
+.stat-namel{
     font-weight: bold;
     color: rgba(255,255,255,0.6);
     text-transform: capitalize;
@@ -2910,6 +2962,69 @@ html.no-webp #enter_player_box_wrapper{
     top: -50px;
 }
 
+#goto_target_username4{
+    text-align: right;
+    display: inline-block;
+    padding: px;
+    padding-left: px;
+    padding-right: px;
+    background-color: #ec0000;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 65px;
+    transition: background-color .2s;
+    border-radius: 999px;
+    position: absolute;
+    left: 50%;
+    margin-left: 220px;
+    top: -50px;
+    border: 0 !important;
+
+    
+}
+
+#goto_target_username5{
+    position: absolute;
+    top: 5;
+    left: 1600;
+    border: 0 !important;
+    background-color: hsla(81, 100%, 50%, 0.29);
+    color: white;
+    height: 36px;
+    width: 120px;
+    padding: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    border-radius: 25px;
+}
+
+
+#alert{
+    text-align: right;
+    display: inline-block;
+    padding: px;
+    padding-left: px;
+    padding-right: px;
+    background-color: #ec0000;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 62px;
+    transition: background-color .2s;
+    border-radius: 999px;
+    position: absolute;
+    left: 50%;
+    margin-left: 255px;
+    top: -50px;
+    border: 0 !important;
+}
 
 #goto_target_username:hover{
     background-color: #ff03a6b0;
@@ -2921,6 +3036,18 @@ html.no-webp #enter_player_box_wrapper{
 
 #goto_target_username3:hover{
     background-color: #00a2ff56;
+}
+
+#goto_target_username4:hover{
+    background-color: #ff0000d7;
+}
+
+#alert:hover{
+    background-color: #ff0000d7;
+}
+
+#goto_target_username5:hover{
+    background-color: hsla(81, 100%, 50%, 0.678);
 }
 
 #error_box_wrapper{
@@ -3307,6 +3434,16 @@ html.no-webp #error_box_wrapper{
         margin: 25px;
     }
 
+    #player_profile_mana{
+        font-size: 25px;
+        margin: 25px;
+    }
+
+    #player_profile_dama{
+        font-size: 25px;
+        margin: 25px;
+    }
+
     #skin_display_mobile{
         left: 20px;
     }
@@ -3341,6 +3478,14 @@ html.no-webp #error_box_wrapper{
     }
 
     #player_profile_crit .text-stats-for{
+        display: none;
+    }
+
+    #player_profile_mana .text-stats-for{
+        display: none;
+    }
+
+    #player_profile_dama .text-stats-for{
         display: none;
     }
 
@@ -3415,6 +3560,18 @@ html.no-webp #error_box_wrapper{
     }
 
     #basic_stats_crit{
+        text-align: center;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    #basic_stats_mana{
+        text-align: center;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    #basic_stats_dama{
         text-align: center;
         padding: 0;
         background-color: transparent;

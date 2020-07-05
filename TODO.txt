@@ -1,0 +1,17 @@
+todo
+
+1- Finir bouton intell et damages
+2- Enlever la limite de caractere de la ligne (pour pas que le truc aille a la ligne suivante)
+3- Finir bouton Calcul (qui cache les div etoile)
+4- Remplacer NaN par 0
+5- Arrondir les resultats
+6- Bouton reset 
+7- Bouton croix pour fermer un des trucs star
+8- Systeme de redirection vers voir les damages sur lequel on peut choisir les étoiles
+9- Idem que up mais pour les ehp (pas un html visible a part entiere sur l'accueil)
+
+
+
+
+
+

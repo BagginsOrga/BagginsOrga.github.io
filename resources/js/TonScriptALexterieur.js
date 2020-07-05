@@ -1,5 +1,19 @@
 function clickbuttfunc() {
-    var leveldumec = document.getElementById("lvldumecITN").value;
+
+  var leveldumec = document.getElementById("lvldumecITN").value;
+
+  if ( !leveldumec.replace(/\s+/, '').length ) {
+ 
+    var alertlulu = document.getElementById("goto_target_username4");
+    alertlulu.style.display = "block";
+
+  } else {
+
+    var alertlulu = document.getElementById("goto_target_username4");
+    alertlulu.style.display = "none";
+    var alertluluo = document.getElementById("alert");
+    alertluluo.style.display = "none";
+
     console.log("coucou, la valeur du niveau est de : " + lvldumecITN.value);
     var strength = document.getElementById("StrengthITN").value;
     var damages = document.getElementById("DamagesITN").value;
@@ -103,6 +117,9 @@ function clickbuttfunc() {
     resultfivestar: newlife.resultfivestar * newdef.resultfivestar,
     };
 
+
+    
+
     //Voilà l'exemple (j'ai juste logué parsque je voi rien sur ton IHM) : 
 
     document.getElementById("newHealth").innerHTML=newlife.resultbase;
@@ -127,6 +144,62 @@ function clickbuttfunc() {
 
 
     document.getElementById("newdamages").innerHTML=newdamages.resultbase;
+
+    document.getElementById("newHealth1").innerHTML=newlife.resultonestar;
+    document.getElementById("newHealth2").innerHTML=newlife.resulttwostar;
+    document.getElementById("newHealth3").innerHTML=newlife.resulttreestar;
+    document.getElementById("newHealth4").innerHTML=newlife.resultfourstar;
+    document.getElementById("newHealth5").innerHTML=newlife.resultfivestar;
+
+    document.getElementById("newDefence1").innerHTML=newdef.resultonestar;
+    document.getElementById("newDefence2").innerHTML=newdef.resulttwostar;
+    document.getElementById("newDefence3").innerHTML=newdef.resulttreestar;
+    document.getElementById("newDefence4").innerHTML=newdef.resultfourstar;
+    document.getElementById("newDefence5").innerHTML=newdef.resultfivestar;
+
+    document.getElementById("newStrength1").innerHTML=newstrength.resultonestar;
+    document.getElementById("newStrength2").innerHTML=newstrength.resulttwostar;
+    document.getElementById("newStrength3").innerHTML=newstrength.resulttreestar;
+    document.getElementById("newStrength4").innerHTML=newstrength.resultfourstar;
+    document.getElementById("newStrength5").innerHTML=newstrength.resultfivestar;
+
+    document.getElementById("newSpeed1").innerHTML=newspeed.resultonestar;
+    document.getElementById("newSpeed2").innerHTML=newspeed.resulttwostar;
+    document.getElementById("newSpeed3").innerHTML=newspeed.resulttreestar;
+    document.getElementById("newSpeed4").innerHTML=newspeed.resultfourstar;
+    document.getElementById("newSpeed5").innerHTML=newspeed.resultfivestar;
+
+    document.getElementById("newChance1").innerHTML=newchance.resultonestar;
+    document.getElementById("newChance2").innerHTML=newchance.resulttwostar;
+    document.getElementById("newChance3").innerHTML=newchance.resulttreestar;
+    document.getElementById("newChance4").innerHTML=newchance.resultfourstar;
+    document.getElementById("newChance5").innerHTML=newchance.resultfivestar;
+
+    document.getElementById("newCrit1").innerHTML=newcrit2.resultonestar;
+    document.getElementById("newCrit2").innerHTML=newcrit2.resulttwostar;
+    document.getElementById("newCrit3").innerHTML=newcrit2.resulttreestar;
+    document.getElementById("newCrit4").innerHTML=newcrit2.resultfourstar;
+    document.getElementById("newCrit5").innerHTML=newcrit2.resultfivestar;
+
+    document.getElementById("newMana1").innerHTML=newmana.resultonestar;
+    document.getElementById("newMana2").innerHTML=newmana.resulttwostar;
+    document.getElementById("newMana3").innerHTML=newmana.resulttreestar;
+    document.getElementById("newMana4").innerHTML=newmana.resultfourstar;
+    document.getElementById("newMana5").innerHTML=newmana.resultfivestar;
+
+    document.getElementById("newDamages1").innerHTML=newdamages.resultonestar;
+    document.getElementById("newDamages2").innerHTML=newdamages.resulttwostar;
+    document.getElementById("newDamages3").innerHTML=newdamages.resulttreestar;
+    document.getElementById("newDamages4").innerHTML=newdamages.resultfourstar;
+    document.getElementById("newDamages5").innerHTML=newdamages.resultfivestar;
+
+  }
+
+    
+    
+
+
+
 
 }
 
@@ -164,11 +237,20 @@ function clickhealth() {
 
     var cachercrit = document.getElementById("basic_stats_crit");
     var cachercrittitle = document.getElementById("player_profile_crit");
+
+    var cachermana = document.getElementById("basic_stats_mana");
+    var cachermanatitle = document.getElementById("player_profile_mana");
+
+    var cacherdama = document.getElementById("basic_stats_dama");
+    var cacherdamatitle = document.getElementById("player_profile_dama");
     
     if (cacherhealth.style.display === "none") {
 
       cacherhealth.style.display = "block";
 
+
+      cachermana.style.display = "none"
+      cachermanatitle.style.display = "none"
 
       cacherdef.style.display = "none";
       cacherdeftitle.style.display = "none";
@@ -184,6 +266,9 @@ function clickhealth() {
 
       cachercrit.style.display = "none"
       cachercrittitle.style.display = "none"
+      
+      cacherdama.style.display = "none"
+      cacherdamatitle.style.display = "none"
 
 
     } else {
@@ -236,6 +321,9 @@ function clickdefence() {
 
     var cacherdef = document.getElementById("basic_stats_def");
 
+    var cachermana = document.getElementById("basic_stats_mana");
+    var cachermanatitle = document.getElementById("player_profile_mana");
+
     var cacherhealthtitle = document.getElementById("player_profile_health");
     var cacherhealth = document.getElementById("basic_stats_health");
 
@@ -250,11 +338,18 @@ function clickdefence() {
 
     var cachercrit = document.getElementById("basic_stats_crit");
     var cachercrittitle = document.getElementById("player_profile_crit");
+
+    var cacherdama = document.getElementById("basic_stats_dama");
+    var cacherdamatitle = document.getElementById("player_profile_dama");
+    
     
     if (cacherdef.style.display === "none") {
 
 
       cacherdef.style.display = "block";
+
+      cachermana.style.display = "none"
+      cachermanatitle.style.display = "none"
 
       cacherhealth.style.display = "none";
       cacherhealthtitle.style.display = "none";
@@ -270,6 +365,9 @@ function clickdefence() {
 
       cachercrit.style.display = "none"
       cachercrittitle.style.display = "none"
+
+      cacherdama.style.display = "none"
+      cacherdamatitle.style.display = "none"
 
     } else {
       cacherdef.style.display = "none";
@@ -315,6 +413,9 @@ function clickstrength() {
 
     var cacherstr = document.getElementById("basic_stats_str");
 
+    var cachermana = document.getElementById("basic_stats_mana");
+    var cachermanatitle = document.getElementById("player_profile_mana");
+
     var cacherdeftitle = document.getElementById("player_profile_def");
     var cacherdef = document.getElementById("basic_stats_def");
     
@@ -327,10 +428,20 @@ function clickstrength() {
     var cacherchance = document.getElementById("basic_stats_chance");
     var cacherchancetitle = document.getElementById("player_profile_chance");
 
+    var cachercrit = document.getElementById("basic_stats_crit");
+    var cachercrittitle = document.getElementById("player_profile_crit");
+
+    var cacherdama = document.getElementById("basic_stats_dama");
+    var cacherdamatitle = document.getElementById("player_profile_dama");
+
+
     if (cacherstr.style.display === "none") {
 
       cacherstr.style.display = "block";
-
+      
+      cachermana.style.display = "none"
+      cachermanatitle.style.display = "none"
+      
       cacherdeftitle.style.display = "none";
       cacherdef.style.display = "none";
 
@@ -342,6 +453,12 @@ function clickstrength() {
 
       cacherchance.style.display = "none";
       cacherchancetitle.style.display = "none";
+
+      cachercrit.style.display = "none"
+      cachercrittitle.style.display = "none"
+
+      cacherdama.style.display = "none"
+      cacherdamatitle.style.display = "none"
 
 
     } else {
@@ -388,6 +505,9 @@ function clickspeed() {
 
     var cacherspeed = document.getElementById("basic_stats_speed");
 
+    var cachermana = document.getElementById("basic_stats_mana");
+    var cachermanatitle = document.getElementById("player_profile_mana");
+
     var cacherstrtitle = document.getElementById("player_profile_str");
     var cacherstr = document.getElementById("basic_stats_str");
 
@@ -403,11 +523,17 @@ function clickspeed() {
     var cachercrit = document.getElementById("basic_stats_crit");
     var cachercrittitle = document.getElementById("player_profile_crit");
 
+    var cacherdama = document.getElementById("basic_stats_dama");
+    var cacherdamatitle = document.getElementById("player_profile_dama");
+
   
     if (cacherspeed.style.display === "none") {
 
       cacherspeed.style.display = "block";
  
+      cachermana.style.display = "none"
+      cachermanatitle.style.display = "none"
+
       cacherstr.style.display = "none";
       cacherstrtitle.style.display = "none";
 
@@ -422,6 +548,9 @@ function clickspeed() {
 
       cachercrit.style.display = "none"
       cachercrittitle.style.display = "none"
+
+      cacherdama.style.display = "none"
+      cacherdamatitle.style.display = "none"
 
     } else {
       cacherspeed.style.display = "none";
@@ -469,6 +598,9 @@ function clickchance() {
 
     var cacherchance = document.getElementById("basic_stats_chance");
 
+    var cachermana = document.getElementById("basic_stats_mana");
+    var cachermanatitle = document.getElementById("player_profile_mana");
+
     var cacherspeedtitle = document.getElementById("player_profile_speed");
     var cacherspeed = document.getElementById("basic_stats_speed");
 
@@ -484,9 +616,15 @@ function clickchance() {
     var cachercrit = document.getElementById("basic_stats_crit");
     var cachercrittitle = document.getElementById("player_profile_crit");
     
+    var cacherdama = document.getElementById("basic_stats_dama");
+    var cacherdamatitle = document.getElementById("player_profile_dama");
+
     if (cacherchance.style.display === "none") {
 
       cacherchance.style.display = "block";
+
+      cachermana.style.display = "none"
+      cachermanatitle.style.display = "none"
 
       cacherspeedtitle.style.display = "none";
       cacherspeed.style.display = "none";
@@ -502,6 +640,9 @@ function clickchance() {
 
       cachercrit.style.display = "none"
       cachercrittitle.style.display = "none"
+
+      cacherdama.style.display = "none"
+      cacherdamatitle.style.display = "none"
 
     } else {
       cacherchance.style.display = "none";
@@ -537,10 +678,15 @@ function clickchance() {
     document.getElementById("newChance5").innerHTML=newchance.resultfivestar;
 }
 
+
+
 function clickcrit() {
 
     var cachercrit = document.getElementById("basic_stats_crit");
 
+
+    var cachermana = document.getElementById("basic_stats_mana");
+    var cachermanatitle = document.getElementById("player_profile_mana");
 
     var cacherchancetitle = document.getElementById("player_profile_chance");
     var cacherchance = document.getElementById("basic_stats_chance");
@@ -556,6 +702,9 @@ function clickcrit() {
     
     var cacherhealthtitle = document.getElementById("player_profile_health");
     var cacherhealth = document.getElementById("basic_stats_health");
+
+    var cacherdama = document.getElementById("basic_stats_dama");
+    var cacherdamatitle = document.getElementById("player_profile_dama");
     
     if (cachercrit.style.display === "none") {
 
@@ -575,6 +724,12 @@ function clickcrit() {
 
       cacherhealth.style.display = "none";
       cacherhealthtitle.style.display = "none";
+
+      cachermana.style.display = "none"
+      cachermanatitle.style.display = "none"
+
+      cacherdama.style.display = "none"
+      cacherdamatitle.style.display = "none"
 
     } else {
       cachercrit.style.display = "none";
@@ -613,7 +768,100 @@ function clickcrit() {
     document.getElementById("newCrit5").innerHTML=newcrit2.resultfivestar;
 }
 
+
+
+
+
 function clickmana() {
+
+
+
+
+
+  var cachermana = document.getElementById("basic_stats_mana");
+
+  var cachercrittitle = document.getElementById("player_profile_crit");
+  var cachercrit = document.getElementById("basic_stats_crit");
+  
+  var cacherchancetitle = document.getElementById("player_profile_chance");
+  var cacherchance = document.getElementById("basic_stats_chance");
+  
+  var cacherspeedtitle = document.getElementById("player_profile_speed");
+  var cacherspeed = document.getElementById("basic_stats_speed");
+
+  var cacherstrtitle = document.getElementById("player_profile_str");
+  var cacherstr = document.getElementById("basic_stats_str");
+
+  var cacherdeftitle = document.getElementById("player_profile_def");
+  var cacherdef = document.getElementById("basic_stats_def");
+  
+  var cacherhealthtitle = document.getElementById("player_profile_health");
+  var cacherhealth = document.getElementById("basic_stats_health");
+
+  var cacherdama = document.getElementById("basic_stats_dama");
+  var cacherdamatitle = document.getElementById("player_profile_dama");
+
+  
+  if (cachermana.style.display === "none") {
+
+
+
+    cachermana.style.display = "block"
+
+    cachercrit.style.display = "none"
+    cachercrittitle.style.display = "none";
+
+    cacherchance.style.display = "none";
+    cacherchancetitle.style.display = "none";
+
+    cacherspeedtitle.style.display = "none";
+    cacherspeed.style.display = "none";
+
+    cacherstr.style.display = "none";
+    cacherstrtitle.style.display = "none";
+
+    cacherdeftitle.style.display = "none";
+    cacherdef.style.display = "none";
+
+    cacherhealth.style.display = "none";
+    cacherhealthtitle.style.display = "none";
+
+    cacherdama.style.display = "none"
+    cacherdamatitle.style.display = "none"
+
+
+
+  } else {
+    cachermana.style.display = "none";
+  }
+
+
+  var cachertitre = document.getElementById("player_profile_mana");
+    if (cachertitre.style.display === "none" ) {
+      cachertitre.style.display = "block";
+    } else {
+      cachertitre.style.display = "none";
+    }
+
+
+  var mana = document.getElementById("manaITN").value;
+  var leveldumec = document.getElementById("lvldumecITN").value;
+
+
+  //Défini le pourcentage en fonction du level qu'a tapé le mec
+  var sonmultiplicateurdelevel = pourcentparlevel[leveldumec -(1)]
+
+  //Mana
+  var newmana = {
+    resultbase: ((sonmultiplicateurdelevel/100) * mana ) + mana*1,
+    resultonestar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(10/100) + mana*1,
+    resulttwostar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(20/100) + mana*1,
+    resulttreestar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(30/100) + mana*1,
+    resultfourstar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(40/100) + mana*1,
+    resultfivestar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(50/100) + mana*1,
+    };
+
+
     document.getElementById("newMana1").innerHTML=newmana.resultonestar;
     document.getElementById("newMana2").innerHTML=newmana.resulttwostar;
     document.getElementById("newMana3").innerHTML=newmana.resulttreestar;
@@ -621,7 +869,96 @@ function clickmana() {
     document.getElementById("newMana5").innerHTML=newmana.resultfivestar;
 }
 
+
+
+
+
 function clickdamages() {
+
+
+
+
+  var cacherdama = document.getElementById("basic_stats_dama");
+
+  var cachermana = document.getElementById("basic_stats_mana");
+  var cachermanatitle = document.getElementById("player_profile_mana");
+
+  var cachercrittitle = document.getElementById("player_profile_crit");
+  var cachercrit = document.getElementById("basic_stats_crit");
+  
+  var cacherchancetitle = document.getElementById("player_profile_chance");
+  var cacherchance = document.getElementById("basic_stats_chance");
+  
+  var cacherspeedtitle = document.getElementById("player_profile_speed");
+  var cacherspeed = document.getElementById("basic_stats_speed");
+
+  var cacherstrtitle = document.getElementById("player_profile_str");
+  var cacherstr = document.getElementById("basic_stats_str");
+
+  var cacherdeftitle = document.getElementById("player_profile_def");
+  var cacherdef = document.getElementById("basic_stats_def");
+  
+  var cacherhealthtitle = document.getElementById("player_profile_health");
+  var cacherhealth = document.getElementById("basic_stats_health");
+  
+  if (cacherdama.style.display === "none") {
+
+
+    cacherdama.style.display = "block"
+
+    cachermana.style.display = "none"
+    cachermanatitle.style.display = "none"
+
+    cachercrit.style.display = "none"
+    cachercrittitle.style.display = "none";
+
+    cacherchance.style.display = "none";
+    cacherchancetitle.style.display = "none";
+
+    cacherspeedtitle.style.display = "none";
+    cacherspeed.style.display = "none";
+
+    cacherstr.style.display = "none";
+    cacherstrtitle.style.display = "none";
+
+    cacherdeftitle.style.display = "none";
+    cacherdef.style.display = "none";
+
+    cacherhealth.style.display = "none";
+    cacherhealthtitle.style.display = "none";
+
+    
+
+  } else {
+    cacherdama.style.display = "none";
+  }
+
+
+
+  var cachertitre = document.getElementById("player_profile_dama");
+    if (cachertitre.style.display === "none" ) {
+      cachertitre.style.display = "block";
+    } else {
+      cachertitre.style.display = "none";
+    }
+
+  var damages = document.getElementById("DamagesITN").value;
+  var leveldumec = document.getElementById("lvldumecITN").value;
+
+
+  //Défini le pourcentage en fonction du level qu'a tapé le mec
+  var sonmultiplicateurdelevel = pourcentparlevel[leveldumec -(1)]
+
+  //Damages
+  var newdamages = {
+    resultbase: ((sonmultiplicateurdelevel/100) * damages ) + damages*1,
+    resultonestar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(10/100) + damages*1,
+    resulttwostar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(20/100) + damages*1,
+    resulttreestar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(30/100) + damages*1,
+    resultfourstar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(40/100) + damages*1,
+    resultfivestar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(50/100) + damages*1,
+    };
+
     document.getElementById("newDamages1").innerHTML=newdamages.resultonestar;
     document.getElementById("newDamages2").innerHTML=newdamages.resulttwostar;
     document.getElementById("newDamages3").innerHTML=newdamages.resulttreestar;
@@ -693,3 +1030,92 @@ function ehp() {
     document.getElementById("newHealth5").innerHTML=newcaca.caca
 
   }
+
+
+
+
+
+  function alert() {
+
+    var help = document.getElementById("alert");
+
+    
+    if (help.style.display === "none") {
+
+      help.style.display = "block";
+
+    } else {
+      help.style.display = "none";
+    }
+  
+      
+    }
+
+
+    function reset(){
+
+
+
+      document.getElementById("StrengthITN").value = "";
+      document.getElementById("DamagesITN").value = "";
+      document.getElementById("cdITN").value = "";
+      document.getElementById("chanceITN").value = "";
+      document.getElementById("manaITN").value = "";
+      document.getElementById("spidITN").value = "";
+      document.getElementById("lifeITN").value = "";
+      document.getElementById("defITN").value = "";
+
+      lul()
+
+    
+
+     var health = document.getElementById("basic_stats_health");
+     var healthtitre = document.getElementById("player_profile_health");
+
+     var def = document.getElementById("basic_stats_def");
+     var deftitre = document.getElementById("player_profile_def");
+
+     var str = document.getElementById("basic_stats_str");
+     var strtitre = document.getElementById("player_profile_str");
+
+     var speed = document.getElementById("basic_stats_speed");
+     var speedtitre = document.getElementById("player_profile_speed");
+
+     var chance = document.getElementById("basic_stats_chance");
+     var chancetitre = document.getElementById("player_profile_chance");
+
+     var crit = document.getElementById("basic_stats_crit");
+     var crittitre = document.getElementById("player_profile_crit");
+
+     var cachermana = document.getElementById("basic_stats_mana");
+     var cachermanatitle = document.getElementById("player_profile_mana");
+
+     var cacherdama = document.getElementById("basic_stats_dama");
+     var cacherdamatitle = document.getElementById("player_profile_dama");
+
+     chance.style.display = "none";
+     chancetitre.style.display = "none"
+
+     speed.style.display = "none";
+     speedtitre.style.display = "none"
+
+     str.style.display = "none";
+     strtitre.style.display = "none"
+
+     def.style.display = "none";
+     deftitre.style.display = "none"
+
+     health.style.display = "none";
+     healthtitre.style.display = "none"
+
+     crit.style.display = "none";
+     crittitre.style.display = "none"
+
+     cachermana.style.display = "none"
+     cachermanatitle.style.display = "none"
+
+     cacherdama.style.display = "none"
+     cacherdamatitle.style.display = "none"
+
+    }
+
