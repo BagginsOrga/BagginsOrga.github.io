@@ -309,17 +309,10 @@ header{
     width: 360px;
     height: 36px;
     left: 50%;
-    margin-left: 400px;
-    top: 570px;
+    margin-left: -260px;
+    top: 250px;
     background-color: rgba(239, 83, 80, 0.30);
     border-radius: 18px;
-    border: 0 !important;
-}
-
-#StrengthITN .lol{
-    background-color: rgba(239, 83, 80, 0.30);
-    border-radius: 18px;
-    border: 0 !important;
 }
 
 #Damages{
@@ -327,8 +320,8 @@ header{
     width: 360px;
     height: 36px;
     left: 50%;
-    margin-left: 400px;
-    top: 460px;
+    margin-left: 160px;
+    top: 305px;
     background-color: rgba(59, 221, 221, 0.30);
     border-radius: 18px;
 }
@@ -338,8 +331,8 @@ header{
     width: 360px;
     height: 36px;
     left: 50%;
-    margin-left: 400px;
-    top: 350px;
+    margin-left: 160px;
+    top: 195px;
     background-color: rgba(76, 36, 129, 0.30);
     border-radius: 18px;
 }
@@ -349,8 +342,8 @@ header{
     width: 360px;
     height: 36px;
     left: 50%;
-    margin-left: 400px;
-    top: 240px;
+    margin-left: 160px;
+    top: 140px;
     background-color: rgba(159, 168, 218, 0.30);
     border-radius: 18px;
 }
@@ -444,7 +437,8 @@ header{
     top: 0;
     left: 0;
     border: 0 !important;
-    color: rgba(168, 167, 167, 0.76);
+    background-color: transparent;
+    color: white;
     height: 36px;
     width: 360px;
     padding: 4px;
@@ -454,19 +448,6 @@ header{
     box-sizing: border-box;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    background-color: transparent;
-    border-radius: 18px;
-    cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
-}
-
-.mdr{
-
-    border-radius: 18px;
-
 }
 
 #DamagesITN{

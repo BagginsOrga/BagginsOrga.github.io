@@ -29,82 +29,82 @@ function clickbuttfunc() {
     
         //Crit
     var newcrit2 = {
-    resultbase: ((sonmultiplicateurdelevel/100) * crit ) + crit*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(10/100) + crit*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(20/100) + crit*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(30/100) + crit*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(40/100) + crit*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(50/100) + crit*1,
+    resultbase: ((sonmultiplicateurdelevel/100) * crit ) + crit*2,
+    resultonestar: ((sonmultiplicateurdelevel/100) * crit ) + crit*2 + crit*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * crit ) + crit*2 + crit*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * crit ) + crit*2 + crit*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * crit ) + crit*2 + crit*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * crit ) + crit*2 + crit*(50/100),
     };
 
     //Mana
     var newmana = {
-    resultbase: ((sonmultiplicateurdelevel/100) * mana ) + mana*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(10/100) + mana*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(20/100) + mana*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(30/100) + mana*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(40/100) + mana*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(50/100) + mana*1,
+    resultbase: ((sonmultiplicateurdelevel/100) * mana ) + mana*2,
+    resultonestar: ((sonmultiplicateurdelevel/100) * mana ) + mana*2 + mana*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * mana ) + mana*2 + mana*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * mana ) + mana*2 + mana*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * mana ) + mana*2 + mana*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * mana ) + mana*2 + mana*(50/100),
     };
 
     //Chance
     var newchance = {
-    resultbase: ((sonmultiplicateurdelevel/100) * chance ) + chance*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(10/100) + chance*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(20/100) + chance*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(30/100) + chance*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(40/100) + chance*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(50/100) + chance*1,
+    resultbase: ((sonmultiplicateurdelevel/100) * chance ) + chance*2,
+    resultonestar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(50/100),
     };
 
     //Damages
     var newdamages = {
-    resultbase: ((sonmultiplicateurdelevel/100) * damages ) + damages*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(10/100) + damages*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(20/100) + damages*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(30/100) + damages*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(40/100) + damages*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(50/100) + damages*1,
+    resultbase: ((sonmultiplicateurdelevel/100) * damages ) + damages*2,
+    resultonestar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(50/100),
     };
 
     //Strength
     var newstrength = {
-    resultbase: ((sonmultiplicateurdelevel/100) * strength ) + strength*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * strength )+((sonmultiplicateurdelevel/100) * strength )*(10/100) + strength*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * strength )+((sonmultiplicateurdelevel/100) * strength )*(20/100) + strength*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * strength )+((sonmultiplicateurdelevel/100) * strength )*(30/100) + strength*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * strength )+((sonmultiplicateurdelevel/100) * strength )*(40/100) + strength*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * strength )+((sonmultiplicateurdelevel/100) * strength )*(50/100) + strength*1,
+    resultbase: ((sonmultiplicateurdelevel/100) * strength ) + strength*2,
+    resultonestar: ((sonmultiplicateurdelevel/100) * strength ) + strength*2 + strength*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * strength ) + strength*2 + strength*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * strength ) + strength*2 + strength*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * strength ) + strength*2 + strength*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * strength ) + strength*2 + strength*(50/100),
     };
 
     //Speed
     var newspeed = {
-    resultbase: ((sonmultiplicateurdelevel/100) * speed ) + speed*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * speed )+((sonmultiplicateurdelevel/100) * speed )*(10/100) + speed*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * speed )+((sonmultiplicateurdelevel/100) * speed )*(20/100) + speed*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * speed )+((sonmultiplicateurdelevel/100) * speed )*(30/100) + speed*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * speed )+((sonmultiplicateurdelevel/100) * speed )*(40/100) + speed*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * speed )+((sonmultiplicateurdelevel/100) * speed )*(50/100) + speed*1,
+    resultbase: ((sonmultiplicateurdelevel/100) * speed ) + speed*2,
+    resultonestar: ((sonmultiplicateurdelevel/100) * speed ) + speed*2 + speed*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * speed ) + speed*2 + speed*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * speed ) + speed*2 + speed*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * speed ) + speed*2 + speed*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * speed ) + speed*2 + speed*(50/100),
     };
 
     //Life
     var newlife = {
-    resultbase: ((sonmultiplicateurdelevel/100) * life ) + life*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * life )+((sonmultiplicateurdelevel/100) * life )*(10/100) + life*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * life )+((sonmultiplicateurdelevel/100) * life )*(20/100) + life*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * life )+((sonmultiplicateurdelevel/100) * life )*(30/100) + life*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * life )+((sonmultiplicateurdelevel/100) * life )*(40/100) + life*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * life )+((sonmultiplicateurdelevel/100) * life )*(50/100) + life*1,
+    resultbase: ((sonmultiplicateurdelevel/100) * life ) + life*2,
+    resultonestar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(50/100),
     };
 
     //Défence
     var newdef = {
-    resultbase: ((sonmultiplicateurdelevel/100) * def ) + def*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * def ) + ((sonmultiplicateurdelevel/100) * def )*(10/100) + def*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * def ) + ((sonmultiplicateurdelevel/100) * def )*(20/100) + def*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * def ) + ((sonmultiplicateurdelevel/100) * def )*(30/100) + def*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * def ) + ((sonmultiplicateurdelevel/100) * def )*(40/100) + def*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * def ) + ((sonmultiplicateurdelevel/100) * def )*(50/100) + def*1,
+    resultbase: ((sonmultiplicateurdelevel/100) * def ) + def*2,
+    resultonestar: ((sonmultiplicateurdelevel/100) * def ) + def*2 + def*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * def ) + def*2 + def*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * def ) + def*2 + def*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * def ) + def*2 + def*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * def ) + def*2 + def*(50/100),
     };
 
     //EHP
@@ -294,13 +294,13 @@ function clickhealth() {
     
     //Life
     var newlife = {
-    resultbase: ((sonmultiplicateurdelevel/100) * life ) + life*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * life )+((sonmultiplicateurdelevel/100) * life )*(10/100) + life*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * life )+((sonmultiplicateurdelevel/100) * life )*(20/100) + life*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * life )+((sonmultiplicateurdelevel/100) * life )*(30/100) + life*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * life )+((sonmultiplicateurdelevel/100) * life )*(40/100) + life*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * life )+((sonmultiplicateurdelevel/100) * life )*(50/100) + life*1,
-    };
+      resultbase: ((sonmultiplicateurdelevel/100) * life ) + life*2,
+      resultonestar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(10/100),
+      resulttwostar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(20/100),
+      resulttreestar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(30/100),
+      resultfourstar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(40/100),
+      resultfivestar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(50/100),
+      };
 
 
 
@@ -392,13 +392,13 @@ function clickdefence() {
 
     //Défence
     var newdef = {
-        resultbase: ((sonmultiplicateurdelevel/100) * def ) + def*1,
-        resultonestar: ((sonmultiplicateurdelevel/100) * def ) + ((sonmultiplicateurdelevel/100) * def )*(10/100) + def*1,
-        resulttwostar: ((sonmultiplicateurdelevel/100) * def ) + ((sonmultiplicateurdelevel/100) * def )*(20/100) + def*1,
-        resulttreestar: ((sonmultiplicateurdelevel/100) * def ) + ((sonmultiplicateurdelevel/100) * def )*(30/100) + def*1,
-        resultfourstar: ((sonmultiplicateurdelevel/100) * def ) + ((sonmultiplicateurdelevel/100) * def )*(40/100) + def*1,
-        resultfivestar: ((sonmultiplicateurdelevel/100) * def ) + ((sonmultiplicateurdelevel/100) * def )*(50/100) + def*1,
-        };
+      resultbase: ((sonmultiplicateurdelevel/100) * def ) + def*2,
+      resultonestar: ((sonmultiplicateurdelevel/100) * def ) + def*2 + def*(10/100),
+      resulttwostar: ((sonmultiplicateurdelevel/100) * def ) + def*2 + def*(20/100),
+      resulttreestar: ((sonmultiplicateurdelevel/100) * def ) + def*2 + def*(30/100),
+      resultfourstar: ((sonmultiplicateurdelevel/100) * def ) + def*2 + def*(40/100),
+      resultfivestar: ((sonmultiplicateurdelevel/100) * def ) + def*2 + def*(50/100),
+      };
 
     document.getElementById("newDefence1").innerHTML=newdef.resultonestar;
     document.getElementById("newDefence2").innerHTML=newdef.resulttwostar;
@@ -484,13 +484,13 @@ function clickstrength() {
 
     //Strength
     var newstrength = {
-        resultbase: ((sonmultiplicateurdelevel/100) * strength ) + strength*1,
-        resultonestar: ((sonmultiplicateurdelevel/100) * strength )+((sonmultiplicateurdelevel/100) * strength )*(10/100) + strength*1,
-        resulttwostar: ((sonmultiplicateurdelevel/100) * strength )+((sonmultiplicateurdelevel/100) * strength )*(20/100) + strength*1,
-        resulttreestar: ((sonmultiplicateurdelevel/100) * strength )+((sonmultiplicateurdelevel/100) * strength )*(30/100) + strength*1,
-        resultfourstar: ((sonmultiplicateurdelevel/100) * strength )+((sonmultiplicateurdelevel/100) * strength )*(40/100) + strength*1,
-        resultfivestar: ((sonmultiplicateurdelevel/100) * strength )+((sonmultiplicateurdelevel/100) * strength )*(50/100) + strength*1,
-        };
+      resultbase: ((sonmultiplicateurdelevel/100) * strength ) + strength*2,
+      resultonestar: ((sonmultiplicateurdelevel/100) * strength ) + strength*2 + strength*(10/100),
+      resulttwostar: ((sonmultiplicateurdelevel/100) * strength ) + strength*2 + strength*(20/100),
+      resulttreestar: ((sonmultiplicateurdelevel/100) * strength ) + strength*2 + strength*(30/100),
+      resultfourstar: ((sonmultiplicateurdelevel/100) * strength ) + strength*2 + strength*(40/100),
+      resultfivestar: ((sonmultiplicateurdelevel/100) * strength ) + strength*2 + strength*(50/100),
+      };
 
     document.getElementById("newStrength1").innerHTML=newstrength.resultonestar;
     document.getElementById("newStrength2").innerHTML=newstrength.resulttwostar;
@@ -576,13 +576,13 @@ function clickspeed() {
 
     //Speed
     var newspeed = {
-        resultbase: ((sonmultiplicateurdelevel/100) * speed ) + speed*1,
-        resultonestar: ((sonmultiplicateurdelevel/100) * speed )+((sonmultiplicateurdelevel/100) * speed )*(10/100) + speed*1,
-        resulttwostar: ((sonmultiplicateurdelevel/100) * speed )+((sonmultiplicateurdelevel/100) * speed )*(20/100) + speed*1,
-        resulttreestar: ((sonmultiplicateurdelevel/100) * speed )+((sonmultiplicateurdelevel/100) * speed )*(30/100) + speed*1,
-        resultfourstar: ((sonmultiplicateurdelevel/100) * speed )+((sonmultiplicateurdelevel/100) * speed )*(40/100) + speed*1,
-        resultfivestar: ((sonmultiplicateurdelevel/100) * speed )+((sonmultiplicateurdelevel/100) * speed )*(50/100) + speed*1,
-        };
+      resultbase: ((sonmultiplicateurdelevel/100) * speed ) + speed*2,
+      resultonestar: ((sonmultiplicateurdelevel/100) * speed ) + speed*2 + speed*(10/100),
+      resulttwostar: ((sonmultiplicateurdelevel/100) * speed ) + speed*2 + speed*(20/100),
+      resulttreestar: ((sonmultiplicateurdelevel/100) * speed ) + speed*2 + speed*(30/100),
+      resultfourstar: ((sonmultiplicateurdelevel/100) * speed ) + speed*2 + speed*(40/100),
+      resultfivestar: ((sonmultiplicateurdelevel/100) * speed ) + speed*2 + speed*(50/100),
+      };
 
     document.getElementById("newSpeed1").innerHTML=newspeed.resultonestar;
     document.getElementById("newSpeed2").innerHTML=newspeed.resulttwostar;
@@ -663,12 +663,12 @@ function clickchance() {
 
   //Chance
   var newchance = {
-    resultbase: ((sonmultiplicateurdelevel/100) * chance ) + chance*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(10/100) + chance*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(20/100) + chance*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(30/100) + chance*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(40/100) + chance*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * chance )+((sonmultiplicateurdelevel/100) * chance )*(50/100) + chance*1,
+    resultbase: ((sonmultiplicateurdelevel/100) * chance ) + chance*2,
+    resultonestar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(50/100),
     };
 
     document.getElementById("newChance1").innerHTML=newchance.resultonestar;
@@ -753,12 +753,12 @@ function clickcrit() {
 
    //Crit
    var newcrit2 = {
-    resultbase: ((sonmultiplicateurdelevel/100) * crit ) + crit*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(10/100) + crit*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(20/100) + crit*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(30/100) + crit*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(40/100) + crit*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * crit )+((sonmultiplicateurdelevel/100) * crit )*(50/100) + crit*1,
+    resultbase: ((sonmultiplicateurdelevel/100) * crit ) + crit*2,
+    resultonestar: ((sonmultiplicateurdelevel/100) * crit ) + crit*2 + crit*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * crit ) + crit*2 + crit*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * crit ) + crit*2 + crit*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * crit ) + crit*2 + crit*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * crit ) + crit*2 + crit*(50/100),
     };
 
     document.getElementById("newCrit1").innerHTML=newcrit2.resultonestar;
@@ -853,12 +853,12 @@ function clickmana() {
 
   //Mana
   var newmana = {
-    resultbase: ((sonmultiplicateurdelevel/100) * mana ) + mana*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(10/100) + mana*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(20/100) + mana*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(30/100) + mana*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(40/100) + mana*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * mana )+((sonmultiplicateurdelevel/100) * mana )*(50/100) + mana*1,
+    resultbase: ((sonmultiplicateurdelevel/100) * mana ) + mana*2,
+    resultonestar: ((sonmultiplicateurdelevel/100) * mana ) + mana*2 + mana*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * mana ) + mana*2 + mana*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * mana ) + mana*2 + mana*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * mana ) + mana*2 + mana*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * mana ) + mana*2 + mana*(50/100),
     };
 
 
@@ -951,12 +951,12 @@ function clickdamages() {
 
   //Damages
   var newdamages = {
-    resultbase: ((sonmultiplicateurdelevel/100) * damages ) + damages*1,
-    resultonestar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(10/100) + damages*1,
-    resulttwostar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(20/100) + damages*1,
-    resulttreestar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(30/100) + damages*1,
-    resultfourstar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(40/100) + damages*1,
-    resultfivestar: ((sonmultiplicateurdelevel/100) * damages )+((sonmultiplicateurdelevel/100) * damages )*(50/100) + damages*1,
+    resultbase: ((sonmultiplicateurdelevel/100) * damages ) + damages*2,
+    resultonestar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(50/100),
     };
 
     document.getElementById("newDamages1").innerHTML=newdamages.resultonestar;

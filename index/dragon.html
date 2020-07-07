@@ -15,6 +15,10 @@
         <link rel="stylesheet" href="../resources/css/inventory8e9a.css?v13">
 
         <script type="text/javascript" src="../resources/js/dragon.js"></script>
+        <script type="text/javascript" src="../resources/js/stats.js"></script>
+        <script type="text/javascript" src="../resources/js/sticky.min.js"></script>
+        <script type="text/javascript" src="../resources/js/anime.min.js"></script>
+        <script type="text/javascript" src="../resources/js/modernizr.js"></script>
     </head> 
     
 
@@ -31,20 +35,55 @@
 
     <div id="wrapper" data-sticky-container="">
             
-        <div id="player_profile"><span class="text-stats-for">Stats for Dungeons items</span>
+        <div id="player_profile"><span class="text-stats-for">Dragon simulator</span>
             
             
         </div><div id="basic_stats">
             
 
 
-            <input id="goto_target_username" type="button" value="Summon the Dragon" onclick="drag()">
+            <input id="goto_target_username" type="button" value="Summon the Dragon" onclick="drag(), compter(), totsumm(), weigth(), totcostu(), placest()">
             <img src="9ce934d59ae58d5216f218ccdf064770.png" id="dragimg1">
+
+            <div data-stat="kills" class="stat-container stat-kills">
+                <div class="stat-anchor"></div>
+                <div class="stat-header"><span>Stats</span></div>
+                <div class="stat-content">
+                    <p class="stat-raw-values">
+                        <span class="stat-name">Total Cost: </span><span class="stat-value"><span class="stat-value" id="totalcost"></span></span><br>
+                        <span class="stat-name">Total Summoning Eyes Used: </span><span class="stat-value"><span class="stat-value" id="toteye"></span></span></body><br>
+                        <span class="stat-name">Total Dragon Summoned: </span><span class="stat-value"><span class="stat-value" id="totdrag"></span></span>
+                    </p>
+                    <div class="kills-deaths-container">
+                        <div class="narrow-info-container top-kills">
+                            <div class="narrow-info-header">Precedent Summon</div>
+                            <div class="narrow-info-content">
+                                
+                                        <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="unstable">Cost</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="cost"></span></div>
+                                    
+                                        <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="unstable">Eyes Placed</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="eyelast"></span></div>
+                                    
+                                        <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="wize">Magic Find</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="mf"></div>
+                                    
+                                        <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="sup">Place</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="place"></span></div>
+
+                                        <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="unstable">Weigth</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="weigth"></span></div>
+                                    
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            
             
                 
 
         
-                <div id="base_stats_container" onclick="titreoff()">
+                <div id="base_stats_container" >
                 
                     <br/>
                     <br/>
@@ -68,35 +107,352 @@
             <br/>
             <br/>
             <br/>
+
+        
+
+            <style>
+                /*the container must be positioned relative:*/
+                .custom-select {
+                  position: relative;
+                  font-family: Montserrat, sans-serif;
+                  font-weight: 600;
+                  height:36px;
+                }
+                
+                .custom-select select {
+                  display: none; /*hide original SEECT element:*/
+                }
+                
+                .select-selected {
+                  background-color: rgba(239, 83, 80, 0.30);
+                  border-radius: 18px;
+                  
+                }
+                
+                /*style the arrow inside the select element:*/
+                .select-selected:after {
+                  position: absolute;
+                  content: "";
+                  top: 14px;
+                  right: 10px;
+                  width: 0;
+                  height: 36px;
+                  border: 6px solid transparent;
+                  border-color: #fff transparent transparent transparent;
+                }
+                
+                /*point the arrow upwards when the select box is open (active):*/
+                .select-selected.select-arrow-active:after {
+                  border-color: transparent transparent #fff transparent;
+                  top: 7px;
+                }
+                
+                /*style the items (options), including the selected item:*/
+                .select-items div,.select-selected {
+                  color: rgba(168, 167, 167, 0.76);
+                  padding: 8px 16px;
+                  border: 1px solid transparent;
+                  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+                  cursor: pointer;
+                  user-select: none;
+                  
+                  
+                }
+                
+                /*style items (options):*/
+                .select-items {
+                  position: absolute;
+                  background-color: rgba(239, 83, 80, 0.30);
+                  top: 100%;
+                  left: 0;
+                  right: 0;
+                  z-index: 99;
+                  border-radius: 18px;
+                }
+                
+                /*hide the items when the select box is closed:*/
+                .select-hide {
+                  display: none;
+                }
+                
+                .select-items div:hover, .same-as-selected {
+                  background-color: rgba(0, 0, 0, 0.1);
+                }
+                </style>
+                </head>     
+                
+                <body>
+                
+                <h2> </h2>
+                
+                <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+                <div id="idlistl" class="custom-select" style="width:360px;left: 50%;margin-left: 400px;top: -245px;" >
+                  <select id="idlist">
+                                    <option value="1">
+                                        1st
+                                    </option>
+                                    <option value="1">
+                                      1st
+                                   </option>
+                                    <option value="2">
+                                        2nd
+                                    </option>
+                                    <option value="3">
+                                        3rd
+                                    </option>
+                                    <option value="4">
+                                        4th
+                                    </option>
+                                    <option value="5">
+                                        5th
+                                    </option>
+                                    <option value="6">
+                                        6th
+                                    </option>
+                                    <option value="7">
+                                        7th
+                                    </option>
+                                    <option value="8">
+                                        8th
+                                    </option>
+                                    <option value="9">
+                                        9th
+                                    </option>
+                                    <option value="10">
+                                        10th
+                                    </option>
+                                    <option value="11">
+                                        11th
+                                    </option>
+                                    <option value="12">
+                                        12th
+                                    </option>
+                                    <option value="13">
+                                        13th
+                                    </option>
+                  </select>
+                </div>
+                
+                <script>
+                var x, i, j, l, ll, selElmnt, a, b, c;
+                /*look for any elements with the class "custom-select":*/
+                x = document.getElementsByClassName("custom-select");
+                l = x.length;
+                for (i = 0; i < l; i++) {
+                  selElmnt = x[i].getElementsByTagName("select")[0];
+                  ll = selElmnt.length;
+                  /*for each element, create a new DIV that will act as the selected item:*/
+                  a = document.createElement("DIV");
+                  a.setAttribute("class", "select-selected");
+                  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+                  x[i].appendChild(a);
+                  /*for each element, create a new DIV that will contain the option list:*/
+                  b = document.createElement("DIV");
+                  b.setAttribute("class", "select-items select-hide");
+                  for (j = 1; j < ll; j++) {
+                    /*for each option in the original select element,
+                    create a new DIV that will act as an option item:*/
+                    c = document.createElement("DIV");
+                    c.innerHTML = selElmnt.options[j].innerHTML;
+                    c.addEventListener("click", function(e) {
+                        /*when an item is clicked, update the original select box,
+                        and the selected item:*/
+                        var y, i, k, s, h, sl, yl;
+                        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                        sl = s.length;
+                        h = this.parentNode.previousSibling;
+                        for (i = 0; i < sl; i++) {
+                          if (s.options[i].innerHTML == this.innerHTML) {
+                            s.selectedIndex = i;
+                            h.innerHTML = this.innerHTML;
+                            y = this.parentNode.getElementsByClassName("same-as-selected");
+                            yl = y.length;
+                            for (k = 0; k < yl; k++) {
+                              y[k].removeAttribute("class");
+                            }
+                            this.setAttribute("class", "same-as-selected");
+                            break;
+                          }
+                        }
+                        h.click();
+                    });
+                    b.appendChild(c);
+                  }
+                  x[i].appendChild(b);
+                  a.addEventListener("click", function(e) {
+                      /*when the select box is clicked, close any other select boxes,
+                      and open/close the current select box:*/
+                      e.stopPropagation();
+                      closeAllSelect(this);
+                      this.nextSibling.classList.toggle("select-hide");
+                      this.classList.toggle("select-arrow-active");
+                    });
+                }
+                function closeAllSelect(elmnt) {
+                  /*a function that will close all select boxes in the document,
+                  except the current select box:*/
+                  var x, y, i, xl, yl, arrNo = [];
+                  x = document.getElementsByClassName("select-items");
+                  y = document.getElementsByClassName("select-selected");
+                  xl = x.length;
+                  yl = y.length;
+                  for (i = 0; i < yl; i++) {
+                    if (elmnt == y[i]) {
+                      arrNo.push(i)
+                    } else {
+                      y[i].classList.remove("select-arrow-active");
+                    }
+                  }
+                  for (i = 0; i < xl; i++) {
+                    if (arrNo.indexOf(i)) {
+                      x[i].classList.add("select-hide");
+                    }
+                  }
+                }
+                /*if the user clicks anywhere outside the select box,
+                then close all select boxes:*/
+                document.addEventListener("click", closeAllSelect);
+                </script>
+
+            <div id="Damages">
+                <input type="text" placeholder="Magic Find" id="DamagesITN">
+                
+            </div>
+
+            <div id="cd">
+                <input type="text" placeholder="Cost of one Summoning Eye" id="cdITN">
+
+            </div>
+
+            <div id="chance">
+                <input type="text" placeholder="Summoning Eyes" id="chanceITN">
+
+                
+             
+            </div>
+
             
-            <div id="basic_stats_def">
 
 
-                <div id="base_stats_container" onclick="titreoff()">
+        <div id="basic_stats_def">
+
+
+                <div id="base_stats_container" >
                 
                     <br/>
                     <br/>
+                   
+                    <img src="supdargon.png" id="dragsup">
+
                     <br/>
                     <br/>
                     <br/>
                     <br/>
+                    
+
+                    <div data-stat="kills" class="stat-container stat-kills">
+                        <div class="stat-anchor"></div>
+                        <div class="stat-header"><span>Dragons History</span></div>
+                        <div class="stat-content">
+                            <p class="stat-raw-values">
+                                <span class="stat-name">Total Dragons: </span><span class="stat-value">2,080</span><br>
+                                <span class="stat-name">Total Loots: </span><span class="stat-value">9</span>
+                            </p>
+                            <div class="kills-deaths-container">
+                                <div class="narrow-info-container top-kills">
+                                    <div class="narrow-info-header">Loots</div>
+                                    <div class="narrow-info-content">
+                                        
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="prot">Protector Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">655</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="old">Old Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">611</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="wize">Wize Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">156</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="young">Young Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">56</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="unstable">Unstable Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">44</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="strong">Strong Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">42</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Superior Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">41</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Aotd</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">39</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Epic Pet</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">37</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Legendary Pet</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">34</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="bleu">Dragon Scale</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">34</div></div>
+
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Dragon Calw</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">34</div></div>
+
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Dragon Horn</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">34</div></div>
+                                                
+
+                                        
+                                            <div class="kill-stat show-all enabled" data-type="kills">show all</div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="narrow-info-container top-deaths">
+                                    <div class="narrow-info-header">Dragons</div>
+                                    <div class="narrow-info-content">
+                                        
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="prot">Protector Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">3</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="old">Old Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">2</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="wize">Wize Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">1</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="young">Young Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">1</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="unstable">Unstable Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">1</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="strong">Strong Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">1</div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Superior Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">1</div></div>
+
+                                                <div class="kill-stat"><div class="kill-rank"></div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank"></div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank"></div></div>
+                                            
+                                                <div class="kill-stat"><div class="kill-rank"></div></div>
+                                            
+                                        
+                                            <div class="kill-stat show-all " data-type="deaths">show all</div>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+            
                     <br/>
                     <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
+                    
+
+
+
+
+                    
+
 
                 </div>
+
+
+
+
+
+
+
 
             </div>
 
@@ -105,6 +461,241 @@
 
 
 
+                 <script>
+              
+              
+                 var all = 0;
+
+                 document.getElementById("place").innerHTML= all;
+                 document.getElementById("cost").innerHTML=all;
+                 document.getElementById("mf").innerHTML=all;
+                 document.getElementById("eyelast").innerHTML=all;
+
+
+
+                 var totdrag = 0;
+                 eyelastnew = 0;
+                 var totcost = 0;
+
+
+                 document.getElementById("totdrag").innerHTML=totdrag;
+                 document.getElementById("toteye").innerHTML=all;
+                 document.getElementById("totalcost").innerHTML=all;
+
+
+
+
+                 document.getElementById("weigth").innerHTML=all;
+
+
+
+
+
+                 toteye = 0;
+                 ancientot = 0;
+
+                 function totsumm(){
+
+
+                     anciennbeye = document.getElementById("chanceITN").value;
+
+                     if (anciennbeye == 1) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 2) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 3) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 4) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 5) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 6) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 7) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+
+                     if (anciennbeye == 8) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
+                     
+
+
+                      document.getElementById("toteye").innerHTML=toteye;
+                      toteye= document.getElementById("toteye").value;
+                      console.log(anciennbeye)
+
+
+}
+
+                 
+weigthnb = 0;
+
+function weigth(){
+
+
+  summoningeyes = document.getElementById("chanceITN").value;
+
+  if (summoningeyes == 1) {
+    weigthnb = 100
+  }
+  if (summoningeyes == 2) {
+    weigthnb = 200
+  }
+  if (summoningeyes == 3) {
+    weigthnb = 300
+  }
+  if (summoningeyes == 4) {
+    weigthnb = 400
+  }
+  if (summoningeyes > 4) {
+    weigthnb = 400
+  }
+
+
+  placef = document.getElementById("idlist").value;
+
+
+  if (placef == 1) {
+    weigthnb=+ 300 -(-0) + 1*weigthnb
+  }
+  if (placef == 2) {
+    weigthnb=+ 250 -(-0) + 1*weigthnb
+  }
+  if (placef == 3) {
+    weigthnb=+ 200 -(-0) + 1*weigthnb
+  }
+  if (placef == 4) {
+    weigthnb=+ 125 -(-0) + 1*weigthnb
+  }
+  if (placef == 5) {
+    weigthnb=+ 125 -(-0) + 1*weigthnb
+  }
+  if (placef == 6) {
+    weigthnb=+ 125 -(-0) + 1*weigthnb
+  }
+  if (placef == 7) {
+    weigthnb=+ 125 -(-0) + 1*weigthnb
+  }
+  if (placef == 8) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 9) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 10) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 11) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 12) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 13) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 14) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef == 15) {
+    weigthnb=+ 100 -(-0) + 1*weigthnb
+  }
+  if (placef > 15) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+
+
+
+  document.getElementById("weigth").innerHTML=weigthnb;
+
+}
+
+ancientot2 = 0;
+toteye2 = 0;
+anciennbeye2 = 0;
+function totcostu(){
+
+
+anciennbeye2 = document.getElementById("chanceITN").value;
+
+if (anciennbeye2 == 1) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 2) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 3) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 4) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 5) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 6) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 7) {
+ toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+if (anciennbeye2 == 8) {
+ totey2e = anciennbeye2 -(-0) + 1*ancientot2;
+ ancientot2 = toteye2
+}
+
+costofone= document.getElementById("cdITN").value;
+
+costautotal = toteye2*costofone
+
+ document.getElementById("totalcost").innerHTML=costautotal;
+ costautotal= document.getElementById("totalcost").value;
+ console.log(anciennbeye2)
+
+ 
+}
+
+function placest(){
+
+ lol = document.getElementById("idlist").value;
+ document.getElementById("place").innerHTML=lol;
+ console.log(lol)
+}
 
 
 
@@ -121,4 +712,163 @@
 
 
 
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+              
+function drag() {
+
+
+
+var eyelast = document.getElementById("chanceITN").value;
+document.getElementById("eyelast").innerHTML=eyelast;
+
+var mf = document.getElementById("DamagesITN").value;
+document.getElementById("mf").innerHTML=mf;
+
+var cost = document.getElementById("cdITN").value;
+document.getElementById("cost").innerHTML=cost*eyelast;
+
+var place = document.getElementsByClassName("custom-select").value
+document.getElementById("place").innerHTML= place;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</div>
