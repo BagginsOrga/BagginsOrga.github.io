@@ -2,7 +2,7 @@
 <p align="center"><img src="https://imgur.com/3GS3gVs.png"></p>
 <h1 align="center">The best Calculator for Skyblock</h1>
 
-This project allows you to share your <a href="https://hypixel.net//">Hypixel</a> SkyBlock profile with other players with a quick overview of your Stats, Skills, Armor, Weapons and Accessories.
+This project is based on <a href="https://github.com/LeaPhant/skyblock-stats">sky.lea.moe/</a>, with Konocalculator you can calculate dungeons items, you can can simulate dragons and more...
 
 **Website**: https://konocalculator.fr/
 
