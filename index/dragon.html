@@ -681,6 +681,7 @@ if (anciennbeye2 == 8) {
 
 costofone= document.getElementById("cdITN").value;
 
+
 costautotal = toteye2*costofone
 
  document.getElementById("totalcost").innerHTML=costautotal;
@@ -762,7 +763,14 @@ document.getElementById("eyelast").innerHTML=eyelast;
 var mf = document.getElementById("DamagesITN").value;
 document.getElementById("mf").innerHTML=mf;
 
-var cost = document.getElementById("cdITN").value;
+
+fetch("https://api.hypixel.net/skyblock/bazaar?key=ac4220da-070f-4571-a52d-263adf5c0bb4")
+.then(result => result.json())
+.then((bazaar)=> {
+    var cost = bazaar.products.SUMMONING_EYE.buy_summary[bazaar.products.SUMMONING_EYE.buy_summary.length - 1].pricePerUnit
+    console.log(cost)
+})
+
 document.getElementById("cost").innerHTML=cost*eyelast;
 
 var place = document.getElementsByClassName("custom-select").value

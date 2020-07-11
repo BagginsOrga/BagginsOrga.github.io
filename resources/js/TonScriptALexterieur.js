@@ -49,22 +49,22 @@ function clickbuttfunc() {
 
     //Chance
     var newchance = {
-    resultbase: ((sonmultiplicateurdelevel/100) * chance ) + chance*2,
-    resultonestar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(10/100),
-    resulttwostar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(20/100),
-    resulttreestar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(30/100),
-    resultfourstar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(40/100),
-    resultfivestar: ((sonmultiplicateurdelevel/100) * chance ) + chance*2 + chance*(50/100),
+    resultbase: ((sonmultiplicateurdelevel/100) * chance ) + chance*1,
+    resultonestar: ((sonmultiplicateurdelevel/100) * chance ) + chance*1 + chance*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * chance ) + chance*1 + chance*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * chance ) + chance*1 + chance*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * chance ) + chance*1 + chance*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * chance ) + chance*1  + chance*(50/100),
     };
 
     //Damages
     var newdamages = {
-    resultbase: ((sonmultiplicateurdelevel/100) * damages ) + damages*2,
-    resultonestar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(10/100),
-    resulttwostar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(20/100),
-    resulttreestar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(30/100),
-    resultfourstar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(40/100),
-    resultfivestar: ((sonmultiplicateurdelevel/100) * damages ) + damages*2 + damages*(50/100),
+    resultbase: ((sonmultiplicateurdelevel/100) * damages ) + damages*1,
+    resultonestar: ((sonmultiplicateurdelevel/100) * damages ) + damages*1 + damages*(10/100),
+    resulttwostar: ((sonmultiplicateurdelevel/100) * damages ) + damages*1 + damages*(20/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * damages ) + damages*1 + damages*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * damages ) + damages*1 + damages*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * damages ) + damages*1 + damages*(50/100),
     };
 
     //Strength
