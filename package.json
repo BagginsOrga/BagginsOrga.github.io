@@ -1,0 +1,34 @@
+{
+  "name": "@bagginsorga/konocalculator",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "A beatifull Calculator",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BagginsOrga/FabulousWebSite.git"
+  },
+  "license": "UNLICENSED",
+  "smartStep": true,
+  "skipFiles": [
+    "<node_internals>/**"
+  ],
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "package": "electron-packager .  --plateform=win32 --arch=x64 --electron-version=9.1.0"
+  },
+  "author": "konoashi",
+  "electronVersion": "9.1.0",
+  "dependencies": {
+    "custom-electron-titlebar": "^3.2.2-hotfix62",
+    "electron-builder": "^22.7.0",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.0.0",
+    "electron-winstaller": "^4.0.1"
+  }
+}
