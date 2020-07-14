@@ -29,10 +29,17 @@
     <style>
 
 
-        body {
-          overflow-x: hidden;
-          overflow: hidden;
-        }
+     #parent{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+     }
+     #enfant{
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      padding-right: 15px; /* Il faut varier cette variable en fonction du navigateur utilisé (la barre de défilement n'a pas toujours la même largeur) */
+     }
 
     @media (max-width: 480px){
         #search_user{

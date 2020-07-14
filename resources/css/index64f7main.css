@@ -2,7 +2,10 @@
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 }
-
+body {
+          overflow-x: hidden;
+          overflow: hidden;
+        }
 html{
     background-color: black;
     background: url(../img/hub.webp?v2) no-repeat center center fixed;

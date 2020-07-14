@@ -701,7 +701,456 @@ function placest(){
 
 
 
+function looter() {
+  var dragon = Math.floor(Math.random() * 100) + 1;
+  var alreadyloot = "no"
 
+  if (dragon < 17) {
+    dragon = "PROTECTOR"
+  }
+  if (dragon < 33 &&dragon > 16) {
+    dragon = "OLD"
+  }
+  if (dragon < 49 &&dragon > 32) {
+    dragon = "WIZE"
+  }
+  if (dragon < 65 &&dragon > 48) {
+    dragon = "YOUNG"
+  }
+  if (dragon < 81 &&dragon > 64) {
+    dragon = "UNSTABLE"
+  }
+  if (dragon < 97 &&dragon > 80) {
+    dragon = "STRONG"
+  }
+  if (dragon < 101 &&dragon > 96) {
+    dragon = "SUPERIOR"
+  }
+  
+
+  
+
+  if (weigthnb > 22) {
+      lootpossible = {
+      BOOTS: 300,
+      LEGGINGS: 350,
+      CHESTPLATE: 400,
+      HELMET: 325,
+      PET: 450,
+      CLAW: 450,
+      SCALE: 450,
+      AOTD: 450,
+      SCROLL: 250,
+      HORN: 450,
+    }
+    
+
+    if (dragon = "SUPERIOR" && alreadyloot == "no" && weigthnb > 449) {
+     //HORN
+   }
+
+   if (alreadyloot == "no" && weigthnb > 449) {
+     //CLAW
+   }
+
+   if (alreadyloot == "no" && weigthnb > 449 && dragon == "PROTECTOR" || dragon == "UNSTABLE" || dragon == "WIZE" || dragon == "OLD" || dragon == "YOUNG" || dragon == "STRONG") {
+     //SCALE
+   }
+
+   if (dragon = "UNSTABLE" && alreadyloot == "no" && weigthnb > 249) {
+     //SCROLL
+   }
+
+
+
+    if (alreadyloot == "no" && weigthnb > 449) {
+      //PET
+      var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+    var a = Math.random();
+    var b = 0.005 * eyemoment;
+    if (a < b) {
+     if (Math.random() < 0.2) {
+       var LOOT = 6;
+       var alreadyloot = "yes"
+      } else {
+        var LOOT = 5;
+        var alreadyloot = "yes"
+     } 
+    }
+   }
+
+   
+   if (alreadyloot == "no" && weigthnb > 449) {
+     //SWORD
+     var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+    var a = Math.random();
+    var b = 0.058 * eyemoment		
+    if (a < b) {
+     var LOOT = 0;
+     var alreadyloot = "yes"
+   }
+   }
+
+   
+
+   if (alreadyloot == "no" && weigthnb > 399) {
+     //CHESTPLATE
+     var a = Math.random();
+  
+  if (weigth == 400 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 425 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 450 ) {
+   var b = 0.19;
+   }
+   
+   if (weigth == 475 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 500 ) {
+   var b = 0.23;
+   }
+   
+   if (weigth == 525 ) {
+   var b = 0.24;
+   }
+   
+   if (weigth == 550 ) {
+   var b = 0.25;
+   }
+   
+   if (weigth == 575 ) {
+   var b = 0.26;
+   }
+   
+   if (weigth == 600 ) {
+   var b = 0.27;
+   }
+   
+   if (weigth == 625 ) {
+   var b = 0.28;
+   }
+   
+   if (weigth == 650 ) {
+   var b = 0.29;
+   }
+   
+   if (weigth == 675 ) {
+   var b = 0.30;
+   }
+   
+   if (weigth == 700 ) {
+   var b = 0.31;
+   }
+   
+  if (a < b) {
+            var LOOT = 1;
+            var alreadyloot = "yes"
+		
+					}
+   }
+
+   if (alreadyloot == "no" && weigthnb > 349) {
+     //LEGGINGS
+     var a = Math.random();
+  
+  if (weigth == 350 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 375 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 400 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 425 ) {
+   var b = 0.18;
+   }
+
+   if (weigth == 450 ) {
+   var b = 0.18;
+   }
+
+   if (weigth == 475 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 500 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 525 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 550 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 575 ) {
+   var b = 0.21;
+   }
+   
+   if (weigth == 600 ) {
+   var b = 0.22;
+   }
+   
+   if (weigth == 625 ) {
+   var b = 0.23;
+   }
+   
+   if (weigth == 650 ) {
+   var b = 0.24;
+   }
+   
+   if (weigth == 675 ) {
+   var b = 0.25;
+   }
+   
+   if (weigth == 700 ) {
+   var b = 0.25;
+   }
+   
+  if (a < b) {
+            var LOOT = 2;
+            var alreadyloot = "yes"
+		
+					}
+   }
+
+   if (alreadyloot == "no" && weigthnb > 324) {
+     //HELMET
+     var a = Math.random();
+
+  if (weigth == 325 ) {
+   var b = 0.16;
+   }
+
+  if (weigth == 350 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 375 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 400 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 425 ) {
+   var b = 0.18;
+   }
+
+   if (weigth == 450 ) {
+   var b = 0.18;
+   }
+
+   if (weigth == 475 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 500 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 525 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 550 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 575 ) {
+   var b = 0.21;
+   }
+   
+   if (weigth == 600 ) {
+   var b = 0.22;
+   }
+   
+   if (weigth == 625 ) {
+   var b = 0.23;
+   }
+   
+   if (weigth == 650 ) {
+   var b = 0.24;
+   }
+   
+   if (weigth == 675 ) {
+   var b = 0.25;
+   }
+   
+   if (weigth == 700 ) {
+   var b = 0.25;
+   }
+   
+  if (a < b) {
+            var LOOT = 3;
+            var alreadyloot = "yes"
+		
+					}
+   }
+
+   if (alreadyloot == "no" && weigthnb > 299) {
+     //BOOTS
+     var a = Math.random();
+
+  if (weigth == 300 ) {
+   var b = 0.20;
+   }
+
+  if (weigth == 325 ) {
+   var b = 0.20;
+   }
+
+  if (weigth == 350 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 375 ) {
+   var b = 0.21;
+   }
+   
+   if (weigth == 400 ) {
+   var b = 0.22;
+   }
+   
+   if (weigth == 425 ) {
+   var b = 0.22;
+   }
+
+   if (weigth == 450 ) {
+   var b = 0.23;
+   }
+
+   if (weigth == 475 ) {
+   var b = 0.25;
+   }
+   
+   if (weigth == 500 ) {
+   var b = 0.26;
+   }
+   
+   if (weigth == 525 ) {
+   var b = 0.26;
+   }
+   
+   if (weigth == 550 ) {
+   var b = 0.26;
+   }
+   
+   if (weigth == 575 ) {
+   var b = 0.27;
+   }
+   
+   if (weigth == 600 ) {
+   var b = 0.27;
+   }
+   
+   if (weigth == 625 ) {
+   var b = 0.28;
+   }
+   
+   if (weigth == 650 ) {
+   var b = 0.29;
+   }
+   
+   if (weigth == 675 ) {
+   var b = 0.30;
+   }
+   
+   if (weigth == 700 ) {
+   var b = 0.33;
+   }
+   
+  if (a < b) {
+            var LOOT = 4;
+            var alreadyloot = "yes"
+		
+					}
+   }
+   
+
+   var fragWeight = weigthnb;
+				if (LOOT == 0 || LOOT == 5 || LOOT == 6) {
+					fragWeight = fragWeight - 450;
+				}
+				if (LOOT == 1) {
+					fragWeight = fragWeight - 400;
+				}
+				if (LOOT == 2) {
+					fragWeight = fragWeight - 350;
+				}
+				if (LOOT == 3) {
+					fragWeight = fragWeight - 350;
+				}
+				if (LOOT == 4) {
+					fragWeight = fragWeight - 300;
+        }
+				var frags = Math.floor(fragWeight / 22);
+              	if(frags < 3 && LOOT == -1) frags = 3;
+			
+
+
+  }
+
+
+ var LOOTFINAL = LOOT
+ if (LOOTFINAL = 1 || 2 || 3 || 4) {
+   if (dragon = "PROTECTOR") {
+     var LOOTFINAL = 10+ LOOTFINAL
+   }
+   if (dragon = "OLD") {
+     var LOOTFINAL = 20+ LOOTFINAL
+   }
+   if (dragon = "WIZE") {
+     var LOOTFINAL = 30+ LOOTFINAL
+   }
+   if (dragon = "YOUNG") {
+     var LOOTFINAL = 40+ LOOTFINAL
+   }
+   if (dragon = "UNSTABLE") {
+     var LOOTFINAL = 50+ LOOTFINAL
+   }
+   if (dragon = "STRONG") {
+     var LOOTFINAL = 60+ LOOTFINAL
+   }
+   if (dragon = "SUPERIOR") {
+     var LOOTFINAL = 70+ LOOTFINAL
+   }
+ }
+ var FRAGFINAL = frags
+
+console.log(LOOT)
+console.log(a)
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
