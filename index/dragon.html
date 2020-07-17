@@ -42,7 +42,7 @@
             
 
 
-            <input id="goto_target_username" type="button" value="Summon the Dragon" onclick="drag(), compter(), totsumm(), weigth(), totcostu(), placest()">
+            <input id="goto_target_username" type="button" value="Summon the Dragon" onclick="drag(), compter()">
             <img src="9ce934d59ae58d5216f218ccdf064770.png" id="dragimg1">
 
             <div data-stat="kills" class="stat-container stat-kills">
@@ -702,7 +702,7 @@ function placest(){
 
 
 function looter() {
-  var dragon = Math.floor(Math.random() * 100) + 1;
+  var dragon = Math.floor(Math.random() * 100) + 1
   var alreadyloot = "no"
 
   if (dragon < 17) {
@@ -727,6 +727,9 @@ function looter() {
     dragon = "SUPERIOR"
   }
   
+  var dragcalcul = dragon
+
+  
 
   
 
@@ -743,24 +746,89 @@ function looter() {
       SCROLL: 250,
       HORN: 450,
     }
+    console.log("------")
+    console.log(weigthnb)
+    console.log("------")
     
+    
+    var eyelast = document.getElementById("chanceITN").value;
 
-    if (dragon = "SUPERIOR" && alreadyloot == "no" && weigthnb > 449) {
-     //HORN
+    if (dragon == "SUPERIOR" && alreadyloot == "no" && weigthnb > 449) {
+     //CLAW
+     var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+      var random = Math.floor(Math.random() * 15) + 1;
+      var placecalcul = 0.05 / placef
+      var a = Math.random();
+      var b = 0.06 * (eyemoment	/ random ) + placecalcul
+    if (a < b) {
+     var LOOT = 7;
+     var alreadyloot = "yes"
    }
+   }
+
+   
 
    if (alreadyloot == "no" && weigthnb > 449) {
      //CLAW
+     var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+      var random = Math.floor(Math.random() * 15) + 1;
+      var placecalcul = 0.05 / placef
+      var a = Math.random();
+      var b = 0.06 * (eyemoment	/ random ) + placecalcul
+    if (a < b) {
+     var LOOT = 8;
+     var alreadyloot = "yes"
    }
+   }
+   
+   
 
    if (alreadyloot == "no" && weigthnb > 449 && dragon == "PROTECTOR" || dragon == "UNSTABLE" || dragon == "WIZE" || dragon == "OLD" || dragon == "YOUNG" || dragon == "STRONG") {
      //SCALE
+     var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+      var random = Math.floor(Math.random() * 25 ) + 1;
+      var placecalcul = 0.01 / placef
+      var a = Math.random();
+      var b = 0.01 * (eyemoment	/ random ) + (placecalcul + placecalcul)
+    if (a < b) {
+     var LOOT = 9;
+     var alreadyloot = "yes"
    }
+   }
+   
+   console.log(a)
+   console.log(b)
+   console.log(eyemoment)
+   console.log(random)
+   console.log(placecalcul)
+   console.log(placef)
 
-   if (dragon = "UNSTABLE" && alreadyloot == "no" && weigthnb > 249) {
+   if (dragon == "UNSTABLE" && alreadyloot == "no" && weigthnb > 249) {
      //SCROLL
+     var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+      var random = Math.floor(Math.random() * 15) + 1;
+      var placecalcul = 0.03 / placef
+      var a = Math.random();
+      var b = 0.06 * (eyemoment	/ random ) + placecalcul
+    if (a < b) {
+     var LOOT = 10;
+     var alreadyloot = "yes"
+   }
    }
 
+   
 
 
     if (alreadyloot == "no" && weigthnb > 449) {
@@ -783,6 +851,7 @@ function looter() {
    }
 
    
+   
    if (alreadyloot == "no" && weigthnb > 449) {
      //SWORD
      var eyemoment = eyelast
@@ -797,6 +866,7 @@ function looter() {
    }
    }
 
+   
    
 
    if (alreadyloot == "no" && weigthnb > 399) {
@@ -861,6 +931,8 @@ function looter() {
 		
 					}
    }
+
+   
 
    if (alreadyloot == "no" && weigthnb > 349) {
      //LEGGINGS
@@ -932,6 +1004,8 @@ function looter() {
 		
 					}
    }
+
+   
 
    if (alreadyloot == "no" && weigthnb > 324) {
      //HELMET
@@ -1007,6 +1081,8 @@ function looter() {
 		
 					}
    }
+
+   
 
    if (alreadyloot == "no" && weigthnb > 299) {
      //BOOTS
@@ -1087,6 +1163,8 @@ function looter() {
 					}
    }
    
+   
+
 
    var fragWeight = weigthnb;
 				if (LOOT == 0 || LOOT == 5 || LOOT == 6) {
@@ -1114,33 +1192,35 @@ function looter() {
 
  var LOOTFINAL = LOOT
  if (LOOTFINAL = 1 || 2 || 3 || 4) {
-   if (dragon = "PROTECTOR") {
+   if (dragon == "PROTECTOR") {
      var LOOTFINAL = 10+ LOOTFINAL
    }
-   if (dragon = "OLD") {
+   if (dragon == "OLD") {
      var LOOTFINAL = 20+ LOOTFINAL
    }
-   if (dragon = "WIZE") {
+   if (dragon == "WIZE") {
      var LOOTFINAL = 30+ LOOTFINAL
    }
-   if (dragon = "YOUNG") {
+   if (dragon == "YOUNG") {
      var LOOTFINAL = 40+ LOOTFINAL
    }
-   if (dragon = "UNSTABLE") {
+   if (dragon == "UNSTABLE") {
      var LOOTFINAL = 50+ LOOTFINAL
    }
-   if (dragon = "STRONG") {
+   if (dragon == "STRONG") {
      var LOOTFINAL = 60+ LOOTFINAL
    }
-   if (dragon = "SUPERIOR") {
+   if (dragon == "SUPERIOR") {
      var LOOTFINAL = 70+ LOOTFINAL
    }
  }
  var FRAGFINAL = frags
+ 
 
-console.log(LOOT)
-console.log(a)
-
+console.log("-----------")
+console.log(LOOT + " =LOOT")
+console.log(FRAGFINAL + " Frags")
+console.log(dragon)
 
 
 
@@ -1212,7 +1292,7 @@ document.getElementById("eyelast").innerHTML=eyelast;
 var mf = document.getElementById("DamagesITN").value;
 document.getElementById("mf").innerHTML=mf;
 
-
+/*
 fetch("https://api.hypixel.net/skyblock/bazaar?key=ac4220da-070f-4571-a52d-263adf5c0bb4")
 .then(result => result.json())
 .then((bazaar)=> {
@@ -1221,11 +1301,11 @@ fetch("https://api.hypixel.net/skyblock/bazaar?key=ac4220da-070f-4571-a52d-263ad
 })
 
 document.getElementById("cost").innerHTML=cost*eyelast;
-
+*/
 var place = document.getElementsByClassName("custom-select").value
 document.getElementById("place").innerHTML= place;
 
-
+totsumm(), weigth(), totcostu(), placest(), looter()
 }
 
 
