@@ -42,7 +42,7 @@
             
 
 
-            <input id="goto_target_username" type="button" value="Summon the Dragon" onclick="drag(), compter()">
+            <input id="goto_target_username" type="button" value="Summon the Dragon" onclick="drag(), compter()" >
             <img src="9ce934d59ae58d5216f218ccdf064770.png" id="dragimg1">
 
             <div data-stat="kills" class="stat-container stat-kills">
@@ -230,6 +230,52 @@
                                     <option value="13">
                                         13th
                                     </option>
+                                    <option value="14">
+                                      14th
+                                    </option>
+                                    <option value="15">
+                                      15th
+                                    </option>
+                                    <option value="16">
+                                      16th
+                                    </option>
+                                    <option value="17">
+                                      17th
+                                    </option>
+                                    <option value="18">
+                                      18th
+                                    </option>
+                                    <option value="19">
+                                      19th
+                                    </option>
+                                    <option value="20">
+                                      20th
+                                    </option>
+                                    <option value="21">
+                                      21th
+                                    </option>
+                                    <option value="22">
+                                      22th
+                                    </option>
+                                    <option value="23">
+                                      23th
+                                    </option>
+                                    <option value="24">
+                                      24th
+                                    </option>
+                                    <option value="25">
+                                      25th
+                                    </option>
+                                    <option value="26">
+                                      26th
+                                    </option>
+                                    <option value="27">
+                                      27th
+                                    </option>
+                                    <option value="28">
+                                      28th
+                                    </option>
+                                    
                   </select>
                 </div>
                 
@@ -363,55 +409,56 @@
                                     <div class="narrow-info-header">Loots</div>
                                     <div class="narrow-info-content">
                                         
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="prot">Protector Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">655</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="prot">Protector Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totprotectorpiece"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="old">Old Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">611</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="old">Old Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totoldpiece"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="wize">Wize Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">156</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="wize">Wize Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totwizepiece"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="young">Young Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">56</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="young">Young Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totyoungpiece"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="unstable">Unstable Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">44</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="unstable">Unstable Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totunstablepiece"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="strong">Strong Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">42</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="strong">Strong Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totstrongpiece"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Superior Piece</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">41</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Superior Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totsuppiece"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Aotd</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">39</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Aotd's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totaotd"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Epic Pet</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">37</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Epic Pets</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totepicpet"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Legendary Pet</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">34</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Legendary Pets</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totlegpet"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="bleu">Dragon Scale</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">34</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="bleu">Dragon Scale's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totscale"></span></div></div>
 
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Dragon Calw</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">34</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Dragon Calw's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totclaw"></span></div></div>
 
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Dragon Horn</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">34</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Dragon Horn's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="tothorn"></span></div></div>
                                                 
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Scrolls</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totscroll"></span></div></div>
 
                                         
                                             <div class="kill-stat show-all enabled" data-type="kills">show all</div>
                                         
                                     </div>
-                                </div>
+                                 </div>
                                 <div class="narrow-info-container top-deaths">
                                     <div class="narrow-info-header">Dragons</div>
                                     <div class="narrow-info-content">
                                         
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="prot">Protector Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">3</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="prot">Protector Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="protectort"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="old">Old Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">2</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="old">Old Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="oldt"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="wize">Wize Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">1</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="wize">Wize Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="wizet"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="young">Young Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">1</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="young">Young Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="youngt"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="unstable">Unstable Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">1</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="unstable">Unstable Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="unstablet"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="strong">Strong Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">1</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="strong">Strong Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="strongt"></span></div></div>
                                             
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Superior Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount">1</div></div>
+                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Superior Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="superiort"></span></div></div>
 
                                                 <div class="kill-stat"><div class="kill-rank"></div></div>
                                             
@@ -427,6 +474,35 @@
                                         
                                     </div>
                                 </div>
+
+
+                                <div class="narrow-info-container top-deaths">
+                                  <div class="narrow-info-header">PIECES</div>
+                                  <div class="narrow-info-content">
+                                      
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Helmets</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="helmetstats"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Chestplates</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="chestplatestats"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Leggings</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="leggingstats"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Boots</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="bootstats"></span></div></div>
+
+                                              <div class="kill-stat"><div class="kill-rank"></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank"></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank"></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank"></div></div>
+                                          
+                                      
+                                          <div class="kill-stat show-all " data-type="deaths">show all</div>
+
+                                      
+                                  </div>
+                              </div>
+
                             </div>
                         </div>
                     </div>
@@ -456,10 +532,21 @@
 
             </div>
 
+            
 
         </div>
 
-
+        
+          <audio id="audioPlayer">
+            <source src="dragon.wav">
+        </audio>
+        
+        <body onload="document.getElementById('audioPlayer2').volume='0.2';">
+        <audio id="audioPlayer2" loop="true">
+          <source src="minecraft-music-boss.mp3">
+      </audio>
+ 
+      </body>
 
                  <script>
               
@@ -470,6 +557,7 @@
                  document.getElementById("cost").innerHTML=all;
                  document.getElementById("mf").innerHTML=all;
                  document.getElementById("eyelast").innerHTML=all;
+                
 
 
 
@@ -498,6 +586,11 @@
 
 
                      anciennbeye = document.getElementById("chanceITN").value;
+
+                     if (anciennbeye == 0) {
+                      toteye = anciennbeye -(-0) + 1*ancientot;
+                      ancientot = toteye
+                     }
 
                      if (anciennbeye == 1) {
                       toteye = anciennbeye -(-0) + 1*ancientot;
@@ -556,6 +649,9 @@ function weigth(){
 
   summoningeyes = document.getElementById("chanceITN").value;
 
+  if (summoningeyes == 0) {
+    weigthnb = 0
+  }
   if (summoningeyes == 1) {
     weigthnb = 100
   }
@@ -621,10 +717,45 @@ function weigth(){
   if (placef == 15) {
     weigthnb=+ 100 -(-0) + 1*weigthnb
   }
-  if (placef > 15) {
+  if (placef == 16) {
     weigthnb=+ 75 -(-0) + 1*weigthnb
   }
-
+  if (placef == 17) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 18) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 19) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 20) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 21) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 22) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 23) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 24) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 25) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 26) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 27) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
+  if (placef == 28) {
+    weigthnb=+ 75 -(-0) + 1*weigthnb
+  }
 
 
   document.getElementById("weigth").innerHTML=weigthnb;
@@ -754,7 +885,7 @@ function looter() {
     var eyelast = document.getElementById("chanceITN").value;
 
     if (dragon == "SUPERIOR" && alreadyloot == "no" && weigthnb > 449) {
-     //CLAW
+     //HORN
      var eyemoment = eyelast
     if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
         var eyemoment = 4
@@ -766,6 +897,7 @@ function looter() {
     if (a < b) {
      var LOOT = 7;
      var alreadyloot = "yes"
+     horn()
    }
    }
 
@@ -784,6 +916,7 @@ function looter() {
     if (a < b) {
      var LOOT = 8;
      var alreadyloot = "yes"
+     claw()
    }
    }
    
@@ -802,6 +935,7 @@ function looter() {
     if (a < b) {
      var LOOT = 9;
      var alreadyloot = "yes"
+     scale()
    }
    }
    
@@ -825,6 +959,7 @@ function looter() {
     if (a < b) {
      var LOOT = 10;
      var alreadyloot = "yes"
+     scroll()
    }
    }
 
@@ -843,9 +978,11 @@ function looter() {
      if (Math.random() < 0.2) {
        var LOOT = 6;
        var alreadyloot = "yes"
+       legpet()
       } else {
         var LOOT = 5;
         var alreadyloot = "yes"
+        epicpet()
      } 
     }
    }
@@ -863,6 +1000,7 @@ function looter() {
     if (a < b) {
      var LOOT = 0;
      var alreadyloot = "yes"
+     aotd()
    }
    }
 
@@ -928,6 +1066,7 @@ function looter() {
   if (a < b) {
             var LOOT = 1;
             var alreadyloot = "yes"
+            chestplatef()
 		
 					}
    }
@@ -1001,6 +1140,7 @@ function looter() {
   if (a < b) {
             var LOOT = 2;
             var alreadyloot = "yes"
+            leggingsf()
 		
 					}
    }
@@ -1078,6 +1218,7 @@ function looter() {
   if (a < b) {
             var LOOT = 3;
             var alreadyloot = "yes"
+            helmetf()
 		
 					}
    }
@@ -1159,6 +1300,7 @@ function looter() {
   if (a < b) {
             var LOOT = 4;
             var alreadyloot = "yes"
+            bootsf()
 		
 					}
    }
@@ -1223,6 +1365,47 @@ console.log(FRAGFINAL + " Frags")
 console.log(dragon)
 
 
+if (dragon == "PROTECTOR") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
+  protectorpiece()
+}
+}
+
+if (dragon == "SUPERIOR") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
+  suppiece()
+}
+}
+
+if (dragon == "STRONG") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
+  strongpiece()
+}
+}
+
+if (dragon == "UNSTABLE") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
+  unstablepiece()
+}
+}
+
+if (dragon == "YOUNG") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
+  youngpiece()
+}
+}
+
+if (dragon == "WIZE") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
+  wizepiece()
+}
+}
+
+if (dragon == "OLD") {
+  if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT ==  4) {
+  oldpiece()
+}
+}
 
 
 
@@ -1230,6 +1413,365 @@ console.log(dragon)
 
 
 
+
+
+
+if (dragon == "PROTECTOR") {
+  protector()
+}
+
+
+if (dragon == "SUPERIOR") {
+
+  sup()
+}
+
+
+if (dragon == "STRONG") {
+
+  strong()
+}
+
+
+if (dragon == "UNSTABLE") {
+
+  unstable()
+}
+
+
+if (dragon == "YOUNG") {
+ 
+  young()
+}
+
+
+if (dragon == "WIZE") {
+
+  wize()
+}
+
+
+if (dragon == "OLD") {
+
+  old()
+}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+totaotd = 0
+document.getElementById("totaotd").innerHTML=all;
+
+totclaw = 0
+document.getElementById("totclaw").innerHTML=all;
+
+tothorn = 0
+document.getElementById("tothorn").innerHTML=all;
+
+totscale = 0
+document.getElementById("totscale").innerHTML=all;
+
+totscroll = 0
+document.getElementById("totscroll").innerHTML=all;
+
+totlegpet= 0
+document.getElementById("totlegpet").innerHTML=all;
+
+totepicpet = 0
+document.getElementById("totepicpet").innerHTML=all;
+
+totsuppiece = 0
+document.getElementById("totsuppiece").innerHTML=all;
+
+totstrongpiece = 0
+document.getElementById("totstrongpiece").innerHTML=all;
+
+totunstablepiece = 0
+document.getElementById("totunstablepiece").innerHTML=all;
+
+totyoungpiece = 0
+document.getElementById("totyoungpiece").innerHTML=all;
+
+totwizepiece = 0
+document.getElementById("totwizepiece").innerHTML=all;
+
+totoldpiece = 0
+document.getElementById("totoldpiece").innerHTML=all;
+
+totprotectorpiece = 0
+document.getElementById("totprotectorpiece").innerHTML=all;
+
+
+function claw() {
+
+  totclaw= 1+ totclaw;
+
+document.getElementById("totclaw").innerHTML= totclaw;
+}
+
+
+
+
+function horn() {
+
+tothorn+= 1;
+
+document.getElementById("tothorn").innerHTML= tothorn;
+}
+
+
+
+
+function scale() {
+
+totscale+= 1;
+
+document.getElementById("totscale").innerHTML= totscale;
+}
+
+
+
+
+function legpet() {
+
+totlegpet+= 1;
+
+document.getElementById("totlegpet").innerHTML= totlegpet;
+}
+
+
+
+
+function epicpet() {
+
+totepicpet+= 1;
+
+document.getElementById("totepicpet").innerHTML= totepicpet;
+}
+
+
+
+
+
+
+function aotd() {
+
+totaotd= 1+ totaotd;
+
+document.getElementById("totaotd").innerHTML= totaotd;
+}
+
+
+
+
+function suppiece() {
+
+totsuppiece+= 1;
+
+document.getElementById("totsuppiece").innerHTML= totsuppiece;
+}
+
+
+
+
+function strongpiece() {
+
+totstrongpiece+= 1;
+
+document.getElementById("totstrongpiece").innerHTML= totstrongpiece;
+}
+
+
+
+
+function unstablepiece() {
+
+totunstablepiece+= 1;
+
+document.getElementById("totunstablepiece").innerHTML= totunstablepiece;
+}
+
+
+
+
+function youngpiece() {
+
+totyoungpiece+= 1;
+
+document.getElementById("totyoungpiece").innerHTML= totyoungpiece;
+}
+
+
+
+
+function wizepiece() {
+
+totwizepiece+= 1;
+
+document.getElementById("totwizepiece").innerHTML= totwizepiece;
+}
+
+
+
+
+
+function oldpiece() {
+
+totoldpiece+= 1;
+
+document.getElementById("totoldpiece").innerHTML= totoldpiece;
+}
+
+
+
+function protectorpiece() {
+
+totprotectorpiece+= 1;
+
+document.getElementById("totprotectorpiece").innerHTML= totprotectorpiece;
+}
+
+
+function scroll() {
+
+totscroll+= 1;
+
+document.getElementById("totscroll").innerHTML= totscroll;
+}
+
+
+
+
+
+totsup = 0
+document.getElementById("superiort").innerHTML=all;
+
+totstrong = 0
+document.getElementById("strongt").innerHTML=all;
+
+totunstable = 0
+document.getElementById("unstablet").innerHTML=all;
+
+totyoung = 0
+document.getElementById("youngt").innerHTML=all;
+
+totwize = 0
+document.getElementById("wizet").innerHTML=all;
+
+totold = 0
+document.getElementById("oldt").innerHTML=all;
+
+totprotector = 0
+document.getElementById("protectort").innerHTML=all;
+
+
+
+
+
+
+
+
+function sup() {
+
+  totsup+= 1;
+
+document.getElementById("superiort").innerHTML= totsup;
+}
+
+function strong() {
+
+totstrong+= 1;
+
+document.getElementById("strongt").innerHTML= totstrong;
+}
+
+function unstable() {
+
+totunstable+= 1;
+
+document.getElementById("unstablet").innerHTML= totunstable;
+}
+
+function young() {
+
+totyoung+= 1;
+
+document.getElementById("youngt").innerHTML= totyoung;
+}
+
+function wize() {
+
+totwize+= 1;
+
+document.getElementById("wizet").innerHTML= totwize;
+}
+
+function old() {
+
+totold+= 1;
+
+document.getElementById("oldt").innerHTML= totold;
+}
+
+function protector() {
+
+totprotector+= 1;
+
+document.getElementById("protectort").innerHTML= totprotector;
+}
+
+
+
+helmetvar = 0
+document.getElementById("helmetstats").innerHTML=all;
+
+chestplatevar = 0
+document.getElementById("chestplatestats").innerHTML=all;
+
+bootsvar = 0
+document.getElementById("bootstats").innerHTML=all;
+
+leggingsvar = 0
+document.getElementById("leggingstats").innerHTML=all;
+
+
+
+function helmetf() {
+
+helmetvar+= 1;
+
+document.getElementById("helmetstats").innerHTML= helmetvar;
+}
+
+function chestplatef() {
+
+chestplatevar+= 1;
+
+document.getElementById("chestplatestats").innerHTML= chestplatevar;
+}
+
+function leggingsf() {
+
+leggingsvar+= 1;
+
+document.getElementById("leggingstats").innerHTML= leggingsvar;
+}
+
+function bootsf() {
+
+bootsvar+= 1;
+
+document.getElementById("bootstats").innerHTML= bootsvar;
 }
 
 
@@ -1250,30 +1792,8 @@ console.log(dragon)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var player2 = document.querySelector('#audioPlayer2');
+player2.play();
 
 
 
@@ -1285,6 +1805,8 @@ console.log(dragon)
 function drag() {
 
 
+var player = document.querySelector('#audioPlayer');
+player.play();
 
 var eyelast = document.getElementById("chanceITN").value;
 document.getElementById("eyelast").innerHTML=eyelast;
