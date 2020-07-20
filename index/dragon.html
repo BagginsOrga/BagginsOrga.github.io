@@ -33,12 +33,12 @@
         
     </header>
 
-    <div id="wrapper" data-sticky-container="">
+    <div id="wrapper" data-sticky-container="" onclick="suprstats()" >
             
-        <div id="player_profile"><span class="text-stats-for">Dragon simulator</span>
+        <div id="player_profile"><span class="text-stats-for">Dragon simulator</span></div>
             
             
-        </div><div id="basic_stats">
+        <div id="basic_stats">
             
 
 
@@ -380,113 +380,81 @@
             
 
 
-        <div id="basic_stats_def">
+            <div id="basic_stats_def">
 
 
-                <div id="base_stats_container" >
-                
-                    <br/>
-                    <br/>
-                   
-                    <img src="supdargon.png" id="dragsup">
+              <div id="base_stats_container" >
+              
+                 
+                 
+                  <img src="9ce934d59ae58d5216f218ccdf064770.png" id="dragbasestats">
 
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    
+                  
+                  
 
-                    <div data-stat="kills" class="stat-container stat-kills">
-                        <div class="stat-anchor"></div>
-                        <div class="stat-header"><span>Dragons History</span></div>
-                        <div class="stat-content">
-                            <p class="stat-raw-values">
-                                <span class="stat-name">Total Dragons: </span><span class="stat-value">2,080</span><br>
-                                <span class="stat-name">Total Loots: </span><span class="stat-value">9</span>
-                            </p>
-                            <div class="kills-deaths-container">
-                                <div class="narrow-info-container top-kills">
-                                    <div class="narrow-info-header">Loots</div>
-                                    <div class="narrow-info-content">
-                                        
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="prot">Protector Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totprotectorpiece"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="old">Old Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totoldpiece"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="wize">Wize Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totwizepiece"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="young">Young Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totyoungpiece"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="unstable">Unstable Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totunstablepiece"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="strong">Strong Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totstrongpiece"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Superior Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totsuppiece"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Aotd's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totaotd"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Epic Pets</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totepicpet"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Legendary Pets</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totlegpet"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="bleu">Dragon Scale's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totscale"></span></div></div>
-
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Dragon Calw's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totclaw"></span></div></div>
-
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Dragon Horn's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="tothorn"></span></div></div>
-                                                
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Scrolls</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totscroll"></span></div></div>
-
-                                        
-                                            <div class="kill-stat show-all enabled" data-type="kills">show all</div>
-                                        
-                                    </div>
-                                 </div>
-                                <div class="narrow-info-container top-deaths">
-                                    <div class="narrow-info-header">Dragons</div>
-                                    <div class="narrow-info-content">
-                                        
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="prot">Protector Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="protectort"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="old">Old Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="oldt"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="wize">Wize Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="wizet"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="young">Young Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="youngt"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="unstable">Unstable Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="unstablet"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="strong">Strong Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="strongt"></span></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Superior Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="superiort"></span></div></div>
-
-                                                <div class="kill-stat"><div class="kill-rank"></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank"></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank"></div></div>
-                                            
-                                                <div class="kill-stat"><div class="kill-rank"></div></div>
-                                            
-                                        
-                                            <div class="kill-stat show-all " data-type="deaths">show all</div>
-
-                                        
-                                    </div>
-                                </div>
-
-
-                                <div class="narrow-info-container top-deaths">
-                                  <div class="narrow-info-header">PIECES</div>
+                  <div data-stat="kills" class="stat-container stat-kills">
+                      <div class="stat-anchor"></div>
+                      <div class="stat-header"><span>Dragons History</span></div>
+                      <div class="stat-content">
+                          <p class="stat-raw-values">
+                              <span class="stat-name">Total Dragons: </span><span class="stat-value">2,080</span><br>
+                              <span class="stat-name">Total Loots: </span><span class="stat-value">9</span>
+                          </p>
+                          <div class="kills-deaths-container">
+                              <div class="narrow-info-container top-kills">
+                                  <div class="narrow-info-header">Loots</div>
                                   <div class="narrow-info-content">
                                       
-                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Helmets</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="helmetstats"></span></div></div>
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="prot">Protector Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totprotectorpiece"></span></div></div>
                                           
-                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Chestplates</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="chestplatestats"></span></div></div>
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="old">Old Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totoldpiece"></span></div></div>
                                           
-                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Leggings</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="leggingstats"></span></div></div>
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="wize">Wize Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totwizepiece"></span></div></div>
                                           
-                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Boots</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="bootstats"></span></div></div>
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="young">Young Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totyoungpiece"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="unstable">Unstable Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totunstablepiece"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="strong">Strong Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totstrongpiece"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Superior Pieces</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totsuppiece"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Aotd's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totaotd"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Epic Pets</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totepicpet"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Legendary Pets</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totlegpet"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="bleu">Dragon Scale's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totscale"></span></div></div>
+
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Dragon Calw's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totclaw"></span></div></div>
+
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Dragon Horn's</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="tothorn"></span></div></div>
+                                              
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="epic">Scrolls</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="totscroll"></span></div></div>
+
+                                      
+                                          <div class="kill-stat show-all enabled" data-type="kills">show all</div>
+                                      
+                                  </div>
+                               </div>
+                              <div class="narrow-info-container top-deaths">
+                                  <div class="narrow-info-header">Dragons</div>
+                                  <div class="narrow-info-content">
+                                      
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="prot">Protector Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="protectort"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="old">Old Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="oldt"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="wize">Wize Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="wizet"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="young">Young Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="youngt"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="unstable">Unstable Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="unstablet"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="strong">Strong Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="strongt"></span></div></div>
+                                          
+                                              <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Superior Dragon</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="superiort"></span></div></div>
 
                                               <div class="kill-stat"><div class="kill-rank"></div></div>
                                           
@@ -503,38 +471,203 @@
                                   </div>
                               </div>
 
+
+                              <div class="narrow-info-container top-deaths">
+                                <div class="narrow-info-header">PIECES</div>
+                                <div class="narrow-info-content">
+                                    
+                                            <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Helmets</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="helmetstats"></span></div></div>
+                                        
+                                            <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Chestplates</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="chestplatestats"></span></div></div>
+                                        
+                                            <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Leggings</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="leggingstats"></span></div></div>
+                                        
+                                            <div class="kill-stat"><div class="kill-rank">>&nbsp;</div><div id="sup">Boots</div><div class="stat-separator">:&nbsp;</div><div class="kill-amount"><span class="kill-amount" id="bootstats"></span></div></div>
+
+                                            <div class="kill-stat"><div class="kill-rank"></div></div>
+                                        
+                                            <div class="kill-stat"><div class="kill-rank"></div></div>
+                                        
+                                            <div class="kill-stat"><div class="kill-rank"></div></div>
+                                        
+                                            <div class="kill-stat"><div class="kill-rank"></div></div>
+                                        
+                                    
+                                        <div class="kill-stat show-all " data-type="deaths">show all</div>
+
+                                    
+                                </div>
                             </div>
-                        </div>
-                    </div>
+
+                          </div>
+                      </div>
+                  </div>
 
 
 
 
+          
+                  <br/>
+                  <br/>
+                  
+
+
+
+
+                  
+
+
+              </div>
+
+
+
+
+
+
+
+
+          </div>
+
+          <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+               
+
+          <div id="basic_stats_str">
+
+
+            <div id="base_stats_container" >
             
-                    <br/>
-                    <br/>
-                    
+                
+               
+                <img src="9ce934d59ae58d5216f218ccdf064770.png" id="dragbase">
+                <img src="supdargon.png" id="dragsup">
+                <img src="strongdargon.png" id="dragstrong">
+                <img src="youngdargon.png" id="dragyoung">
+                <img src="unstabledargon.png" id="dragunstable">
+                <img src="wizedargon.png" id="dragwize">
+                <img src="protectordargon.png" id="dragprot">
+                <img src="olddargon.png" id="dragold">
+
+                
+                
+
+                <div data-stat="kills" class="stat-container stat-kills" id="containerid">
+                    <div class="stat-anchor"></div>
+                    <div class="stat-header"><span>Last Summon</span></div>
+                    <div class="stat-content">
+                        <p class="stat-raw-values">
+                            <span class="stat-name">Total Dragons: </span><span class="stat-value">2,080</span><br>
+                            <span class="stat-name">Total Loots: </span><span class="stat-value">9</span>
+                        </p>
+                        <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
 
 
 
 
-                    
 
+                  <div tabindex="3" data-item-id="c37f6848-161a-4450-96ce-78d7c3c5333a" data-item-index="311" class="rich-item wardrobe-piece piece piece-legendary-bg" onclick="gbstastscontent()" onmouseover="mouseoverloot()" onmouseout="onmouseleft()">
+                                    
+                    <div class="piece-shine"></div>
+                
+                <div class="piece-hover-area"></div>
+                
+<div style="background-image: url(https://sky.lea.moe/head/524c4da6ab27e9c93fbf49ea1b1fefaefbe2d4c0c8b222e2ff6b18179fb5addf?v6)" class="piece-icon item-icon  custom-icon icon-397_3">
+</div>
 
+            </div>
+                  <div id="stats_content" data-item-index="311" class="sticky-stats" style="left: 150px; top: 191px;" data-backpack-item-index="13">
+                    <div class="item-name piece-legendary-bg">
+                        <div style="background-image: url(https://sky.lea.moe/head/524c4da6ab27e9c93fbf49ea1b1fefaefbe2d4c0c8b222e2ff6b18179fb5addf?v6);" class="stats-piece-icon item-icon custom-icon"></div><span>Old Dragon Helmet</span><div class="close-lore"></div></div>
+                        <div class="item-lore"><span style="color: #AAAAAA">Health: </span><span style="color: #55FF55">+90 HP</span><br><span style="color: #AAAAAA">Defense: </span><span style="color: #55FF55">+110</span><br><br><span style="color: #FFAA00">Full Set Bonus: Old Blood</span><br><span style="color: #AAAAAA">Increases the strength of</span><br><span style="color: #AAAAAA"></span><span style="color: #8888FF">Growth</span><span style="color: #AAAAAA">, </span><span style="color: #8888FF">Protection</span><span style="color: #AAAAAA">,</span><br><span style="color: #AAAAAA"></span><span style="color: #8888FF">Feather Falling</span><span style="color: #AAAAAA">, </span><span style="color: #8888FF">Sugar</span><br><span style="color: #8888FF">Rush</span><span style="color: #AAAAAA">, and </span><span style="color: #8888FF">True Protection</span><span style="color: #AAAAAA"></span><br><span style="color: #AAAAAA">while worn.</span><br><br><span style="color: #AAAAAA"></span><span style="color: #CC3333">❣ </span><span style="color: #FF5555">Requires </span><span style="color: #55FF55">Combat Skill 16</span><br><span style="color: #AAAAAA"></span><span style="color: #CC3333">❣ </span><span style="color: #FF5555">Requires </span><span style="color: #55FF55">Catacombs Level 28</span><br><span style="color: #55FF55"></span><span style="color: #FF5555">while in Catacombs</span><br><span style="color: #FFAA00"><span style="font-weight: bold">LEGENDARY HELMET</span></span><br><br><span style="color: #AAAAAA">Obtained: </span><span style="color: #FF5555">Today</span></div>
+                    <div class="backpack-contents"></div>
                 </div>
 
 
 
 
 
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+
+                  
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+
+
+                        </div>
+                    </div>
+                </div>
 
 
 
+
+        
+                <br/>
+                <br/>
+                
+
+
+
+
+              
             </div>
+
 
             
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
+
+        
 
         
           <audio id="audioPlayer">
@@ -550,6 +683,23 @@
 
                  <script>
               
+     
+     var cacherdragsup = document.getElementById("dragsup");
+     var cacherdragprot = document.getElementById("dragprot");
+     var cacherdragwize = document.getElementById("dragwize");
+     var cacherdragunstable = document.getElementById("dragunstable");
+     var cacherdragold = document.getElementById("dragold");
+     var cacherdragyoung = document.getElementById("dragyoung");
+     var cacherdragstrong = document.getElementById("dragstrong");
+
+
+     cacherdragsup.style.display = "none";
+     cacherdragprot.style.display = "none";
+     cacherdragwize.style.display = "none";
+     cacherdragunstable.style.display = "none";
+     cacherdragold.style.display = "none";
+     cacherdragyoung.style.display = "none";
+     cacherdragstrong.style.display = "none";
               
                  var all = 0;
 
@@ -1774,14 +1924,41 @@ bootsvar+= 1;
 document.getElementById("bootstats").innerHTML= bootsvar;
 }
 
+function onmouseleft() {
+  var cacherstats = document.getElementById("stats_content");
+  cacherstats.style.display = "none";
+  var mouseover = "yes"
+}
+
+function mouseoverloot() {
+
+  var cacherstats = document.getElementById("stats_content");
+  cacherstats.style.display = "block";
+  var mouseover = "no"
+
+}
+
+function gbstastscontent() {
+
+  var cacherstats = document.getElementById("stats_content");
+
+  if (cacherstats.style.display === "none") {
+
+cacherstats.style.display = "block";
+}
+
+if (cacherstats.style.display === "block" && mouseover === "no") {
+cacherstats.style.display = "none";
+
+}
+
+}
 
 
+function suprstats() {
 
 
-
-
-
-
+}
 
 
 

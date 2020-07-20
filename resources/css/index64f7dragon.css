@@ -708,6 +708,54 @@ html.no-webp #bg_blur{
     margin-top: 50px;
 }
 
+#dragprot{
+
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#dragold{
+
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#dragyoung{
+
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#dragwize{
+
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#dragunstable{
+
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#dragstrong{
+
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#dragbase{
+
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#dragbasestats{
+
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
 #base_stats_container{
     width: 2600px;
 }
@@ -981,7 +1029,7 @@ html.no-transform #info_box.opened{
 }
 
 #stats_content{
-    position: fixed;
+    position: absolute;
     right: calc(70vw + 20px);
     background-color: rgba(15,15,15,0.9);
     text-align: center;
