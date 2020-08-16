@@ -59,7 +59,7 @@
                             <div class="narrow-info-header">Precedent Summon</div>
                             <div class="narrow-info-content">
                                 
-                                        <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="unstable">Cost</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="cost"></span></div>
+                                        <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="unstable">Cost</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="cost1"></span></div>
                                     
                                         <div class="kill-stat"><div class="kill-rank">&gt;&nbsp;</div><div id="unstable">Eyes Placed</div><div class="stat-separator">:&nbsp;</div><span class="stat-value" id="eyelast"></span></div>
                                     
@@ -685,6 +685,13 @@
       </body>
 
                  <script>
+
+
+
+  //setInterval(compter, 10)
+  //setInterval(drag, 10)
+
+
               
      // Set var to 0 to avoid the problem with [SPAN Objet Class]
      var cacherdragsup = document.getElementById("dragsup");
@@ -710,7 +717,7 @@
                  var all = 0;
 
                  document.getElementById("place").innerHTML= all;
-                 document.getElementById("cost").innerHTML=all;
+                 document.getElementById("cost1").innerHTML=all;
                  document.getElementById("mf").innerHTML=all + "%";
                  document.getElementById("eyelast").innerHTML=all;
                 
@@ -733,10 +740,218 @@
 
 
 
+                 
 
 
                  toteye = 0;
                  ancientot = 0;
+
+
+
+
+                 dragonfraglol = {
+    "SUPERIOR": {
+      fragpricetot: 0
+    },
+
+    "STRONG": {
+      fragpricetot: 0
+      },
+
+      "UNSTABLE": {
+        fragpricetot: 0
+      },
+
+      "WIZE": {
+        fragpricetot: 0
+      },
+
+      "YOUNG": {
+        fragpricetot: 0
+      },
+
+      "PROTECTOR": {
+        fragpricetot: 0
+      },
+
+      "OLD": {
+        fragpricetot: 0
+      },
+
+      "FRAG": {
+        
+      },
+}
+
+
+
+
+
+
+                 dragonfraglol["OLD"].fragtot = 0;
+dragonfraglol["WIZE"].fragtot = 0;
+dragonfraglol["YOUNG"].fragtot = 0;
+dragonfraglol["UNSTABLE"].fragtot = 0;
+dragonfraglol["STRONG"].fragtot = 0;
+dragonfraglol["SUPERIOR"].fragtot = 0;
+dragonfraglol["PROTECTOR"].fragtot = 0;
+
+
+
+
+dragonlootlol = {
+    "SUPERIOR": {
+      helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+
+
+    },
+
+    "STRONG": {
+      helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+      },
+
+      "UNSTABLE": {
+        helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+      },
+
+      "WIZE": {
+        helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+      },
+
+      "YOUNG": {
+        helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+      },
+
+      "PROTECTOR": {
+        helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+      },
+
+      "OLD": {
+        helmet: 0,
+      chestplate: 0,
+      leggings: 0,
+      boots: 0,
+      helmetprice: 0,
+      chestplateprice: 0,
+      leggingsprice: 0,
+      bootsprice: 0,
+      helmettotprice: 0,
+      chestplatetotprice: 0,
+      leggingstotprice: 0,
+      bootstotprice: 0,
+      },
+
+      "CLAW": {
+      tot: 0,
+      totprice: 0,
+      clawprice: 0,
+
+      },
+
+      "SCALE": {
+        tot: 0,
+      totprice: 0,
+      scaleprice: 0,
+      },
+
+      "HORN": {
+        tot: 0,
+      totprice: 0,
+      hornprice: 0,
+      },
+
+      "PETLEG": {
+        tot: 0,
+      totprice: 0,
+      petlegprice: 0,
+      },
+
+      "PETEPIC": {
+        tot: 0,
+      totprice: 0,
+      petepicprice: 0, 
+      },
+
+      "AOTD": {
+        tot: 0,
+      totprice: 0,
+      aotdprice: 0,
+      },
+
+    }
+
+
+  
+
+
+
+
 
                  function totsumm(){
 
@@ -924,7 +1139,9 @@ anciennbeye2 = 0;
 function totcostu(){
 
 
+
 anciennbeye2 = document.getElementById("chanceITN").value;
+console.log(anciennbeye2)
 
 if (anciennbeye2 == 0) {
  toteye2 = anciennbeye2 -(-0) + 1*ancientot2;
@@ -969,18 +1186,27 @@ if (anciennbeye2 == 7) {
 if (anciennbeye2 == 8) {
  totey2e = anciennbeye2 -(-0) + 1*ancientot2;
  ancientot2 = toteye2
+ 
 }
 
-costofone= document.getElementById("cdITN").value;
+
+fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+  var costofone= bazaar.products.SUMMONING_EYE.quick_status.buyPrice
+    costofone = parseFloat(costofone)
+
+
+
 
 
 costautotal = toteye2*costofone
 
- document.getElementById("totalcost").innerHTML=costautotal;
- costautotal= document.getElementById("totalcost").value;
- console.log(anciennbeye2)
+ document.getElementById("totalcost").innerHTML=costautotal
 
- 
+
+})
+
 }
 
 function placest(){
@@ -997,26 +1223,26 @@ function looter() {
   var dragon = Math.floor(Math.random() * 100) + 1
   var alreadyloot = "no"
 
-  if (dragon < 17) {
-    dragon = "PROTECTOR"
+  if (dragon <= 4 ) {
+    dragon = "SUPERIOR"
   }
-  if (dragon < 33 &&dragon > 16) {
-    dragon = "OLD"
-  }
-  if (dragon < 49 &&dragon > 32) {
-    dragon = "WIZE"
-  }
-  if (dragon < 65 &&dragon > 48) {
-    dragon = "YOUNG"
-  }
-  if (dragon < 81 &&dragon > 64) {
-    dragon = "UNSTABLE"
-  }
-  if (dragon < 97 &&dragon > 80) {
+  if (dragon <= 20 &&dragon > 4) {
     dragon = "STRONG"
   }
-  if (dragon < 101 &&dragon > 96) {
-    dragon = "SUPERIOR"
+  if (dragon <= 36 &&dragon > 20) {
+    dragon = "UNSTABLE"
+  }
+  if (dragon <= 52 &&dragon > 36) {
+    dragon = "WIZE"
+  }
+  if (dragon <= 68 &&dragon > 52) {
+    dragon = "OLD"
+  }
+  if (dragon <= 84 &&dragon > 68) {
+    dragon = "YOUNG"
+  }
+  if (dragon <= 100 &&dragon > 84) {
+    dragon = "PROTECTOR"
   }
   
   var dragcalcul = dragon
@@ -1134,7 +1360,7 @@ function looter() {
         var eyemoment = 4
       }
     var a = Math.random();
-    var b = 0.005 * eyemoment;
+    var b = 0.001 * eyemoment;
     if (a < b) {
      if (Math.random() < 0.2) {
        var LOOT = 6;
@@ -1526,46 +1752,786 @@ console.log(FRAGFINAL + " Frags")
 console.log(dragon)
 
 
+
+if (dragon == "PROTECTOR") {
+  dragonfraglol["PROTECTOR"].fraglast = FRAGFINAL 
+  dragonfraglol["PROTECTOR"].fragtot = FRAGFINAL + dragonfraglol["PROTECTOR"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["PROTECTOR"].fragpricelast = parseFloat(bazaar.products.PROTECTOR_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["PROTECTOR"].fraglast)
+    dragonfraglol["PROTECTOR"].fragpricetot = parseFloat(bazaar.products.PROTECTOR_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["PROTECTOR"].fragtot)
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+}
+
+if (dragon == "SUPERIOR") {
+  dragonfraglol["SUPERIOR"].fraglast = FRAGFINAL
+  dragonfraglol["SUPERIOR"].fragtot = FRAGFINAL + dragonfraglol["SUPERIOR"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["SUPERIOR"].fragpricelast = parseFloat(bazaar.products.SUPERIOR_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["SUPERIOR"].fraglast)
+    dragonfraglol["SUPERIOR"].fragpricetot = parseFloat(bazaar.products.SUPERIOR_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["SUPERIOR"].fragtot)
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+}
+
+if (dragon == "STRONG") {
+  dragonfraglol["STRONG"].fraglast = FRAGFINAL
+  dragonfraglol["STRONG"].fragtot = FRAGFINAL + dragonfraglol["STRONG"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["STRONG"].fragpricelast = parseFloat(bazaar.products.STRONG_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["STRONG"].fraglast)
+    dragonfraglol["STRONG"].fragpricetot = parseFloat(bazaar.products.STRONG_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["STRONG"].fragtot)
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+
+}
+
+if (dragon == "UNSTABLE") {
+  dragonfraglol["UNSTABLE"].fraglast = FRAGFINAL
+  dragonfraglol["UNSTABLE"].fragtot = FRAGFINAL + dragonfraglol["UNSTABLE"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["UNSTABLE"].fragpricelast = parseFloat(bazaar.products.UNSTABLE_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["UNSTABLE"].fraglast)
+    dragonfraglol["UNSTABLE"].fragpricetot = parseFloat(bazaar.products.UNSTABLE_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["UNSTABLE"].fragtot)
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+
+}
+
+if (dragon == "YOUNG") {
+  dragonfraglol["YOUNG"].fraglast = FRAGFINAL
+  dragonfraglol["YOUNG"].fragtot = FRAGFINAL + dragonfraglol["YOUNG"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["YOUNG"].fragpricelast = parseFloat(bazaar.products.YOUNG_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["YOUNG"].fraglast)
+    dragonfraglol["YOUNG"].fragpricetot = parseFloat(bazaar.products.YOUNG_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["YOUNG"].fragtot)
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+
+}
+
+if (dragon == "WIZE") {
+  dragonfraglol["WIZE"].fraglast = FRAGFINAL
+  dragonfraglol["WIZE"].fragtot = FRAGFINAL + dragonfraglol["WIZE"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["WIZE"].fragpricelast = parseFloat(bazaar.products.WISE_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["WIZE"].fraglast)
+    dragonfraglol["WIZE"].fragpricetot = parseFloat(bazaar.products.WISE_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["WIZE"].fragtot)
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+
+}
+
+if (dragon == "OLD") {
+  dragonfraglol["OLD"].fraglast = FRAGFINAL
+  dragonfraglol["OLD"].fragtot = FRAGFINAL + dragonfraglol["OLD"].fragtot
+
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    dragonfraglol["OLD"].fragpricelast = parseFloat(bazaar.products.OLD_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["OLD"].fraglast)
+    dragonfraglol["OLD"].fragpricetot = parseFloat(bazaar.products.OLD_FRAGMENT.quick_status.buyPrice) * parseFloat(dragonfraglol["OLD"].fragtot)
+
+    dragonfraglol["FRAG"].totfrag = dragonfraglol["OLD"].fragtot + dragonfraglol["WIZE"].fragtot + dragonfraglol["STRONG"].fragtot + dragonfraglol["SUPERIOR"].fragtot + dragonfraglol["YOUNG"].fragtot + dragonfraglol["PROTECTOR"].fragtot + dragonfraglol["UNSTABLE"].fragtot
+    dragonfraglol["FRAG"].totfragprice = dragonfraglol["PROTECTOR"].fragpricetot + dragonfraglol["SUPERIOR"].fragpricetot + dragonfraglol["STRONG"].fragpricetot + dragonfraglol["OLD"].fragpricetot + dragonfraglol["YOUNG"].fragpricetot + dragonfraglol["WIZE"].fragpricetot + dragonfraglol["UNSTABLE"].fragpricetot
+    
+    dragonfraglol["FRAG"].priceperfragmoy = dragonfraglol["FRAG"].totfragprice/dragonfraglol["FRAG"].totfrag
+})
+
+
+}
+
+
+
+//
+
+
 if (dragon == "PROTECTOR") {
   if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
   protectorpiece()
 }
+
+if (LOOT == 1) {
+  dragonlootlol["PROTECTOR"].chestplate = dragonlootlol["PROTECTOR"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=protector%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["PROTECTOR"].chestplateprice = totcalc/auction.length
+     dragonlootlol["PROTECTOR"].chestplatetotprice = dragonlootlol["PROTECTOR"].chestplateprice * dragonlootlol["PROTECTOR"].chestplate
+  }
+
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["PROTECTOR"].leggings = dragonlootlol["PROTECTOR"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=protector%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["PROTECTOR"].leggingsprice = totcalc/auction.length
+     dragonlootlol["PROTECTOR"].leggingstotprice = dragonlootlol["PROTECTOR"].leggingsprice * dragonlootlol["PROTECTOR"].leggings
+  }
+
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["PROTECTOR"].helmet = dragonlootlol["PROTECTOR"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=protector%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["PROTECTOR"].helmetprice = totcalc/auction.length
+     dragonlootlol["PROTECTOR"].helmettotprice = dragonlootlol["PROTECTOR"].helmetprice * dragonlootlol["PROTECTOR"].helmet
+  }
+
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["PROTECTOR"].boots = dragonlootlol["PROTECTOR"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=protector%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["PROTECTOR"].bootsprice = totcalc/auction.length
+     dragonlootlol["PROTECTOR"].bootstotprice = dragonlootlol["PROTECTOR"].bootsprice * dragonlootlol["PROTECTOR"].boots
+  }
+
+})
+}
+
+
 }
 
 if (dragon == "SUPERIOR") {
   if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
   suppiece()
 }
+
+if (LOOT == 1) {
+  dragonlootlol["SUPERIOR"].chestplate = dragonlootlol["SUPERIOR"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=superior%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["SUPERIOR"].chestplateprice = totcalc/auction.length
+     dragonlootlol["SUPERIOR"].chestplatetotprice = dragonlootlol["SUPERIOR"].chestplateprice * dragonlootlol["SUPERIOR"].chestplate
+  }
+
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["SUPERIOR"].leggings = dragonlootlol["SUPERIOR"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=superior%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["SUPERIOR"].leggingsprice = totcalc/auction.length
+     dragonlootlol["SUPERIOR"].leggingstotprice = dragonlootlol["SUPERIOR"].leggingsprice * dragonlootlol["SUPERIOR"].leggings
+  }
+
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["SUPERIOR"].helmet = dragonlootlol["SUPERIOR"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=superior%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["SUPERIOR"].helmetprice = totcalc/auction.length
+     dragonlootlol["SUPERIOR"].helmettotprice = dragonlootlol["SUPERIOR"].helmetprice * dragonlootlol["SUPERIOR"].helmet
+  }
+
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["SUPERIOR"].boots = dragonlootlol["SUPERIOR"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=superior%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["SUPERIOR"].bootsprice = totcalc/auction.length
+     dragonlootlol["SUPERIOR"].bootstotprice = dragonlootlol["SUPERIOR"].bootsprice * dragonlootlol["SUPERIOR"].boots
+  }
+
+})
+}
+
 }
 
 if (dragon == "STRONG") {
   if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
   strongpiece()
 }
+
+if (LOOT == 1) {
+  dragonlootlol["STRONG"].chestplate = dragonlootlol["STRONG"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=strong%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["STRONG"].chestplateprice = totcalc/auction.length
+     dragonlootlol["STRONG"].chestplatetotprice = dragonlootlol["STRONG"].chestplateprice * dragonlootlol["STRONG"].chestplate
+  }
+
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["STRONG"].leggings = dragonlootlol["STRONG"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=strong%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["STRONG"].leggingsprice = totcalc/auction.length
+     dragonlootlol["STRONG"].leggingstotprice = dragonlootlol["STRONG"].leggingsprice * dragonlootlol["STRONG"].leggings
+  }
+
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["STRONG"].helmet = dragonlootlol["STRONG"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=strong%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["STRONG"].helmetprice = totcalc/auction.length
+     dragonlootlol["STRONG"].helmettotprice = dragonlootlol["STRONG"].helmetprice * dragonlootlol["STRONG"].helmet
+  }
+
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["STRONG"].boots = dragonlootlol["STRONG"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=strong%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["STRONG"].bootsprice = totcalc/auction.length
+     dragonlootlol["STRONG"].bootstotprice = dragonlootlol["STRONG"].bootsprice * dragonlootlol["STRONG"].boots
+  }
+
+})
+}
+
 }
 
 if (dragon == "UNSTABLE") {
   if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
   unstablepiece()
 }
+
+if (LOOT == 1) {
+  dragonlootlol["UNSTABLE"].chestplate = dragonlootlol["UNSTABLE"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=unstable%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["UNSTABLE"].chestplateprice = totcalc/auction.length
+     dragonlootlol["UNSTABLE"].chestplatetotprice = dragonlootlol["UNSTABLE"].chestplateprice * dragonlootlol["UNSTABLE"].chestplate
+  }
+
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["UNSTABLE"].leggings = dragonlootlol["UNSTABLE"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=unstable%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["UNSTABLE"].leggingsprice = totcalc/auction.length
+     dragonlootlol["UNSTABLE"].leggingstotprice = dragonlootlol["UNSTABLE"].leggingsprice * dragonlootlol["UNSTABLE"].leggings
+  }
+
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["UNSTABLE"].helmet = dragonlootlol["UNSTABLE"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=unstable%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["UNSTABLE"].helmetprice = totcalc/auction.length
+     dragonlootlol["UNSTABLE"].helmettotprice = dragonlootlol["UNSTABLE"].helmetprice * dragonlootlol["UNSTABLE"].helmet
+  }
+
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["UNSTABLE"].boots = dragonlootlol["UNSTABLE"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=unstable%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["UNSTABLE"].bootsprice = totcalc/auction.length
+     dragonlootlol["UNSTABLE"].bootstotprice = dragonlootlol["UNSTABLE"].bootsprice * dragonlootlol["UNSTABLE"].boots
+  }
+
+})
+}
+
 }
 
 if (dragon == "YOUNG") {
   if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
   youngpiece()
 }
+
+if (LOOT == 1) {
+  dragonlootlol["YOUNG"].chestplate = dragonlootlol["YOUNG"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=young%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["YOUNG"].chestplateprice = totcalc/auction.length
+     dragonlootlol["YOUNG"].chestplatetotprice = dragonlootlol["YOUNG"].chestplateprice * dragonlootlol["YOUNG"].chestplate
+  }
+
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["YOUNG"].leggings = dragonlootlol["YOUNG"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=young%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["YOUNG"].leggingsprice = totcalc/auction.length
+     dragonlootlol["YOUNG"].leggingstotprice = dragonlootlol["YOUNG"].leggingsprice * dragonlootlol["YOUNG"].leggings
+  }
+
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["YOUNG"].helmet = dragonlootlol["YOUNG"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=young%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["YOUNG"].helmetprice = totcalc/auction.length
+     dragonlootlol["YOUNG"].helmettotprice = dragonlootlol["YOUNG"].helmetprice * dragonlootlol["YOUNG"].helmet
+  }
+
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["YOUNG"].boots = dragonlootlol["YOUNG"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=young%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["YOUNG"].bootsprice = totcalc/auction.length
+     dragonlootlol["YOUNG"].bootstotprice = dragonlootlol["YOUNG"].bootsprice * dragonlootlol["YOUNG"].boots
+  }
+
+})
+}
+
 }
 
 if (dragon == "WIZE") {
   if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT == 4) {
   wizepiece()
 }
+
+if (LOOT == 1) {
+  dragonlootlol["WIZE"].chestplate = dragonlootlol["WIZE"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=wise%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["WIZE"].chestplateprice = totcalc/auction.length
+     dragonlootlol["WIZE"].chestplatetotprice = dragonlootlol["WIZE"].chestplateprice * dragonlootlol["WIZE"].chestplate
+  }
+
+})
+
+
+
 }
+if (LOOT == 2) {
+  dragonlootlol["WIZE"].leggings = dragonlootlol["WIZE"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=wise%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["WIZE"].leggingsprice = totcalc/auction.length
+     dragonlootlol["WIZE"].leggingstotprice = dragonlootlol["WIZE"].leggingsprice * dragonlootlol["WIZE"].leggings
+  }
+
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["WIZE"].helmet = dragonlootlol["WIZE"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=wise%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["WIZE"].helmetprice = totcalc/auction.length
+     dragonlootlol["WIZE"].helmettotprice = dragonlootlol["WIZE"].helmetprice * dragonlootlol["WIZE"].helmet
+  }
+
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["WIZE"].boots = dragonlootlol["WIZE"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=wise%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["WIZE"].bootsprice = totcalc/auction.length
+     dragonlootlol["WIZE"].bootstotprice = dragonlootlol["WIZE"].bootsprice * dragonlootlol["WIZE"].boots
+  }
+
+})
+}
+
+}
+
+
+
+
+
 
 if (dragon == "OLD") {
   if (LOOT == 1 || LOOT == 2 || LOOT == 3 || LOOT ==  4) {
   oldpiece()
 }
+
+if (LOOT == 1) {
+  dragonlootlol["OLD"].chestplate = dragonlootlol["OLD"].chestplate + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=old%20dragon%20chestplate")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["OLD"].chestplateprice = totcalc/auction.length
+     dragonlootlol["OLD"].chestplatetotprice = dragonlootlol["OLD"].chestplateprice * dragonlootlol["OLD"].chestplate
+  }
+
+})
+
+
+
+}
+if (LOOT == 2) {
+  dragonlootlol["OLD"].leggings = dragonlootlol["OLD"].leggings + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=old%20dragon%20leggings")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["OLD"].leggingsprice = totcalc/auction.length
+     dragonlootlol["OLD"].leggingstotprice = dragonlootlol["OLD"].leggingsprice * dragonlootlol["OLD"].leggings
+  }
+
+})
+}
+
+if (LOOT == 3) {
+  dragonlootlol["OLD"].helmet = dragonlootlol["OLD"].helmet + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=old%20dragon%20helmet")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["OLD"].helmetprice = totcalc/auction.length
+     dragonlootlol["OLD"].helmettotprice = dragonlootlol["OLD"].helmetprice * dragonlootlol["OLD"].helmet
+  }
+
+})
+}
+
+if (LOOT == 4) {
+  dragonlootlol["OLD"].boots = dragonlootlol["OLD"].boots + 1
+
+  totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=old%20dragon%20boots")
+.then(result => result.json())
+.then((auction)=> {
+  
+
+
+  for (let i = 0; i < auction.length; i++) {
+    lastcalc = parseFloat(auction[i].highest)
+    totcalc = lastcalc + totcalc
+     dragonlootlol["OLD"].bootsprice = totcalc/auction.length
+     dragonlootlol["OLD"].bootstotprice = dragonlootlol["OLD"].bootsprice * dragonlootlol["OLD"].boots
+  }
+
+})
+}
+
 }
 
 
@@ -1677,6 +2643,25 @@ function claw() {
 
   totclaw= 1+ totclaw;
 
+  dragonlootlol["CLAW"].tot = dragonlootlol["CLAW"].tot + 1
+
+totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=dragon%20claw")
+.then(result => result.json())
+.then((auction)=> {
+
+
+
+for (let i = 0; i < auction.length; i++) {
+  lastcalc = parseFloat(auction[i].highest)
+  totcalc = lastcalc + totcalc
+   dragonlootlol["CLAW"].clawprice = totcalc/auction.length
+   dragonlootlol["CLAW"].totprice = dragonlootlol["CLAW"].clawprice * dragonlootlol["CLAW"].tot
+}
+
+})
+
 document.getElementById("totclaw").innerHTML= totclaw;
 }
 
@@ -1686,6 +2671,26 @@ document.getElementById("totclaw").innerHTML= totclaw;
 function horn() {
 
 tothorn+= 1;
+
+
+dragonlootlol["HORN"].tot = dragonlootlol["HORN"].tot + 1
+
+totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=dragon%20horn")
+.then(result => result.json())
+.then((auction)=> {
+
+
+
+for (let i = 0; i < auction.length; i++) {
+  lastcalc = parseFloat(auction[i].highest)
+  totcalc = lastcalc + totcalc
+   dragonlootlol["HORN"].hornprice = totcalc/auction.length
+   dragonlootlol["HORN"].totprice = dragonlootlol["HORN"].hornprice * dragonlootlol["HORN"].tot
+}
+
+})
 
 document.getElementById("tothorn").innerHTML= tothorn;
 }
@@ -1697,6 +2702,25 @@ function scale() {
 
 totscale+= 1;
 
+dragonlootlol["SCALE"].tot = dragonlootlol["SCALE"].tot + 1
+
+totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=dragon%20scale")
+.then(result => result.json())
+.then((auction)=> {
+
+
+
+for (let i = 0; i < auction.length; i++) {
+  lastcalc = parseFloat(auction[i].highest)
+  totcalc = lastcalc + totcalc
+   dragonlootlol["SCALE"].scaleprice = totcalc/auction.length
+   dragonlootlol["SCALE"].totprice = dragonlootlol["SCALE"].scaleprice * dragonlootlol["SCALE"].tot
+}
+
+})
+
 document.getElementById("totscale").innerHTML= totscale;
 }
 
@@ -1707,6 +2731,28 @@ function legpet() {
 
 totlegpet+= 1;
 
+dragonlootlol["PETLEG"].tot = dragonlootlol["PETLEG"].tot + 1
+
+totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=ender%20dragon")
+.then(result => result.json())
+.then((auction)=> {
+
+
+
+for (let i = 0; i < auction.length; i++) {
+  if (auction[i].tier == "LEGENDARY") {
+    lastcalc = parseFloat(auction[i].highest)
+  totcalc = lastcalc + totcalc
+   dragonlootlol["PETLEG"].petlegprice = totcalc/auction.length
+   dragonlootlol["PETLEG"].totprice = dragonlootlol["PETLEG"].petlegprice * dragonlootlol["PETLEG"].tot
+  }
+  
+}
+
+})
+
 document.getElementById("totlegpet").innerHTML= totlegpet;
 }
 
@@ -1716,6 +2762,28 @@ document.getElementById("totlegpet").innerHTML= totlegpet;
 function epicpet() {
 
 totepicpet+= 1;
+
+dragonlootlol["PETEPIC"].tot = dragonlootlol["PETEPIC"].tot + 1
+
+totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=ender%20dragon")
+.then(result => result.json())
+.then((auction)=> {
+
+
+
+for (let i = 0; i < auction.length; i++) {
+  if (auction[i].tier == "EPIC") {
+  lastcalc = parseFloat(auction[i].highest)
+  totcalc = lastcalc + totcalc
+   dragonlootlol["PETEPIC"].petepicprice = totcalc/auction.length
+   dragonlootlol["PETEPIC"].totprice = dragonlootlol["PETEPIC"].petepicprice * dragonlootlol["PETEPIC"].tot
+  }
+}
+
+})
+
 
 document.getElementById("totepicpet").innerHTML= totepicpet;
 }
@@ -1728,6 +2796,25 @@ document.getElementById("totepicpet").innerHTML= totepicpet;
 function aotd() {
 
 totaotd= 1+ totaotd;
+
+dragonlootlol["AOTD"].tot = dragonlootlol["AOTD"].tot + 1
+
+totcalc = 0
+
+fetch("https://hyskyapi.cc/apihandle.php?req=search&query=aotd")
+.then(result => result.json())
+.then((auction)=> {
+
+
+
+for (let i = 0; i < auction.length; i++) {
+  lastcalc = parseFloat(auction[i].highest)
+  totcalc = lastcalc + totcalc
+   dragonlootlol["AOTD"].aotdprice = totcalc/auction.length
+   dragonlootlol["AOTD"].totprice = dragonlootlol["AOTD"].aotdprice * dragonlootlol["AOTD"].tot
+}
+
+})
 
 document.getElementById("totaotd").innerHTML= totaotd;
 }
@@ -2005,16 +3092,21 @@ if ( !mf.replace(/\s+/, '').length ) {
                  }
 document.getElementById("mf").innerHTML=mf + "%";
 
-/*
-fetch("https://api.hypixel.net/skyblock/bazaar?key=API_KEY")
+
+fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
 .then(result => result.json())
 .then((bazaar)=> {
-    var cost = bazaar.products.SUMMONING_EYE.buy_summary[bazaar.products.SUMMONING_EYE.buy_summary.length - 1].pricePerUnit
+    var cost = bazaar.products.SUMMONING_EYE.quick_status.buyPrice
+    cost = parseFloat(cost)
+    document.getElementById("cost1").innerHTML=cost*eyelast;
     console.log(cost)
 })
 
-document.getElementById("cost").innerHTML=cost*eyelast;
-*/
+
+
+
+
+
 var place = document.getElementsByClassName("custom-select").value
 document.getElementById("place").innerHTML= place;
 
