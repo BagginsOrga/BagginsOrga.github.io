@@ -1,7 +1,7 @@
 
 PriceItem = 0
 
-function APIAUCTION(requestObject, objectTier ) {
+function APIAUCTION(requestObject) {
   
 
 fetch("https://api.hypixel.net/skyblock/auctions?key=ffa56cad-5677-47d7-86f2-aca03c3df3de&page=0")
@@ -27,7 +27,7 @@ fetch("https://api.hypixel.net/skyblock/auctions?key=ffa56cad-5677-47d7-86f2-aca
         var totcalc = []
         for (let i = 0; i < auction.length; i++) {
           lastcalc = parseFloat(auction.auctions[i2].highest_bid_amount)
-
+           
           
           totcalc.push(lastcalc)
           
@@ -65,7 +65,7 @@ fetch("https://api.hypixel.net/skyblock/auctions?key=ffa56cad-5677-47d7-86f2-aca
 
 
 let requestObject = "Superior Dragon Helmet"
-var objectTier =  "LEGENDARY"
+
 
 dragon = 0
-dragon = APIAUCTION(requestObject, objectTier)
+dragon = APIAUCTION(requestObject)
