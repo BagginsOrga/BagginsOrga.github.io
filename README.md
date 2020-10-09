@@ -11,6 +11,7 @@ This project is based on <a href="https://github.com/LeaPhant/skyblock-stats">sk
 <p align="center"><img src="https://imgur.com/Zrybgta.png"></p>
 <p align="center"><img src="https://imgur.com/V0t8fDn.png"></p>
 <p align="center"><img src="https://imgur.com/JHIGyDV.png"></p>
+<p align="center"><img src="https://imgur.com/p3Nuzbw.png"></p>
 
 
 <h2 align="center">Contributing</h1>

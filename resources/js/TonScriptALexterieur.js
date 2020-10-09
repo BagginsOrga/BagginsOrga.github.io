@@ -92,9 +92,9 @@ function clickbuttfunc() {
     resultbase: ((sonmultiplicateurdelevel/100) * life ) + life*1,
     resultonestar: ((sonmultiplicateurdelevel/100) * life ) + life*1 + life*(10/100),
     resulttwostar: ((sonmultiplicateurdelevel/100) * life ) + life*1 + life*(20/100),
-    resulttreestar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(30/100),
-    resultfourstar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(40/100),
-    resultfivestar: ((sonmultiplicateurdelevel/100) * life ) + life*2 + life*(50/100),
+    resulttreestar: ((sonmultiplicateurdelevel/100) * life ) + life*1 + life*(30/100),
+    resultfourstar: ((sonmultiplicateurdelevel/100) * life ) + life*1 + life*(40/100),
+    resultfivestar: ((sonmultiplicateurdelevel/100) * life ) + life*1 + life*(50/100),
     };
 
     //Défence

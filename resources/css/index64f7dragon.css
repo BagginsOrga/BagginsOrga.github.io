@@ -1045,7 +1045,99 @@ html.no-transform #info_box.opened{
     overflow: hidden;
 }
 
+#stats_content_helmet{
+    position: absolute;
+    right: calc(70vw + 20px);
+    background-color: rgba(15,15,15,0.9);
+    text-align: center;
+    width: 500px;
+    max-width: calc(30vw - 20px);
+    z-index: 100;
+    opacity: 0;
+    transform: translateX(-25px);
+    pointer-events: none;
+    transition: visibility .2s, opacity .2s, transform .2s, left .1s;
+    visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#stats_content_chestplate{
+    position: absolute;
+    right: calc(70vw + 20px);
+    background-color: rgba(15,15,15,0.9);
+    text-align: center;
+    width: 500px;
+    max-width: calc(30vw - 20px);
+    z-index: 100;
+    opacity: 0;
+    transform: translateX(-25px);
+    pointer-events: none;
+    transition: visibility .2s, opacity .2s, transform .2s, left .1s;
+    visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#stats_content_leggings{
+    position: absolute;
+    right: calc(70vw + 20px);
+    background-color: rgba(15,15,15,0.9);
+    text-align: center;
+    width: 500px;
+    max-width: calc(30vw - 20px);
+    z-index: 100;
+    opacity: 0;
+    transform: translateX(-25px);
+    pointer-events: none;
+    transition: visibility .2s, opacity .2s, transform .2s, left .1s;
+    visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#stats_content_boots{
+    position: absolute;
+    right: calc(70vw + 20px);
+    background-color: rgba(15,15,15,0.9);
+    text-align: center;
+    width: 500px;
+    max-width: calc(30vw - 20px);
+    z-index: 100;
+    opacity: 0;
+    transform: translateX(-25px);
+    pointer-events: none;
+    transition: visibility .2s, opacity .2s, transform .2s, left .1s;
+    visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 #stats_content .item-lore{
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    font-size: 15px;
+}
+
+#stats_content_helmet .item-lore{
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    font-size: 15px;
+}
+
+#stats_content_chestplate .item-lore{
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    font-size: 15px;
+}
+
+#stats_content_leggings .item-lore{
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    font-size: 15px;
+}
+
+#stats_content_boots .item-lore{
     max-height: calc(100vh - 200px);
     overflow-y: auto;
     font-size: 15px;
@@ -1055,7 +1147,39 @@ html.no-transform #info_box.opened{
     text-decoration: none;
 }
 
+#stats_content_helmet .item-lore a{
+    text-decoration: none;
+}
+
+#stats_content_chestplate .item-lore a{
+    text-decoration: none;
+}
+
+#stats_content_leggings .item-lore a{
+    text-decoration: none;
+}
+
+#stats_content_boots .item-lore a{
+    text-decoration: none;
+}
+
 #stats_content .item-lore::-webkit-scrollbar {
+    width: 10px;
+}
+
+#stats_content_helmet .item-lore::-webkit-scrollbar {
+    width: 10px;
+}
+
+#stats_content_leggings .item-lore::-webkit-scrollbar {
+    width: 10px;
+}
+
+#stats_content_chestplate .item-lore::-webkit-scrollbar {
+    width: 10px;
+}
+
+#stats_content_boots .item-lore::-webkit-scrollbar {
     width: 10px;
 }
 
@@ -1063,7 +1187,39 @@ html.no-transform #info_box.opened{
     border-radius: 5px;
 }
 
+#stats_content_helmet .item-lore::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+}
+
+#stats_content_chestplate .item-lore::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+}
+
+#stats_content_leggings .item-lore::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+}
+
+#stats_content_boots .item-lore::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+}
+
 #stats_content .item-lore::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+#stats_content_helmet .item-lore::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+#stats_content_chestplate .item-lore::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+#stats_content_leggings .item-lore::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+#stats_content_boots .item-lore::-webkit-scrollbar-track{
     background-color: transparent;
 }
 
@@ -1073,7 +1229,71 @@ html.no-transform #info_box.opened{
     visibility: visible;
 }
 
+#stats_content_helmet.show-stats{
+    opacity: 1;
+    transform: translateX(0px);
+    visibility: visible;
+}
+
+#stats_content_chestplate.show-stats{
+    opacity: 1;
+    transform: translateX(0px);
+    visibility: visible;
+}
+
+#stats_content_leggings.show-stats{
+    opacity: 1;
+    transform: translateX(0px);
+    visibility: visible;
+}
+
+#stats_content_boots.show-stats{
+    opacity: 1;
+    transform: translateX(0px);
+    visibility: visible;
+}
+
 #stats_content.sticky-stats{
+    opacity: 1;
+    transform: translateX(0px);
+    visibility: visible;
+    pointer-events: auto;
+    cursor: auto;
+    user-select: text;
+    z-index: 8001;
+}
+
+#stats_content_helmet.sticky-stats{
+    opacity: 1;
+    transform: translateX(0px);
+    visibility: visible;
+    pointer-events: auto;
+    cursor: auto;
+    user-select: text;
+    z-index: 8001;
+}
+
+#stats_content_chestplate.sticky-stats{
+    opacity: 1;
+    transform: translateX(0px);
+    visibility: visible;
+    pointer-events: auto;
+    cursor: auto;
+    user-select: text;
+    z-index: 8001;
+}
+
+#stats_content_leggings.sticky-stats{
+    opacity: 1;
+    transform: translateX(0px);
+    visibility: visible;
+    pointer-events: auto;
+    cursor: auto;
+    user-select: text;
+    z-index: 8001;
+}
+
+#stats_content_boots.sticky-stats{
     opacity: 1;
     transform: translateX(0px);
     visibility: visible;
@@ -1096,7 +1316,103 @@ html.no-transform #info_box.opened{
     transform-origin: top left;
 }
 
+#stats_content_helmet .stats-piece-icon{
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.4));
+    transform: scale(0.25) translateY(-50%);
+    transform-origin: top left;
+}
+
+#stats_content_chestplate .stats-piece-icon{
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.4));
+    transform: scale(0.25) translateY(-50%);
+    transform-origin: top left;
+}
+
+#stats_content_leggings .stats-piece-icon{
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.4));
+    transform: scale(0.25) translateY(-50%);
+    transform-origin: top left;
+}
+
+#stats_content_boots .stats-piece-icon{
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.4));
+    transform: scale(0.25) translateY(-50%);
+    transform-origin: top left;
+}
+
 #stats_content .close-lore{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 44px;
+    background-image: url(../img/icons/window-close.png);
+    background-size: 24px 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    visibility: hidden;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1));
+    cursor: pointer;
+}
+
+#stats_content_helmet .close-lore{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 44px;
+    background-image: url(../img/icons/window-close.png);
+    background-size: 24px 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    visibility: hidden;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1));
+    cursor: pointer;
+}
+
+#stats_content_chestplate .close-lore{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 44px;
+    background-image: url(../img/icons/window-close.png);
+    background-size: 24px 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    visibility: hidden;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1));
+    cursor: pointer;
+}
+
+#stats_content_leggings .close-lore{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 44px;
+    background-image: url(../img/icons/window-close.png);
+    background-size: 24px 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    visibility: hidden;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1));
+    cursor: pointer;
+}
+
+#stats_content_boots .close-lore{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -1122,12 +1438,116 @@ html.no-transform #info_box.opened{
     box-sizing: border-box;
 }
 
+#stats_content_helmet .item-name{
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    padding-left: 60px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+#stats_content_chestplate .item-name{
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    padding-left: 60px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+#stats_content_leggings .item-name{
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    padding-left: 60px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+#stats_content_boots .item-name{
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    padding-left: 60px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
 #stats_content .item-lore{
     padding: 25px;
     font-weight: 500;
 }
 
+#stats_content_helmet .item-lore{
+    padding: 25px;
+    font-weight: 500;
+}
+
+#stats_content_chestplate .item-lore{
+    padding: 25px;
+    font-weight: 500;
+}
+
+#stats_content_leggings .item-lore{
+    padding: 25px;
+    font-weight: 500;
+}
+
+#stats_content_boots .item-lore{
+    padding: 25px;
+    font-weight: 500;
+}
+
 #stats_content .pack-credit{
+    margin-top: 25px;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    padding-left: 42px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#stats_content_helmet .pack-credit{
+    margin-top: 25px;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    padding-left: 42px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#stats_content_chestplate .pack-credit{
+    margin-top: 25px;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    padding-left: 42px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#stats_content_leggings .pack-credit{
+    margin-top: 25px;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    padding-left: 42px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#stats_content_boots .pack-credit{
     margin-top: 25px;
     position: relative;
     display: inline-block;
@@ -1147,7 +1567,70 @@ html.no-transform #info_box.opened{
     left: 0;
 }
 
+#stats_content_helmet .pack-icon{
+    width: 32px;
+    height: 32px;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+
+#stats_content_chestplate .pack-icon{
+    width: 32px;
+    height: 32px;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+
+
+#stats_content_leggings .pack-icon{
+    width: 32px;
+    height: 32px;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+
+
+#stats_content_boots .pack-icon{
+    width: 32px;
+    height: 32px;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+
+
 #stats_content .pack-name{
+    display: block;
+    text-decoration: none;
+}
+
+#stats_content_helmet .pack-name{
+    display: block;
+    text-decoration: none;
+}
+
+#stats_content_chestplate .pack-name{
+    display: block;
+    text-decoration: none;
+}
+
+#stats_content_leggings .pack-name{
+    display: block;
+    text-decoration: none;
+}
+
+#stats_content_boots .pack-name{
     display: block;
     text-decoration: none;
 }
@@ -1156,9 +1639,42 @@ html.no-transform #info_box.opened{
     color: rgba(255, 255, 255, 0.6);
 }
 
+#stats_content_helmet .pack-author{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#stats_content_chestplate .pack-author{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#stats_content_leggings .pack-author{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#stats_content_boots .pack-author{
+    color: rgba(255, 255, 255, 0.6);
+}
+
 #stats_content .pack-author span{
     color: rgba(255, 255, 255, 0.8);
 }
+
+#stats_content_helmet .pack-author span{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#stats_content_chestplate .pack-author span{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#stats_content_leggings .pack-author span{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#stats_content_boots .pack-author span{
+    color: rgba(255, 255, 255, 0.8);
+}
+
 
 #player_profile{
     font-size: 36px;
@@ -3774,7 +4290,63 @@ html.no-webp #error_box_wrapper{
         transition: opacity .2s, visibility .2s !important;
     }
 
+    #stats_content_helmet{
+        left: 50% !important;
+        width: 360px;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        max-width: 100% !important;
+        transition: opacity .2s, visibility .2s !important;
+    }
+
+    #stats_content_chestplate{
+        left: 50% !important;
+        width: 360px;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        max-width: 100% !important;
+        transition: opacity .2s, visibility .2s !important;
+    }
+
+    #stats_content_leggings{
+        left: 50% !important;
+        width: 360px;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        max-width: 100% !important;
+        transition: opacity .2s, visibility .2s !important;
+    }
+
+    #stats_content_boots{
+        left: 50% !important;
+        width: 360px;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        max-width: 100% !important;
+        transition: opacity .2s, visibility .2s !important;
+    }
+
     #stats_content.show-stats:not(.sticky-stats){
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #stats_content_helmet.show-stats:not(.sticky-stats){
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #stats_content_chestplate.show-stats:not(.sticky-stats){
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #stats_content_leggings.show-stats:not(.sticky-stats){
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #stats_content_boots.show-stats:not(.sticky-stats){
         visibility: hidden;
         opacity: 0;
     }
@@ -4091,11 +4663,71 @@ html.no-webp #error_box_wrapper{
         transform: translateY(-50%) !important;
     }
 
+    #stats_content_helmet{
+        width: calc(100vw - 40px) !important;
+        left: 20px !important;
+        right: auto !important;
+        transform: translateY(-50%) !important;
+    }
+
+    #stats_content_chestplate{
+        width: calc(100vw - 40px) !important;
+        left: 20px !important;
+        right: auto !important;
+        transform: translateY(-50%) !important;
+    }
+
+    #stats_content_leggings{
+        width: calc(100vw - 40px) !important;
+        left: 20px !important;
+        right: auto !important;
+        transform: translateY(-50%) !important;
+    }
+
+    #stats_content_boots{
+        width: calc(100vw - 40px) !important;
+        left: 20px !important;
+        right: auto !important;
+        transform: translateY(-50%) !important;
+    }
+
     #stats_content .close-lore{
         visibility: visible;
     }
 
+    #stats_content_helmet .close-lore{
+        visibility: visible;
+    }
+
+    #stats_content_chestplate .close-lore{
+        visibility: visible;
+    }
+
+    #stats_content_leggings .close-lore{
+        visibility: visible;
+    }
+
+    #stats_content_boots .close-lore{
+        visibility: visible;
+    }
+
     #stats_content .item-name{
+        padding-right: 60px;
+    }
+
+    #stats_content_helmet .item-name{
+        padding-right: 60px;
+    }
+
+    #stats_content_chestplate .item-name{
+        padding-right: 60px;
+    }
+
+    #stats_content_leggings .item-name{
+        padding-right: 60px;
+    }
+
+    #stats_content_boots .item-name{
         padding-right: 60px;
     }
 
