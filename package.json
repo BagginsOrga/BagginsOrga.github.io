@@ -23,6 +23,7 @@
   "author": "konoashi",
   "electronVersion": "9.1.0",
   "dependencies": {
+    "chart.js": "^2.9.3",
     "custom-electron-titlebar": "^3.2.2-hotfix62",
     "electron-builder": "^22.7.0",
     "electron-squirrel-startup": "^1.0.0"

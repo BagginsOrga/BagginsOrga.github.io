@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="../resources/css/inventory8e9a.css?v13">
 
         <script type="text/javascript" src="../resources/js/dragon.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script type="text/javascript" src="../resources/js/stats.js"></script>
         <script type="text/javascript" src="../resources/js/sticky.min.js"></script>
         <script type="text/javascript" src="../resources/js/anime.min.js"></script>
@@ -661,6 +662,128 @@
           </div>
 
           <br/>
+
+
+
+          <div id="basic_stats_mana">
+
+
+            <div id="base_stats_container" >
+            
+               
+               
+                
+
+                
+                
+
+                <div data-stat="kills" class="stat-container stat-kills">
+                    <div class="stat-anchor"></div>
+                    <div class="stat-header"><span>Summoning Eye Price History</span></div>
+                    <div class="stat-content">
+                        <p class="stat-raw-values">
+                            <span class="stat-name">Total Dragons: </span><span class="stat-value" id="totdragsummtab" >0</span><br>
+                            <span class="stat-name">Price per : </span><span class="stat-value" id="priceperonesumm">Not summoned yet</span>
+                        </p>
+                        
+
+
+                        <div style="width: 50%">
+                          <canvas id="myChart"></canvas>
+                           </div>
+                  
+                           <div id='datasumm'>
+                  
+                           </div>
+                  
+                           <script>
+          
+                          
+                                  function addData(chart, label, data) {
+                                  chart.data.labels.push(label);
+                                  chart.data.datasets.forEach((dataset) => {
+                                      dataset.data.push(data);
+                                  });
+                                  chart.update();
+                              }
+                  
+                            
+                           </script>
+                  
+                          <script>
+                               
+                              var ctx = document.getElementById('myChart').getContext('2d');
+                              var chart = new Chart(ctx, {
+                                  // The type of chart we want to create
+                                  type: 'line',
+                  
+                                  // The data for our dataset
+                                  data: {
+                                      labels: [],
+                                      datasets: [{
+                                          label: 'Price per unit',
+                                          backgroundColor: 'rgba(171, 0, 255, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(171, 0, 255)',
+                                          data: []
+                                      }]
+                                  },
+                  
+                                  // Configuration options go here
+                                  options: {
+                                      title: {
+                                          text: "Evolution of Summoning Price"
+                                      },
+                                      elements: {
+                                          line: {
+                                            backgroundColor: 'rgba(255, 255, 255, 1)',
+                                            borderColor: 'rgba(255, 255, 255, 1)'
+                                          },
+                                          point: {
+                                              backgroundColor: 'rgb(0, 0, 255)'
+                                          }
+                                      }
+                  
+                                  }
+                              });
+                  
+                          </script>
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+
+        
+                <br/>
+                <br/>
+                
+
+
+
+
+                
+
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
                   
                
 
@@ -3236,10 +3359,10 @@ player2.play();
 function drag() {
 
   
-  document.getElementById("totdrag").innerHTML=totdrag + 1 ;
-
   
-
+  document.getElementById("totdrag").innerHTML=totdrag + 1 ;
+  document.getElementById("totdragsummtab").innerHTML=totdrag + 1
+ 
 
 
 var player = document.querySelector('#audioPlayer');
@@ -3260,13 +3383,18 @@ fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03
 .then((bazaar)=> {
     var cost = bazaar.products.SUMMONING_EYE.quick_status.buyPrice
     cost = parseFloat(cost)
+    cost = cost.toFixed(2)
     totcost = parseFloat(document.getElementById("toteye").innerHTML) * parseFloat(cost)
   document.getElementById("totalcost").innerHTML= totcost;
     document.getElementById("cost1").innerHTML=cost*eyelast;
+    document.getElementById("priceperonesumm").innerHTML=cost
     console.log(cost)
+    
+    addData(chart, totdrag, cost)
 })
 
 
+//document.getElementById("priceperonesumm").innerHTML =costofonesumm
 
 
 
