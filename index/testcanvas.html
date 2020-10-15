@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chart test</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head>
+    <body>
+        <hl>Chart.js</hl>
+        
+        
+        <div style="width: 60%">
+        <canvas id="myChart"></canvas>
+         </div>
+
+         <div id='datasumm'>
+
+         </div>
+
+         <script>
+
+                
+
+        
+                function addData(chart, label, data) {
+                chart.data.labels.push(label);
+                chart.data.datasets.forEach((dataset) => {
+                    dataset.data.push(data);
+                });
+                chart.update();
+            }
+
+          
+         </script>
+
+        <script>
+             x = ['1', '2', '3']
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: ['1', '2', '3'],
+                    datasets: [{
+                        label: 'Price per unit',
+                        backgroundColor: 'rgba(171, 0, 255, 0.25)',
+                        borderColor: 'rgb(171, 0, 255)',
+                        data: [0, 10, 5]
+                    }]
+                },
+
+                // Configuration options go here
+                options: {
+                    title: {
+                        text: "Evolution of Summoning Price"
+                    },
+                    elements: {
+                        point: {
+                            backgroundColor: 'rgb(0, 0, 255)'
+                        }
+                    }
+
+                }
+            });
+
+        </script>
+
+    </body>
+</html>
