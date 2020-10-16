@@ -698,7 +698,7 @@
                   
                            <script>
           
-                          
+                                  Chart.defaults.global.hover.intersect = 'false'
                                   function addData(chart, label, data) {
                                   chart.data.labels.push(label);
                                   chart.data.datasets.forEach((dataset) => {
@@ -713,7 +713,7 @@
                           <script>
                                
                               var ctx = document.getElementById('myChart').getContext('2d');
-                              var chart = new Chart(ctx, {
+                              var chartsummeye = new Chart(ctx, {
                                   // The type of chart we want to create
                                   type: 'line',
                   
@@ -731,9 +731,20 @@
                   
                                   // Configuration options go here
                                   options: {
-                                      title: {
-                                          text: "Evolution of Summoning Price"
+
+                                    tooltips: {
+                                        intersect: false,
                                       },
+
+                                      hover: {
+                                        intersect: false
+                                      },
+
+                                      title: {
+                                          display: true,
+                                          text: "Evolution of Summoning Eye Price"
+                                      },
+
                                       elements: {
                                           line: {
                                             backgroundColor: 'rgba(255, 255, 255, 1)',
@@ -741,9 +752,26 @@
                                           },
                                           point: {
                                               backgroundColor: 'rgb(0, 0, 255)'
+                                          },
+                                          
+                                      },
+
+                                      scales: {
+                                        xAxes: [{
+                                          display: true,
+                                          scaleLabel: {
+                                            display: true,
+                                            labelString: 'Summon'
                                           }
+                                        }],
+                                        yAxes: [{
+                                          display: true,
+                                          scaleLabel: {
+                                            display: true,
+                                            labelString: 'Price per unit'
+                                          }
+                                        }]
                                       }
-                  
                                   }
                               });
                   
@@ -3390,7 +3418,7 @@ fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03
     document.getElementById("priceperonesumm").innerHTML=cost
     console.log(cost)
     
-    addData(chart, totdrag, cost)
+    addData(chartsummeye, totdrag, cost)
 })
 
 
