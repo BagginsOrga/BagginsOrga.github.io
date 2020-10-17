@@ -702,6 +702,12 @@ html.no-webp #bg_blur{
     margin-top: 75px;
 }
 
+#dragimg2{
+
+    margin-left: 75px;
+    margin-top: 0px;
+}
+
 #dragsup{
 
     margin-left: 50px;
@@ -3519,77 +3525,90 @@ html.no-webp #enter_player_box_wrapper{
 }
 
 #goto_target_username2{
-    text-align: right;
-    display: inline-block;
-    padding: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-    background-color: #fa8f0456;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 10px;
-    transition: background-color .2s;
-    border-radius: 999px;
     position: absolute;
-    left: 50%;
-    margin-left: -160px;
-    top: 32px;
+    top: 2965;
+    left: 160;
+    border: 0 !important;
+    background-color: #a2009fb8;
+    color: white;
+    height: 36px;
+    width: 300px;
+    padding: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    border-radius: 25px;
 }
 
 #goto_target_username3{
-    text-align: right;
-    display: inline-block;
-    padding: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-    background-color: #00a2ff56;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 90px;
-    transition: background-color .2s;
-    border-radius: 999px;
     position: absolute;
-    left: 50%;
-    margin-left: -100px;
-    top: -50px;
+    top: 3730;
+    left: 160;
+    border: 0 !important;
+    background-color: #00ff55b8;
+    color: white;
+    height: 36px;
+    width: 300px;
+    padding: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    border-radius: 25px;
 }
 
 #goto_target_username4{
-    text-align: right;
-    display: inline-block;
-    padding: px;
-    padding-left: px;
-    padding-right: px;
-    background-color: #ec0000;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 65px;
-    transition: background-color .2s;
-    border-radius: 999px;
     position: absolute;
-    left: 50%;
-    margin-left: 220px;
-    top: -50px;
+    top: 3780;
+    left: 160;
     border: 0 !important;
-
-    
+    background-color: #ff0000b8;
+    color: white;
+    height: 36px;
+    width: 300px;
+    padding: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    border-radius: 25px;
 }
 
 #goto_target_username5{
     position: absolute;
-    top: 5;
-    left: 1600;
+    top: 2965;
+    left: 160;
     border: 0 !important;
-    background-color: hsla(81, 100%, 50%, 0.29);
+    background-color: #a2009fb8;
     color: white;
     height: 36px;
-    width: 120px;
+    width: 300px;
+    padding: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    border-radius: 25px;
+}
+
+#goto_target_username6{
+    position: absolute;
+    top: 2965;
+    left: 160;
+    border: 0 !important;
+    background-color: #a2009fb8;
+    color: white;
+    height: 36px;
+    width: 300px;
     padding: 4px;
     padding-left: 15px;
     padding-right: 15px;
@@ -3672,15 +3691,15 @@ html.no-webp #enter_player_box_wrapper{
 }
 
 #goto_target_username2:hover{
-    background-color: #fa8f0456;
+    background-color: #d800d4c5;
 }
 
 #goto_target_username3:hover{
-    background-color: #00a2ff56;
+    background-color: #00ff5556;
 }
 
 #goto_target_username4:hover{
-    background-color: #ff0000d7;
+    background-color: #ff000056;
 }
 
 #alert:hover{
@@ -3688,6 +3707,10 @@ html.no-webp #enter_player_box_wrapper{
 }
 
 #goto_target_username5:hover{
+    background-color: hsla(81, 100%, 50%, 0.678);
+}
+
+#goto_target_username6:hover{
     background-color: hsla(81, 100%, 50%, 0.678);
 }
 
