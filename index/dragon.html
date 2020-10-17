@@ -3640,28 +3640,20 @@ intactive = "on"
 
 function rec1() {
   if (intactive !== "on") {
-    
     interval = setInterval(graphmin, 10000)
-  
-    
-  
+  }
   
 }
 
 function stoprec1() {
-  
-    clearInterval(interval)
+  clearInterval(interval)
   intactive = "off"
-  
-    stoprec1()
-  
-  
 }
 
 time = 0
 setInterval(timez, 1000)
 function timez() {
-  time = time +1
+  time = time +10
 }
 
 
