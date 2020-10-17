@@ -662,6 +662,9 @@
           </div>
 
           <br/>
+          <br/>
+          <br/>
+          <br/>
 
 
 
@@ -671,8 +674,17 @@
             <div id="base_stats_container" >
             
                
-               
+              <br/>
+              <br/>
+              <br/>
+              <br/>
                 
+              <input id="goto_target_username2" type="button" value="Summon the Dragon" onclick="drag(), compter()" >
+              <img src="9ce934d59ae58d5216f218ccdf064770.png" id="dragimg2">
+
+              <input id="goto_target_username3" type="button" value="Start Record" onclick="rec1()" >
+              <input id="goto_target_username4" type="button" value="Stop Record" onclick="stoprec1()" >
+
 
                 
                 
@@ -691,6 +703,20 @@
                         <div style="width: 50%">
                           <canvas id="myChart"></canvas>
                            </div>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <div style="width: 50%">
+                            <canvas id="myChart2"></canvas>
+                            <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <div style="width: 100%">
+                            <canvas id="myChart3"></canvas>
+
+                             </div>
                   
                            <div id='datasumm'>
                   
@@ -706,6 +732,23 @@
                                   });
                                   chart.update();
                               }
+
+                                function addData0(chart, data) {
+                                    
+                                    chart.data.datasets[0].data.push(data)
+                                    chart.update();
+                                }
+
+                                function addData1(chart, label, data) {
+                                  chart.data.labels.push(label);
+                                    chart.data.datasets[1].data.push(data)
+                                    chart.update();
+                                }
+
+                              
+
+
+                              
                   
                             
                            </script>
@@ -725,7 +768,8 @@
                                           backgroundColor: 'rgba(171, 0, 255, 0.25)',
                                           showLine: 'true', 
                                           borderColor: 'rgb(171, 0, 255)',
-                                          data: []
+                                          data: [],
+                                          order: 1
                                       }]
                                   },
                   
@@ -734,15 +778,17 @@
 
                                     tooltips: {
                                         intersect: false,
+                                        
                                       },
 
                                       hover: {
-                                        intersect: false
+                                        intersect: false,
+                                        
                                       },
 
                                       title: {
                                           display: true,
-                                          text: "Evolution of Summoning Eye Price"
+                                          text: "Evolution of Summoning Eye Price (Every summon)"
                                       },
 
                                       elements: {
@@ -751,7 +797,8 @@
                                             borderColor: 'rgba(255, 255, 255, 1)'
                                           },
                                           point: {
-                                              backgroundColor: 'rgb(0, 0, 255)'
+                                              backgroundColor: 'rgb(0, 0, 255)',
+                                              
                                           },
                                           
                                       },
@@ -770,6 +817,160 @@
                                             display: true,
                                             labelString: 'Price per unit'
                                           }
+                                        }]
+                                      }
+                                  }
+                              });
+
+                              //CHART 2
+
+                              var ctx2 = document.getElementById('myChart2').getContext('2d');
+                              var chartsummeyemin = new Chart(ctx2, {
+                                  // The type of chart we want to create
+                                  type: 'line',
+                  
+                                  // The data for our dataset
+                                  data: {
+                                      labels: [],
+                                      datasets: [{
+                                          label: 'Price per unit',
+                                          backgroundColor: 'rgba(171, 0, 255, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(171, 0, 255)',
+                                          data: []
+                                      }]
+                                  },
+
+                  
+                                  // Configuration options go here
+                                  options: {
+
+                                    tooltips: {
+                                        intersect: false,
+                                      },
+
+                                      hover: {
+                                        intersect: false
+                                      },
+
+                                      title: {
+                                          display: true,
+                                          text: "Evolution of Summoning Eye Price (10 Seconds)"
+                                      },
+
+                                      elements: {
+                                          line: {
+                                            backgroundColor: 'rgba(255, 255, 255, 1)',
+                                            borderColor: 'rgba(255, 255, 255, 1)'
+                                          },
+                                          point: {
+                                              backgroundColor: 'rgb(0, 0, 255)'
+                                          },
+                                          
+                                      },
+
+                                      scales: {
+                                        xAxes: [{
+                                          display: true,
+                                          scaleLabel: {
+                                            display: true,
+                                            labelString: 'Minutes'
+                                          }
+                                        }],
+                                        yAxes: [{
+                                          display: true,
+                                          scaleLabel: {
+                                            display: true,
+                                            labelString: 'Price per unit'
+                                          }
+                                        }]
+                                      }
+                                  }
+                              });
+
+                              //CHART 3
+
+                              var ctx3 = document.getElementById('myChart3').getContext('2d');
+                              var chartsummeyeask = new Chart(ctx3, {
+                                  // The type of chart we want to create
+                                  type: 'line',
+                  
+                                  // The data for our dataset
+                                  data: {
+                                      labels: [],
+                                      datasets: [{
+                                          label: 'BuyVolume',
+                                          yAxisID: 'BuyVolume',
+                                          backgroundColor: 'rgba(65, 194, 110, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(65, 194, 110)',
+                                          data: [],
+                                          
+                                        }, {
+                                          label: 'SellVolume',
+                                          yAxisID: 'SellVolume',
+                                          backgroundColor: 'rgba(255, 0, 0, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(255, 0, 0)',
+                                          data: [], 
+                                          
+
+                                      }]
+                                  },
+
+                  
+                                  // Configuration options go here
+                                  options: {
+
+                                    tooltips: {
+                                        intersect: false,
+                                        mode: 'index'
+                                      },
+
+                                      hover: {
+                                        intersect: false
+                                      },
+
+                                      title: {
+                                          display: true,
+                                          text: "Evolution of Summoning Eye Buy/Sell Volume (10 Seconds)"
+                                      },
+
+                                      elements: {
+                                          line: {
+                                            backgroundColor: 'rgba(255, 255, 255, 1)',
+                                            borderColor: 'rgba(255, 255, 255, 1)'
+                                          },
+                                          point: {
+                                              backgroundColor: 'rgb(0, 0, 255)'
+                                          },
+                                          
+                                      },
+
+                                      
+
+                                      scales: {
+                                        xAxes: [{
+                                          display: true,
+                                          scaleLabel: {
+                                            display: true,
+                                            labelString: 'Every 10 seconds'
+                                          }
+                                        }],
+                                        yAxes: [{
+                                          display: true,
+                                          scaleLabel: {
+                                            display: true,
+                                            labelString: 'Buy/Sell Volume'
+                                          },
+                                          id: 'BuyVolume',
+                                          type: 'linear',
+                                          position: 'left',
+                                        }, {
+                                          id: 'SellVolume',
+                                          type: 'linear',
+                                          position: 'right',
+                                          
                                         }]
                                       }
                                   }
@@ -3434,16 +3635,72 @@ totsumm(), weigth(), totcostu(), placest(), looter()
 }
 
 
+interval = setInterval(graphmin, 10000)
+intactive = "on"
+
+function rec1() {
+  if (intactive !== "on") {
+    
+    interval = setInterval(graphmin, 10000)
+  
+    
+  
+  
+}
+
+function stoprec1() {
+  
+    clearInterval(interval)
+  intactive = "off"
+  
+    stoprec1()
+  
+  
+}
+
+time = 0
+setInterval(timez, 1000)
+function timez() {
+  time = time +1
+}
 
 
 
 
+function graphmin() {
 
+  
 
+  
 
+  fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    var cost = bazaar.products.SUMMONING_EYE.quick_status.buyPrice
+    cost = parseFloat(cost)
+    cost = cost.toFixed(2)
+    
+    
+  addData(chartsummeyemin, time, cost)
+})
 
-
-
+fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
+.then(result => result.json())
+.then((bazaar)=> {
+    var cost = bazaar.products.SUMMONING_EYE.quick_status.sellVolume
+    var cost2 = bazaar.products.SUMMONING_EYE.quick_status.buyVolume
+    cost = parseFloat(cost)
+    cost = cost.toFixed(2)
+    cost2 = parseFloat(cost2)
+    cost2 = cost2.toFixed(2)
+    console.log(cost)
+    
+    
+  addData1(chartsummeyeask, time, cost)
+  addData0(chartsummeyeask, cost2)
+})
+  
+}
 
 
 
