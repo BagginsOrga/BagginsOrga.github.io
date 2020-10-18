@@ -714,6 +714,13 @@
                            <br/>
                            <br/>
                            <div style="width: 100%">
+                            <canvas id="myChart6"></canvas>
+                             </div>
+                             <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <div style="width: 100%">
                             <canvas id="myChart3"></canvas>
                              </div>
                              <br/>
@@ -753,6 +760,13 @@
                                     chart.update();
                                 }
 
+
+                                function addData2(chart, data) {
+                                    
+                                    chart.data.datasets[2].data.push(data)
+                                    chart.update();
+                                }
+
                                 function addData1(chart, label, data) {
                                   chart.data.labels.push(label);
                                     chart.data.datasets[1].data.push(data)
@@ -760,15 +774,7 @@
                                 }
 
 
-                                function removeData(chart) {
-                                var x = [];
-                                var y = [];
-
-                                chart.data.datasets[0].data = y;
-                                chart.data.labels = x;
-
-                                chart.update();
-                              }
+                                
 
 
                                 function removeData0(chart) {
@@ -786,6 +792,17 @@
                                 var y = [];
 
                                 chart.data.datasets[1].data = y;
+                                chart.data.labels = x;
+
+                                chart.update();
+                              }
+
+
+                              function removeData2(chart) {
+                                var x = [];
+                                var y = [];
+
+                                chart.data.datasets[2].data = y;
                                 chart.data.labels = x;
 
                                 chart.update();
@@ -1051,6 +1068,16 @@
                                 },
 
                                 options: {
+
+                                  tooltips: {
+                                        intersect: true,
+                                        mode: 'index'
+                                      },
+
+                                      hover: {
+                                        intersect: true
+                                      },
+
                                   animation: {
                                     animateScale: true,
                                     animateRotate: true,
@@ -1080,6 +1107,14 @@
                                           showLine: 'true', 
                                           borderColor: 'rgb(65, 194, 110)',
                                           data: [],
+
+                                        }, {
+                                          label: 'Difference %',
+                                          
+                                          backgroundColor: 'rgba(190, 190, 190, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(190, 190, 190)',
+                                          data: [], 
                                           
                                         }, {
                                           label: 'Sell Volume %',
@@ -1088,6 +1123,8 @@
                                           showLine: 'true', 
                                           borderColor: 'rgb(255, 0, 0)',
                                           data: [], 
+
+                                        
                                           
 
                                       }]
@@ -1144,6 +1181,82 @@
                                       }
                                   }
                               });
+
+
+
+                              var ctx6 = document.getElementById('myChart6').getContext('2d');
+                              var varper10000 = new Chart(ctx6, {
+                                  // The type of chart we want to create
+                                  type: 'line',
+                  
+                                  // The data for our dataset
+                                  data: {
+                                      labels: [],
+                                      datasets: [{
+                                          label: 'Variation in ‱ ',
+                                          backgroundColor: 'rgba(150, 150, 150, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(150, 150, 150)',
+                                          data: []
+
+                                        }, {
+
+                                          label: 'Variation ',
+                                          backgroundColor: 'rgba(171, 0, 255, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(171, 0, 255)',
+                                          data: []
+                                      }]
+                                  },
+
+                  
+                                  // Configuration options go here
+                                  options: {
+
+                                    tooltips: {
+                                        intersect: false,
+                                        mode: 'index'
+                                      },
+
+                                      hover: {
+                                        intersect: false
+                                      },
+
+                                      title: {
+                                          display: true,
+                                          text: "Evolution of Summoning Eye Price Variation in ‱"
+                                      },
+
+                                      elements: {
+                                          line: {
+                                            backgroundColor: 'rgba(255, 255, 255, 1)',
+                                            borderColor: 'rgba(255, 255, 255, 1)'
+                                          },
+                                          point: {
+                                              backgroundColor: 'rgb(0, 0, 255)'
+                                          },
+                                          
+                                      },
+
+                                      scales: {
+                                        xAxes: [{
+                                          display: false,
+                                          scaleLabel: {
+                                            display: true,
+                                            labelString: 'Time'
+                                          }
+                                        }],
+                                        yAxes: [{
+                                          display: true,
+                                          scaleLabel: {
+                                            display: true,
+                                            labelString: 'Price per unit'
+                                          }
+                                        }]
+                                      }
+                                  }
+                              });
+
                           </script>
 
 
@@ -1237,6 +1350,11 @@
         <audio id="audioPlayer2" loop="true">
           <source src="minecraft-music-boss.mp3">
       </audio>
+ 
+      </body>
+
+      <body onload= "graphmin()">
+        
  
       </body>
 
@@ -3810,9 +3928,15 @@ function rec1() {
   if (intactive !== "on") {
     intactive = "on"
     time = 0
-    removeData(chartsummeyemin)
+    removeData0(chartsummeyemin)
     removeData0(chartsummeyeask)
     removeData1(chartsummeyeask)
+    removeData0(percentvolume)
+    removeData1(percentvolume)
+    removeData2(percentvolume)
+    removeData0(varper10000)
+    removeData1(varper10000)
+
     interval = setInterval(graphmin, 10010,000001)
   }
   
@@ -3850,7 +3974,28 @@ function graphmin() {
       chartsummeyemin.data.datasets[0].data.splice(0, 1);
       chartsummeyemin.update()
   }
+  var variationreal = parseFloat(cost) - parseFloat(chartsummeyemin.data.datasets[0].data[chartsummeyemin.data.datasets[0].data.length-1])
+  var variation = ((parseFloat(cost) - parseFloat(chartsummeyemin.data.datasets[0].data[chartsummeyemin.data.datasets[0].data.length-1]))/parseFloat(chartsummeyemin.data.datasets[0].data[chartsummeyemin.data.datasets[0].data.length-1])) * 10000
+  console.log(variation + " lol")
     
+    if (variation > -1000000000) {
+      varper10000.data.datasets[0].data.push(variation.toFixed(2))
+      varper10000.data.datasets[1].data.push(variationreal.toFixed(2))
+  varper10000.data.labels.push(time)
+
+  if (varper10000.data.labels.length == 21) {
+    varper10000.data.labels.splice(0, 1);
+    varper10000.data.datasets[0].data.splice(0, 1);
+    varper10000.data.datasets[1].data.splice(0, 1);
+    
+    varper10000.update()
+  }
+
+  varper10000.update()
+    }
+
+    
+  
   addData(chartsummeyemin, time, cost)
 })
 
@@ -3890,18 +4035,43 @@ fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03
 
   myDoughnutChart.update()
   
-  addData1(percentvolume, time, percentsell.toFixed(2))
+  addData2(percentvolume, percentsell.toFixed(2))
   addData0(percentvolume, percentbuy.toFixed(2))
+  addData1(percentvolume, time, (percentsell.toFixed(2) - percentbuy.toFixed(2)).toFixed(2))
   percentvolume.update()
 
   if (percentvolume.data.labels.length == 21) {
     percentvolume.data.labels.splice(0, 1);
     percentvolume.data.datasets[0].data.splice(0, 1);
     percentvolume.data.datasets[1].data.splice(0, 1);
+    percentvolume.data.datasets[2].data.splice(0, 1);
     percentvolume.update()
   }
 
 })
+
+
+if (chartsummeyemin.data.datasets[0].data.length == 3) {
+      if (varper10000.data.datasets[0].data.length == 2) {
+
+        chartsummeyemin.data.labels.splice(0, 1);
+      chartsummeyemin.data.datasets[0].data.splice(0, 1);
+
+      chartsummeyeask.data.labels.splice(0, 1);
+    chartsummeyeask.data.datasets[0].data.splice(0, 1);
+    chartsummeyeask.data.datasets[1].data.splice(0, 1);
+
+    percentvolume.data.labels.splice(0, 1);
+    percentvolume.data.datasets[0].data.splice(0, 1);
+    percentvolume.data.datasets[1].data.splice(0, 1);
+    percentvolume.data.datasets[2].data.splice(0, 1);
+
+    percentvolume.update()
+    chartsummeyeask.update()
+    chartsummeyemin.update()
+
+      }
+    }
   
 }
 
