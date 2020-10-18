@@ -16,6 +16,7 @@
 
         <script type="text/javascript" src="../resources/js/dragon.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
         <script type="text/javascript" src="../resources/js/stats.js"></script>
         <script type="text/javascript" src="../resources/js/sticky.min.js"></script>
         <script type="text/javascript" src="../resources/js/anime.min.js"></script>
@@ -685,8 +686,7 @@
               <input id="goto_target_username3" type="button" value="Start Record" onclick="rec1()" >
               <input id="goto_target_username4" type="button" value="Stop Record" onclick="stoprec1()" >
 
-
-                
+              
                 
 
                 <div data-stat="kills" class="stat-container stat-kills">
@@ -715,8 +715,22 @@
                            <br/>
                            <div style="width: 100%">
                             <canvas id="myChart3"></canvas>
-
                              </div>
+                             <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                             <div style="width: 75%">
+                              <canvas id="myChart4" style="display: block; width: 746px; height: 373px; top: 1350px; position: absolute; left: -630px;" width="746" height="373" class="chartjs-render-monitor"></canvas>
+                            </div>
+                            <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <div style="width: 100%">
+                            <canvas id="myChart5"></canvas>
+                             </div>
+                            
                   
                            <div id='datasumm'>
                   
@@ -745,7 +759,49 @@
                                     chart.update();
                                 }
 
-                              
+
+                                function removeData(chart) {
+                                var x = [];
+                                var y = [];
+
+                                chart.data.datasets[0].data = y;
+                                chart.data.labels = x;
+
+                                chart.update();
+                              }
+
+
+                                function removeData0(chart) {
+                                  var x = [];
+                                var y = [];
+
+                                chart.data.datasets[0].data = y;
+                                chart.data.labels = x;
+
+                                chart.update();
+                                }
+                                 
+                              function removeData1(chart) {
+                                var x = [];
+                                var y = [];
+
+                                chart.data.datasets[1].data = y;
+                                chart.data.labels = x;
+
+                                chart.update();
+                              }
+
+
+                              function milestone(chart) {
+                                chart.data.labels.splice(0, 1); 
+                                dataset[0].data.splice(0, 1);
+                                dataset[1].data.splice(0, 1);
+                              }
+
+                              function milestonesolo(chart) {
+                                chart.data.labels.shift(); 
+                                dataset[0].data.shift();
+                              }
 
 
                               
@@ -871,10 +927,10 @@
 
                                       scales: {
                                         xAxes: [{
-                                          display: true,
+                                          display: false,
                                           scaleLabel: {
                                             display: true,
-                                            labelString: 'Minutes'
+                                            labelString: 'Time'
                                           }
                                         }],
                                         yAxes: [{
@@ -951,10 +1007,10 @@
 
                                       scales: {
                                         xAxes: [{
-                                          display: true,
+                                          display: false,
                                           scaleLabel: {
                                             display: true,
-                                            labelString: 'Every 10 seconds'
+                                            labelString: 'Time'
                                           }
                                         }],
                                         yAxes: [{
@@ -975,7 +1031,119 @@
                                       }
                                   }
                               });
+                              
+                              
+                              //CHART 4
+                              var ctx4 = document.getElementById('myChart4').getContext('2d');
+                              var myDoughnutChart = new Chart(ctx4, {
+                                type: 'pie',
                   
+                                // The data for our dataset
+                                data: {
+                                    labels: ['Sell Volume', 'Buy Volume'],
+                                    datasets: [{
+                                        label: 'Price per unit',
+                                        backgroundColor: ['rgba(255, 0, 0, 0.25)', 'rgba(65, 194, 110, 0.25)'],
+                                        showLine: 'true', 
+                                        borderColor: ['rgb(255, 0, 0)', 'rgb(65, 194, 110)'],
+                                        data: [1, 1]
+                                    }]
+                                },
+
+                                options: {
+                                  animation: {
+                                    animateScale: true,
+                                    animateRotate: true,
+                                    
+                                  }
+                                   
+                                    
+                                  
+                                },
+                              
+                          });
+
+
+
+                          var ctx5 = document.getElementById('myChart5').getContext('2d');
+                              var percentvolume = new Chart(ctx5, {
+                                  // The type of chart we want to create
+                                  type: 'line',
+                  
+                                  // The data for our dataset
+                                  data: {
+                                      labels: [],
+                                      datasets: [{
+                                          label: 'Buy Volume %',
+                                          
+                                          backgroundColor: 'rgba(65, 194, 110, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(65, 194, 110)',
+                                          data: [],
+                                          
+                                        }, {
+                                          label: 'Sell Volume %',
+                                          
+                                          backgroundColor: 'rgba(255, 0, 0, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(255, 0, 0)',
+                                          data: [], 
+                                          
+
+                                      }]
+                                  },
+
+                  
+                                  // Configuration options go here
+                                  options: {
+
+                                    tooltips: {
+                                        intersect: false,
+                                        mode: 'index'
+                                      },
+
+                                      hover: {
+                                        intersect: false
+                                      },
+
+                                      title: {
+                                          display: true,
+                                          text: "Evolution of Summoning Eye Buy/Sell Volume in %"
+                                      },
+
+                                      elements: {
+                                          line: {
+                                            backgroundColor: 'rgba(255, 255, 255, 1)',
+                                            borderColor: 'rgba(255, 255, 255, 1)'
+                                          },
+                                          point: {
+                                              backgroundColor: 'rgb(0, 0, 255)'
+                                          },
+                                          
+                                      },
+
+                                      
+
+                                      scales: {
+                                        xAxes: [{
+                                          display: false,
+                                          scaleLabel: {
+                                            display: true,
+                                            labelString: 'Time'
+                                          }
+                                        }],
+                                        yAxes: [{
+                                          display: true,
+                                          scaleLabel: {
+                                            display: true,
+                                            labelString: 'Buy/Sell Volume in %'
+                                          },
+                                          
+                                          
+                                        }]
+                                      }
+                                  }
+                              });
                           </script>
 
 
@@ -3635,12 +3803,17 @@ totsumm(), weigth(), totcostu(), placest(), looter()
 }
 
 
-interval = setInterval(graphmin, 10000)
+interval = setInterval(graphmin, 10002)
 intactive = "on"
 
 function rec1() {
   if (intactive !== "on") {
-    interval = setInterval(graphmin, 10000)
+    intactive = "on"
+    time = 0
+    removeData(chartsummeyemin)
+    removeData0(chartsummeyeask)
+    removeData1(chartsummeyeask)
+    interval = setInterval(graphmin, 10010,000001)
   }
   
 }
@@ -3651,9 +3824,9 @@ function stoprec1() {
 }
 
 time = 0
-setInterval(timez, 1000)
+newinterval = setInterval(timez, 1000)
 function timez() {
-  time = time +10
+  time = moment().format('MMMM Do YYYY, h:mm:ss a'); // October 17th 2020, 7:01:51 pm
 }
 
 
@@ -3672,6 +3845,11 @@ function graphmin() {
     cost = parseFloat(cost)
     cost = cost.toFixed(2)
     
+    if (chartsummeyemin.data.labels.length == 21) {
+      chartsummeyemin.data.labels.splice(0, 1);
+      chartsummeyemin.data.datasets[0].data.splice(0, 1);
+      chartsummeyemin.update()
+  }
     
   addData(chartsummeyemin, time, cost)
 })
@@ -3690,6 +3868,39 @@ fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03
     
   addData1(chartsummeyeask, time, cost)
   addData0(chartsummeyeask, cost2)
+
+  if (chartsummeyeask.data.labels.length == 21) {
+    chartsummeyeask.data.labels.splice(0, 1);
+    chartsummeyeask.data.datasets[0].data.splice(0, 1);
+    chartsummeyeask.data.datasets[1].data.splice(0, 1);
+    chartsummeyeask.update()
+  }
+
+  percentbuy = parseFloat(bazaar.products.SUMMONING_EYE.quick_status.buyVolume) / (parseFloat(bazaar.products.SUMMONING_EYE.quick_status.sellVolume)+parseFloat(bazaar.products.SUMMONING_EYE.quick_status.buyVolume)) *100
+  percentsell = parseFloat(bazaar.products.SUMMONING_EYE.quick_status.sellVolume) / (parseFloat(bazaar.products.SUMMONING_EYE.quick_status.sellVolume)+parseFloat(bazaar.products.SUMMONING_EYE.quick_status.buyVolume)) *100
+
+  dg1 = "Sell Volume" +  " - " + percentsell.toFixed(2) + "% "
+  dg2 = "Buy Volume" +  " - " + percentbuy.toFixed(2) + "% "
+
+  myDoughnutChart.data.datasets[0].data.push(cost)
+  myDoughnutChart.data.datasets[0].data.push(cost2)
+  myDoughnutChart.data.datasets[0].data.splice(0, 2);
+  myDoughnutChart.data.labels.push(dg1, dg2)
+  myDoughnutChart.data.labels.splice(0, 2);
+
+  myDoughnutChart.update()
+  
+  addData1(percentvolume, time, percentsell.toFixed(2))
+  addData0(percentvolume, percentbuy.toFixed(2))
+  percentvolume.update()
+
+  if (percentvolume.data.labels.length == 21) {
+    percentvolume.data.labels.splice(0, 1);
+    percentvolume.data.datasets[0].data.splice(0, 1);
+    percentvolume.data.datasets[1].data.splice(0, 1);
+    percentvolume.update()
+  }
+
 })
   
 }

@@ -3505,6 +3505,11 @@ html.no-webp #enter_player_box_wrapper{
     right: 0;
 }
 
+#myChart4{
+    top: 650;
+    left: 160; 
+}
+
 #goto_target_username{
     position: absolute;
     top: 650;
@@ -3685,6 +3690,8 @@ html.no-webp #enter_player_box_wrapper{
     top: -50px;
     border: 0 !important;
 }
+
+
 
 #goto_target_username:hover{
     background-color: #d800d4c5;
