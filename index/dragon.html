@@ -707,9 +707,17 @@
                            <br/>
                            <br/>
                            <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <br/>
                            <div style="width: 50%">
                             <canvas id="myChart2"></canvas>
                             <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <br/>
                            <br/>
                            <br/>
                            <br/>
@@ -720,10 +728,18 @@
                            <br/>
                            <br/>
                            <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <br/>
                            <div style="width: 100%">
                             <canvas id="myChart3"></canvas>
                              </div>
                              <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <br/>
                            <br/>
                            <br/>
                            <br/>
@@ -734,9 +750,13 @@
                            <br/>
                            <br/>
                            <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <br/>
                            <div style="width: 100%">
                             <canvas id="myChart5"></canvas>
-                             </div>
+                          
                             
                   
                            <div id='datasumm'>
@@ -1950,6 +1970,27 @@ function looter() {
     
     var eyelast = document.getElementById("chanceITN").value;
 
+    if (alreadyloot == "no" && weigthnb > 449) {
+      //PET
+      var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+    var a = Math.random();
+    var b = 0.0001 * eyemoment;
+    if (a < b) {
+     if (Math.random() < 0.2) {
+       var LOOT = 6;
+       var alreadyloot = "yes"
+       legpet()
+      } else {
+        var LOOT = 5;
+        var alreadyloot = "yes"
+        epicpet()
+     } 
+    }
+   }
+
 
     if (dragon == "SUPERIOR" && alreadyloot == "no" && weigthnb > 449) {
      //HORN
@@ -1960,7 +2001,7 @@ function looter() {
       var random = Math.floor(Math.random() * 15) + 1;
       var placecalcul = 0.05 / placef
       var a = Math.random();
-      var b = 0.06 * (eyemoment	/ random ) + placecalcul
+      var b = 0.08 * (eyemoment	/ random ) + placecalcul
     if (a < b) {
      var LOOT = 7;
      var alreadyloot = "yes"
@@ -1979,7 +2020,7 @@ function looter() {
       var random = Math.floor(Math.random() * 15) + 1;
       var placecalcul = 0.05 / placef
       var a = Math.random();
-      var b = 0.06 * (eyemoment	/ random ) + placecalcul
+      var b = 0.006 * (eyemoment	/ random ) + placecalcul
     if (a < b) {
      var LOOT = 8;
      var alreadyloot = "yes"
@@ -1998,7 +2039,7 @@ function looter() {
       var random = Math.floor(Math.random() * 25 ) + 1;
       var placecalcul = 0.01 / placef
       var a = Math.random();
-      var b = 0.01 * (eyemoment	/ random ) + (placecalcul + placecalcul)
+      var b = 0.0175 * (eyemoment	/ random ) + (placecalcul + placecalcul)
     if (a < b) {
      var LOOT = 9;
      var alreadyloot = "yes"
@@ -2006,12 +2047,30 @@ function looter() {
    }
    }
    
-   console.log(a)
+  /* console.log(a)
    console.log(b)
    console.log(eyemoment)
    console.log(random)
    console.log(placecalcul)
-   console.log(placef)
+   console.log(placef)*/
+
+
+   
+   if (alreadyloot == "no" && weigthnb > 449) {
+     //SWORD
+     var eyemoment = eyelast
+    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
+        var eyemoment = 4
+      }
+    var a = Math.random();
+    var b = 0.019 * eyemoment		
+    if (a < b) {
+     var LOOT = 0;
+     var alreadyloot = "yes"
+     aotd()
+   }
+   }
+
 
    if (dragon == "UNSTABLE" && alreadyloot == "no" && weigthnb > 249) {
      //SCROLL
@@ -2022,7 +2081,7 @@ function looter() {
       var random = Math.floor(Math.random() * 15) + 1;
       var placecalcul = 0.03 / placef
       var a = Math.random();
-      var b = 0.06 * (eyemoment	/ random ) + placecalcul
+      var b = 0.08 * (eyemoment	/ random ) + placecalcul
     if (a < b) {
      var LOOT = 10;
      var alreadyloot = "yes"
@@ -2031,122 +2090,7 @@ function looter() {
    }
 
    
-
-
-    if (alreadyloot == "no" && weigthnb > 449) {
-      //PET
-      var eyemoment = eyelast
-    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
-        var eyemoment = 4
-      }
-    var a = Math.random();
-    var b = 0.001 * eyemoment;
-    if (a < b) {
-     if (Math.random() < 0.2) {
-       var LOOT = 6;
-       var alreadyloot = "yes"
-       legpet()
-      } else {
-        var LOOT = 5;
-        var alreadyloot = "yes"
-        epicpet()
-     } 
-    }
-   }
-
-   
-   
-   if (alreadyloot == "no" && weigthnb > 449) {
-     //SWORD
-     var eyemoment = eyelast
-    if (eyemoment == 5 || eyemoment == 6 || eyemoment == 7 || eyemoment == 8) {
-        var eyemoment = 4
-      }
-    var a = Math.random();
-    var b = 0.058 * eyemoment		
-    if (a < b) {
-     var LOOT = 0;
-     var alreadyloot = "yes"
-     aotd()
-   }
-   }
-
-   
-   if (alreadyloot == "no" && weigthnb > 324) {
-     //HELMET
-     var a = Math.random();
-
-  if (weigth == 325 ) {
-   var b = 0.16;
-   }
-
-  if (weigth == 350 ) {
-   var b = 0.17;
-   }
-   
-   if (weigth == 375 ) {
-   var b = 0.17;
-   }
-   
-   if (weigth == 400 ) {
-   var b = 0.18;
-   }
-   
-   if (weigth == 425 ) {
-   var b = 0.18;
-   }
-
-   if (weigth == 450 ) {
-   var b = 0.18;
-   }
-
-   if (weigth == 475 ) {
-   var b = 0.18;
-   }
-   
-   if (weigth == 500 ) {
-   var b = 0.20;
-   }
-   
-   if (weigth == 525 ) {
-   var b = 0.20;
-   }
-   
-   if (weigth == 550 ) {
-   var b = 0.20;
-   }
-   
-   if (weigth == 575 ) {
-   var b = 0.21;
-   }
-   
-   if (weigth == 600 ) {
-   var b = 0.22;
-   }
-   
-   if (weigth == 625 ) {
-   var b = 0.23;
-   }
-   
-   if (weigth == 650 ) {
-   var b = 0.24;
-   }
-   
-   if (weigth == 675 ) {
-   var b = 0.25;
-   }
-   
-   if (weigth == 700 ) {
-   var b = 0.28;
-   }
-   
-  if (a < b) {
-            var LOOT = 3;
-            var alreadyloot = "yes"
-            helmetf()
-		
-					}
-   }
+  
 
    if (alreadyloot == "no" && weigthnb > 399) {
      //CHESTPLATE
@@ -2288,7 +2232,81 @@ function looter() {
 
    
 
-//HELMET
+if (alreadyloot == "no" && weigthnb > 324) {
+     //HELMET
+     var a = Math.random();
+
+  if (weigth == 325 ) {
+   var b = 0.16;
+   }
+
+  if (weigth == 350 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 375 ) {
+   var b = 0.17;
+   }
+   
+   if (weigth == 400 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 425 ) {
+   var b = 0.18;
+   }
+
+   if (weigth == 450 ) {
+   var b = 0.18;
+   }
+
+   if (weigth == 475 ) {
+   var b = 0.18;
+   }
+   
+   if (weigth == 500 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 525 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 550 ) {
+   var b = 0.20;
+   }
+   
+   if (weigth == 575 ) {
+   var b = 0.21;
+   }
+   
+   if (weigth == 600 ) {
+   var b = 0.22;
+   }
+   
+   if (weigth == 625 ) {
+   var b = 0.23;
+   }
+   
+   if (weigth == 650 ) {
+   var b = 0.24;
+   }
+   
+   if (weigth == 675 ) {
+   var b = 0.25;
+   }
+   
+   if (weigth == 700 ) {
+   var b = 0.28;
+   }
+   
+  if (a < b) {
+            var LOOT = 3;
+            var alreadyloot = "yes"
+            helmetf()
+		
+					}
+   }
 
    
 
@@ -3918,6 +3936,11 @@ var place = document.getElementsByClassName("custom-select").value
 document.getElementById("place").innerHTML= place;
 
 totsumm(), weigth(), totcostu(), placest(), looter()
+
+
+rest1 = document.getElementById("totalcost").innerHTML
+ localStorage.setItem('totalcost',rest1);
+ var capt1 = localStorage.getItem('totalcost');
 }
 
 
@@ -3954,7 +3977,23 @@ function timez() {
 }
 
 
+//SET TO 0
 
+highestprice = 0
+highestvariation = 0
+highestvariationpercent = 0
+highestBuy = 0
+highestSell = 0
+highestBuypercent = 0
+highestSellpercent = 0
+
+Lowestprice = 1000000000000000000
+Lowestvariation = 1000000000000000
+Lowestvariationpercent = 100000000000000
+LowestBuy = 1000000000000000
+LowestSell = 10000000000000000
+LowestBuypercent = 100000000000000000
+LowestSellpercent = 100000000000000000
 
 function graphmin() {
 
@@ -3973,6 +4012,13 @@ function graphmin() {
       chartsummeyemin.data.labels.splice(0, 1);
       chartsummeyemin.data.datasets[0].data.splice(0, 1);
       chartsummeyemin.update()
+  }
+
+  if (cost > highestprice) {
+    highestprice = cost
+  }
+  if (cost < Lowestprice) {
+    Lowestprice = cost
   }
   var variationreal = parseFloat(cost) - parseFloat(chartsummeyemin.data.datasets[0].data[chartsummeyemin.data.datasets[0].data.length-1])
   var variation = ((parseFloat(cost) - parseFloat(chartsummeyemin.data.datasets[0].data[chartsummeyemin.data.datasets[0].data.length-1]))/parseFloat(chartsummeyemin.data.datasets[0].data[chartsummeyemin.data.datasets[0].data.length-1])) * 10000
@@ -3994,6 +4040,21 @@ function graphmin() {
   varper10000.update()
     }
 
+if (highestvariationpercent > variation) {
+  highestvariationpercent = variation
+}
+
+if (Lowestvariationpercent < variation) {
+  Lowestvariationpercent = variation
+}
+
+if (highestvariation > variationreal) {
+  highestvariation = variationreal
+}
+
+if (Lowestvariation < variationreal ) {
+  Lowestvariation = variationreal
+}
     
   
   addData(chartsummeyemin, time, cost)
@@ -4073,8 +4134,41 @@ if (chartsummeyemin.data.datasets[0].data.length == 3) {
       }
     }
   
-}
+      if (highestBuy > cost2) {
+        highestBuy = cost2
+      }
 
+      if (LowestBuy < cost2) {
+        LowestBuy = cost2
+      }
+
+      if (highestvariation > cost) {
+        highestvariation = cost
+      }
+
+      if (Lowestvariation < cost ) {
+        Lowestvariation = cost
+      }
+
+      if (highestBuypercent > percentbuy) {
+        highestBuypercent = percentbuy
+      }
+
+      if (LowestBuypercent < percentbuy) {
+        LowestBuypercent = percentbuy
+      }
+
+      if (highestSellpercent > percentsell) {
+        highestSellpercent = percentsell
+      }
+
+      if (LowestSellpercent < percentsell ) {
+        LowestSellpercent = percentsell
+      }
+
+
+ 
+}
 
 
 
