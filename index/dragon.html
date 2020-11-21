@@ -721,6 +721,7 @@
                            <br/>
                            <br/>
                            <br/>
+                          
                            <div style="width: 100%">
                             <canvas id="myChart6"></canvas>
                              </div>
@@ -756,6 +757,25 @@
                            <br/>
                            <div style="width: 100%">
                             <canvas id="myChart5"></canvas>
+                          </div>
+                          <br/>
+                         <br/>
+                         <br/>
+                         <br/>
+                         <br/>
+                         <br/>
+                         <br/>
+                         <br/>
+                            <div style="width: 100%">
+                              <canvas id="myChart7"></canvas>
+                              <br/>
+                             <br/>
+                             <br/>
+                             <br/>
+                             <br/>
+                             <br/>
+                             <br/>
+                             <br/>
                           
                             
                   
@@ -766,11 +786,52 @@
                            <script>
           
                                   Chart.defaults.global.hover.intersect = 'false'
+
+
+                                  function gettrends3(varuse) {
+
+                                  for (let letdatai = 1; letdatai < 18; letdatai++) {
+                                    varuse.data.datasets[2].data[letdatai] = (parseFloat(varuse.data.datasets[0].data[letdatai - 1]) + parseFloat(varuse.data.datasets[0].data[letdatai]) + parseFloat(varuse.data.datasets[0].data[letdatai +1]))/3
+                                    chartsummeyemin.data.datasets[2].data.push(varuse.data.datasets[2].data[letdatai])
+                                  }
+                                  varuse.data.datasets[2].data[0] = varuse.data.datasets[0].data[1]
+                                  varuse.data.datasets[2].data[19] = varuse.data.datasets[0].data[18]
+
+                                  console.log('NICE')
+                                  }
+
+                                  function gettrends5(varuse) {
+
+                                  for (let letdatai = 2; letdatai < 17; letdatai++) {
+                                    varuse.data.datasets[1].data[letdatai] = (parseFloat(varuse.data.datasets[0].data[letdatai - 1]) + parseFloat(varuse.data.datasets[0].data[letdatai]) + parseFloat(varuse.data.datasets[0].data[letdatai +1]) + parseFloat(varuse.data.datasets[0].data[letdatai +2]) + parseFloat(varuse.data.datasets[0].data[letdatai -2])).toFixed(2) /5
+                                    chartsummeyemin.data.datasets[1].data.push(varuse.data.datasets[1].data[letdatai])
+                                  }
+
+                                  varuse.data.datasets[1].data[1] = (parseFloat(varuse.data.datasets[0].data[1]) + parseFloat(varuse.data.datasets[0].data[0])).toFixed(2) / 2
+                                  varuse.data.datasets[1].data[18] = (parseFloat(varuse.data.datasets[0].data[17]) + parseFloat(varuse.data.datasets[0].data[18])).toFixed(2) / 2
+
+
+                                  varuse.data.datasets[1].data[0] = varuse.data.datasets[0].data[0]
+                                  varuse.data.datasets[1].data[19] = varuse.data.datasets[0].data[19]
+                                  
+
+                                  console.log('NICE')
+                                  }
+
+
+
                                   function addData(chart, label, data) {
                                   chart.data.labels.push(label);
-                                  chart.data.datasets.forEach((dataset) => {
-                                      dataset.data.push(data);
-                                  });
+                                  chart.data.datasets[0].data.push(data)
+
+                                  if (chartsummeyemin.data.labels.length == 20) {
+                                  chartsummeyemin.data.datasets[1].data = [];
+                                  chartsummeyemin.data.datasets[2].data = []
+
+                                  gettrends5(chartsummeyemin)
+                                  gettrends3(chartsummeyemin)
+                                 }
+
                                   chart.update();
                               }
 
@@ -871,6 +932,7 @@
 
                                     tooltips: {
                                         intersect: false,
+                                        mode: 'index'
                                         
                                       },
 
@@ -931,6 +993,23 @@
                                           showLine: 'true', 
                                           borderColor: 'rgb(171, 0, 255)',
                                           data: []
+
+                                        }, {
+                                          label: 'Arithmetic moving average with 5',
+                                          backgroundColor: 'rgba(255, 255, 255, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(190, 190, 190)',
+                                          data: [], 
+
+
+                                        }, {
+                                          label: 'Arithmetic moving average with 3',
+                                          backgroundColor: 'rgba(255, 255, 255, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(190, 190, 190)',
+                                          data: [], 
+                                          
+
                                       }]
                                   },
 
@@ -940,6 +1019,7 @@
 
                                     tooltips: {
                                         intersect: false,
+                                        mode: 'index'
                                       },
 
                                       hover: {
@@ -1277,6 +1357,102 @@
                                   }
                               });
 
+                                //GRAPH 7
+
+                              var ctx7 = document.getElementById('myChart7').getContext('2d');
+                              var chartproj = new Chart(ctx7, {
+                                  // The type of chart we want to create
+                                  type: 'line',
+                  
+                                  // The data for our dataset
+                                  data: {
+                                      labels: [],
+                                      datasets: [{
+                                          label: 'Projection with Arithmetic moving average with 5',
+                                          backgroundColor: 'rgba(240, 195, 0, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(240, 195, 0)',
+                                          data: []
+
+                                      }, {
+
+                                        
+                                          label: 'Projection with Arithmetic moving average with 3',
+                                          backgroundColor: 'rgba(240, 195, 0, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(240, 195, 0)',
+                                          data: []
+
+                                      }, {
+
+                                  
+                                          label: 'Projection with Arithmetic moving average with 1',
+                                          backgroundColor: 'rgba(240, 195, 0, 0.25)',
+                                          showLine: 'true', 
+                                          borderColor: 'rgb(240, 195, 0)',
+                                          data: []
+
+                                        }, {
+
+                                  
+                                        label: 'Projection with Arithmetic moving average with average of 1, 3 and 5',
+                                        backgroundColor: 'rgba(65, 194, 110, 0.25)',
+                                        showLine: 'true', 
+                                        borderColor: 'rgb(65, 194, 110)',
+                                        data: []
+                                          
+
+                                      }]
+                                  },
+
+                  
+                                  // Configuration options go here
+                                  options: {
+
+                                    tooltips: {
+                                        intersect: false,
+                                        mode: 'index'
+                                      },
+
+                                      hover: {
+                                        intersect: false
+                                      },
+
+                                      title: {
+                                          display: true,
+                                          text: "Evolution of Summoning Eye Price Projection (10 Seconds)"
+                                      },
+
+                                      elements: {
+                                          line: {
+                                            backgroundColor: 'rgba(240, 195, 0, 0.25)',
+                                            borderColor: 'rgba(240, 195, 0, 1)'
+                                          },
+                                          point: {
+                                              backgroundColor: 'rgb(240, 195, 0)'
+                                          },
+                                          
+                                      },
+
+                                      scales: {
+                                        xAxes: [{
+                                          display: false,
+                                          scaleLabel: {
+                                            display: true,
+                                            labelString: 'Time'
+                                          }
+                                        }],
+                                        yAxes: [{
+                                          display: true,
+                                          scaleLabel: {
+                                            display: true,
+                                            labelString: 'Price per unit'
+                                          }
+                                        }]
+                                      }
+                                  }
+                              });
+
                           </script>
 
 
@@ -1367,8 +1543,8 @@
         </audio>
         
         <body onload="document.getElementById('audioPlayer2').volume='0.2';">
-        <audio id="audioPlayer2" loop="true">
-          <source src="minecraft-music-boss.mp3">
+        <video id="audioPlayer2" loop="true">
+          <video src="https://www.youtube.com/watch?v=kV8tNPTmpmM&list=RDkV8tNPTmpmM" controls poster="sintel.jpg" width="600"></video>
       </audio>
  
       </body>
@@ -4008,7 +4184,7 @@ function graphmin() {
     cost = parseFloat(cost)
     cost = cost.toFixed(2)
     
-    if (chartsummeyemin.data.labels.length == 21) {
+    if (chartsummeyemin.data.labels.length == 20) {
       chartsummeyemin.data.labels.splice(0, 1);
       chartsummeyemin.data.datasets[0].data.splice(0, 1);
       chartsummeyemin.update()
@@ -4029,7 +4205,7 @@ function graphmin() {
       varper10000.data.datasets[1].data.push(variationreal.toFixed(2))
   varper10000.data.labels.push(time)
 
-  if (varper10000.data.labels.length == 21) {
+  if (varper10000.data.labels.length == 20) {
     varper10000.data.labels.splice(0, 1);
     varper10000.data.datasets[0].data.splice(0, 1);
     varper10000.data.datasets[1].data.splice(0, 1);
@@ -4058,6 +4234,10 @@ if (Lowestvariation < variationreal ) {
     
   
   addData(chartsummeyemin, time, cost)
+
+  
+      
+      
 })
 
 fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03c3df3de")
@@ -4070,12 +4250,15 @@ fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03
     cost2 = parseFloat(cost2)
     cost2 = cost2.toFixed(2)
     console.log(cost)
-    
+
+
+
+       
     
   addData1(chartsummeyeask, time, cost)
   addData0(chartsummeyeask, cost2)
 
-  if (chartsummeyeask.data.labels.length == 21) {
+  if (chartsummeyeask.data.labels.length == 20) {
     chartsummeyeask.data.labels.splice(0, 1);
     chartsummeyeask.data.datasets[0].data.splice(0, 1);
     chartsummeyeask.data.datasets[1].data.splice(0, 1);
@@ -4101,7 +4284,7 @@ fetch("https://api.hypixel.net/skyblock/bazaar?key=ffa56cad-5677-47d7-86f2-aca03
   addData1(percentvolume, time, (percentsell.toFixed(2) - percentbuy.toFixed(2)).toFixed(2))
   percentvolume.update()
 
-  if (percentvolume.data.labels.length == 21) {
+  if (percentvolume.data.labels.length == 20) {
     percentvolume.data.labels.splice(0, 1);
     percentvolume.data.datasets[0].data.splice(0, 1);
     percentvolume.data.datasets[1].data.splice(0, 1);
@@ -4117,6 +4300,8 @@ if (chartsummeyemin.data.datasets[0].data.length == 3) {
 
         chartsummeyemin.data.labels.splice(0, 1);
       chartsummeyemin.data.datasets[0].data.splice(0, 1);
+     
+      
 
       chartsummeyeask.data.labels.splice(0, 1);
     chartsummeyeask.data.datasets[0].data.splice(0, 1);
@@ -4133,8 +4318,43 @@ if (chartsummeyemin.data.datasets[0].data.length == 3) {
 
       }
     }
+    
+    timestamp10sec = parseFloat((moment().unix()+10)+"000")
+    time2 = moment(timestamp10sec).format('MMMM Do YYYY, h:mm:ss a');
+
   
-      if (highestBuy > cost2) {
+    
+    proj = 2*parseFloat(chartsummeyemin.data.datasets[1].data[chartsummeyemin.data.datasets[1].data.length - 1]) - parseFloat(chartsummeyemin.data.datasets[1].data[chartsummeyemin.data.datasets[1].data.length - 2])
+    proj2l = 2*parseFloat(chartsummeyemin.data.datasets[2].data[chartsummeyemin.data.datasets[2].data.length - 1]) - parseFloat(chartsummeyemin.data.datasets[2].data[chartsummeyemin.data.datasets[2].data.length - 2])
+    proj3 = 2*parseFloat(chartsummeyemin.data.datasets[0].data[chartsummeyemin.data.datasets[0].data.length - 1]) - parseFloat(chartsummeyemin.data.datasets[0].data[chartsummeyemin.data.datasets[0].data.length - 2])
+    
+    go = 0
+    if (chartsummeyemin.data.datasets[0].data.length >= 20) {
+
+      chartproj.data.labels.push(time2)
+      go = 1
+    }
+    if (go == 1) {
+      chartproj.data.datasets[1].data.push(proj)
+      chartproj.data.datasets[2].data.push(proj2l)
+      chartproj.data.datasets[0].data.push(proj3)
+      chartproj.data.datasets[3].data.push((proj3+proj2l+proj)/3)
+    chartproj.update()
+    }
+    
+
+    if (chartproj.data.labels.length == 21) {
+    chartproj.data.labels.splice(0, 1);
+    chartproj.data.datasets[0].data.splice(0, 1);
+    chartproj.data.datasets[2].data.splice(0, 1);
+    chartproj.data.datasets[1].data.splice(0, 1);
+    chartproj.data.datasets[3].data.splice(0, 1);
+
+    chartproj.update()
+  }
+  
+    
+     /* if (highestBuy > cost2) {
         highestBuy = cost2
       }
 
@@ -4165,7 +4385,7 @@ if (chartsummeyemin.data.datasets[0].data.length == 3) {
       if (LowestSellpercent < percentsell ) {
         LowestSellpercent = percentsell
       }
-
+*/
 
  
 }
