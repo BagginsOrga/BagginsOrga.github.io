@@ -15,6 +15,7 @@
   "skipFiles": [
     "<node_internals>/**"
   ],
+<<<<<<< HEAD
   "scripts": {
     "postinstall": "install-app-deps",
     "start": "electron .",
@@ -35,3 +36,6 @@
     "electron-winstaller": "^4.0.1"
   }
 }
+=======
+
+>>>>>>> f0610483c450a79c61a6494c424a72e6284b9d57
