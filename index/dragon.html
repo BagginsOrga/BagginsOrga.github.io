@@ -695,7 +695,9 @@
                     <div class="stat-content">
                         <p class="stat-raw-values">
                             <span class="stat-name">Total Dragons: </span><span class="stat-value" id="totdragsummtab" >0</span><br>
-                            <span class="stat-name">Price per : </span><span class="stat-value" id="priceperonesumm">Not summoned yet</span>
+                            <span class="stat-name">Price per : </span><span class="stat-value" id="priceperonesumm">Not summoned yet</span><br>
+                            <span class="stat-name">Difference bettwen projected and reality: </span><span class="stat-value" id="diffbtwdiv">Need more stats</span><br>
+                            <span class="stat-name">Best project now: </span><span class="stat-value" id="bestprojectdiv">Need more stats</span>
                         </p>
                         
 
@@ -1368,7 +1370,7 @@
                                   data: {
                                       labels: [],
                                       datasets: [{
-                                          label: 'Projection with Arithmetic moving average with 5',
+                                          label: 'Projection with Arithmetic moving average with 1',
                                           backgroundColor: 'rgba(240, 195, 0, 0.25)',
                                           showLine: 'true', 
                                           borderColor: 'rgb(240, 195, 0)',
@@ -1377,7 +1379,7 @@
                                       }, {
 
                                         
-                                          label: 'Projection with Arithmetic moving average with 3',
+                                          label: 'Projection with Arithmetic moving average with 5',
                                           backgroundColor: 'rgba(240, 195, 0, 0.25)',
                                           showLine: 'true', 
                                           borderColor: 'rgb(240, 195, 0)',
@@ -1386,7 +1388,7 @@
                                       }, {
 
                                   
-                                          label: 'Projection with Arithmetic moving average with 1',
+                                          label: 'Projection with Arithmetic moving average with 3',
                                           backgroundColor: 'rgba(240, 195, 0, 0.25)',
                                           showLine: 'true', 
                                           borderColor: 'rgb(240, 195, 0)',
@@ -4324,6 +4326,9 @@ if (chartsummeyemin.data.datasets[0].data.length == 3) {
     time2 = moment(timestamp10sec).format('MMMM Do YYYY, h:mm:ss a');
 
   
+    function difference(a, b) {
+  return Math.abs(a - b);
+}
     
     proj = 2*parseFloat(chartsummeyemin.data.datasets[1].data[chartsummeyemin.data.datasets[1].data.length - 1]) - parseFloat(chartsummeyemin.data.datasets[1].data[chartsummeyemin.data.datasets[1].data.length - 2])
     proj2l = 2*parseFloat(chartsummeyemin.data.datasets[2].data[chartsummeyemin.data.datasets[2].data.length - 1]) - parseFloat(chartsummeyemin.data.datasets[2].data[chartsummeyemin.data.datasets[2].data.length - 2])
@@ -4341,6 +4346,34 @@ if (chartsummeyemin.data.datasets[0].data.length == 3) {
       chartproj.data.datasets[0].data.push(proj3)
       chartproj.data.datasets[3].data.push((proj3+proj2l+proj)/3)
     chartproj.update()
+    datatocompare = parseFloat(chartsummeyemin.data.datasets[0].data[chartsummeyemin.data.datasets[0].data.length - 1]);
+    datacompare5 =  parseFloat(chartproj.data.datasets[1].data[chartproj.data.datasets[1].data.length - 2])
+    datacompare1 = parseFloat(chartproj.data.datasets[0].data[chartproj.data.datasets[0].data.length - 2])
+    datacompare3 = parseFloat(chartproj.data.datasets[2].data[chartproj.data.datasets[2].data.length - 2])
+    datacompareav = parseFloat(chartproj.data.datasets[3].data[chartproj.data.datasets[3].data.length - 2])
+    comp5 = difference(datacompare5, datatocompare)
+    comp3 = difference(datacompare3, datatocompare)
+    comp1 = difference(datacompare1, datatocompare)
+    compav = difference(datacompareav, datatocompare)
+    lepluspetit = Math.min(comp5, comp3, comp1, compav)
+
+    document.getElementById("diffbtwdiv").innerHTML = lepluspetit.toFixed(2)
+    if (lepluspetit == comp1) {
+      document.getElementById("bestprojectdiw").innerHTML = "Projection with Arithmetic moving average with 1"
+    }
+
+    if (lepluspetit == comp5) {
+      document.getElementById("bestprojectdiw").innerHTML = "Projection with Arithmetic moving average with 5"
+    }
+
+    if (lepluspetit == comp3) {
+      document.getElementById("bestprojectdiw").innerHTML = "Projection with Arithmetic moving average with 3"
+    }
+
+    if (lepluspetit == compav) {
+      document.getElementById("bestprojectdiw").innerHTML = "Projection with Arithmetic moving average with average of 1, 3 and 5"
+    }
+
     }
     
 
