@@ -13,8 +13,26 @@ html{
     font-family: 'Montserrat', sans-serif;
     color: white;
     overflow-x: hidden;
+    scrollbar-color: rgb(218, 171, 3) rgb(45,45,45)
 }
 
+
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: rgb(45,45,45);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(218, 171, 3);
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgb(45,45,45);
+}
+
+::-webkit-scrollbar-corner {
+    background: rgb(40,40,40);
+}
 .grecaptcha-badge{
     visibility: hidden;
 }

@@ -1,93 +1,91 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Chart test</title>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    </head>
-    <body>
-        <hl>Chart.js</hl>
-        
-        
-        <div style="width: 60%">
-        <canvas id="myChart"></canvas>
-         </div>
+<html><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><style type="text/css" id="dark-mode-custom-style" lang="en"></style><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home-style.css">
+    <title>DoughnutTheGuy's Bazaar Price Viewer</title>
+    <script src="../js/main.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<style type="text/css">/* Chart.js */
+@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head>
 
-         <div id='datasumm'>
+<body>
+    <nav>
+        <h1 class="branding vert-centre">Bazaar Price Viewer v0.1</h1>
+        <hr class="line">
+        <div class="right vert-centre">
+            <a href="index.html" class="nav-item">Bazaar Price</a>
+            <a href="minion_rank.html" class="nav-item">Minion Rank</a>
+            <a class="support-button top-support" href="https://ko-fi.com/doughnuttheguy">Support Me</a>
+        </div>
+    </nav>
+    <div class="clear"></div>
+    <section>
+        <div class="settings-panel" id="settings-panel">
+            <div class="center">
+                <h1>Graph Options</h1>
+                <label for="">Input product name:</label>
+                <br>
+                <input type="text" id="item-chooser">
+                <div id="error"></div>
+                <br><br>
+                <input class="button" type="submit" value="Load Graph" id="load">
+            </div>
+        </div>
+        <div class="item-status">
+            <table>
+                <tbody><tr>
+                    <th>Properties</th>
+                    <th>Price (Pct Change)</th>
+                </tr>
+                <tr>
+                    <td>Current Insta-Buy price</td>
+                    <td id="insta-buy"></td>
+                </tr>
+                <tr>
+                    <td>Current Insta-Sell price</td>
+                    <td id="insta-sell"></td>
+                </tr>
+            </tbody></table>
+        </div>
+        <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="myChart" style="display: block;" width="833" height="416" class="chartjs-render-monitor"></canvas></div>
+        <div id="orders">
+            <div id="sell-order">
+                <h1>Top Sell Orders</h1>
+                <table id="top-sell" class="order-table" style="width: 90%;">
+                    <tbody><tr class="head">
+                        <th>Orders</th>
+                        <th>Amount</th>
+                        <th>Unit Price</th>
+                    </tr>
+                </tbody></table>
+            </div>
+            <div id="buy-order">
+                <h1>Top Buy Orders</h1>
+                <table id="top-buy" class="order-table" style="width: 90%;">
+                    <tbody><tr class="head">
+                        <th>Orders</th>
+                        <th>Amount</th>
+                        <th>Unit Price</th>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>s
+    </section>
+    <footer>
+        <div class="footer-box">
+            <div class="all-centre">
+                <p>Powered By:</p>
+                <h1>Hypixel Api</h1>
+            </div>
+        </div>
+        <div class="support footer-box">
+            <h1>Support the Dev!</h1>
+            <p>Support me by buying me a VIP.</p>
+            <br>
+            <a class="support-button footer-button" href="https://ko-fi.com/doughnuttheguy">Support Me</a>
+        </div>
+    </footer>
 
-         </div>
 
-         <script>
-
-                
-
-
-
-var prout = (cost - chartsummeyemin.data.datasets[0].data[chartsummeyemin.data.datasets[0].data.length-2])/10
-
-
-            config.data.labels.shift(); 
-            dataset.data.shift();
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-                function addData(chart, label, data) {
-                chart.data.labels.push(label);
-                chart.data.datasets.forEach((dataset) => {
-                    dataset.data.push(data);
-                });
-                chart.update();
-            }
-
-          
-         </script>
-
-        <script>
-             x = ['1', '2', '3']
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var chart = new Chart(ctx, {
-                // The type of chart we want to create
-                type: 'line',
-
-                // The data for our dataset
-                data: {
-                    labels: ['1', '2', '3'],
-                    datasets: [{
-                        label: 'Price per unit',
-                        backgroundColor: 'rgba(171, 0, 255, 0.25)',
-                        borderColor: 'rgb(171, 0, 255)',
-                        data: [0, 10, 5]
-                    }]
-                },
-
-                // Configuration options go here
-                options: {
-                    title: {
-                        text: "Evolution of Summoning Price"
-                    },
-                    elements: {
-                        point: {
-                            backgroundColor: 'rgb(0, 0, 255)'
-                        }
-                    }
-
-                }
-            });
-
-        </script>
-
-    </body>
-</html>
+</body></html>
