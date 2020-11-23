@@ -4,7 +4,7 @@
 
 This project is based on <a href="https://github.com/LeaPhant/skyblock-stats">sky.lea.moe</a>, with Konocalculator you can calculate dungeons items, you can can simulate dragons and more...
 
-**Website**: https://bagginsorga.github.io/  
+**Website**: https://bagginsorga.github.io  
 
 <h2 align="center">Screenshots</h1>
 
