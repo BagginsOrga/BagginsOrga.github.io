@@ -2881,6 +2881,7 @@ a.additional-player-stat:hover{
     border-radius: 10px;
     overflow: hidden;
     background-color: rgb(10,10,10);
+    border-radius: 45px;
 }
 
 #enter_player_box_wrapper p:last-child{
@@ -2922,6 +2923,7 @@ html.no-webp #enter_player_box_wrapper{
     left: 0;
     bottom: 0;
     right: 0;
+    border-radius: 50px;
 }
 
 #goto_target_username{
@@ -3108,6 +3110,7 @@ html.no-webp #enter_player_box_wrapper{
     text-decoration: none;
     opacity: 0.9;
     transition: opacity .2s;
+    border-radius: 25px;
 }
 
 .top-profile2{
@@ -3135,9 +3138,10 @@ html.no-webp #enter_player_box_wrapper{
     border-radius: 10px;
     padding: 20px;
     box-sizing: border-box;
-    text-decoration: none;
+    text-decoration: yellow;
     opacity: 0.9;
     transition: opacity .2s;
+    font: 1em sans-serif;
 }
 
 html.no-webp .top-profile{
@@ -3151,7 +3155,7 @@ html.no-webp .top-profile{
 .profile-avatar{
     width: 64px;
     height: 64px;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 .profile-name{

@@ -1445,6 +1445,7 @@ a.additional-player-stat:hover{
     padding-bottom: 20px;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.56);
+    border-radius: 35px;
 }
 
 #basic_stats_health{
@@ -1453,6 +1454,7 @@ a.additional-player-stat:hover{
     padding-bottom: 20px;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.56);
+    border-radius: 35px;
 }
 
 #basic_stats_def{
@@ -1461,6 +1463,7 @@ a.additional-player-stat:hover{
     padding-bottom: 20px;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.56);
+    border-radius: 35px;
 }
 
 #basic_stats_str{
@@ -1469,6 +1472,7 @@ a.additional-player-stat:hover{
     padding-bottom: 20px;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.56);
+    border-radius: 35px;
 }
 
 #basic_stats_speed{
@@ -1477,6 +1481,7 @@ a.additional-player-stat:hover{
     padding-bottom: 20px;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.56);
+    border-radius: 35px;
 }
 
 #basic_stats_chance{
@@ -1485,6 +1490,7 @@ a.additional-player-stat:hover{
     padding-bottom: 20px;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.56);
+    border-radius: 35px;
 }
 
 #basic_stats_crit{
@@ -1493,6 +1499,7 @@ a.additional-player-stat:hover{
     padding-bottom: 20px;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.56);
+    border-radius: 35px;
 }
 
 #basic_stats_mana{
@@ -1501,6 +1508,7 @@ a.additional-player-stat:hover{
     padding-bottom: 20px;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.56);
+    border-radius: 35px;
 }
 
 #basic_stats_dama{
@@ -1509,6 +1517,7 @@ a.additional-player-stat:hover{
     padding-bottom: 20px;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.56);
+    border-radius: 35px;
 }
 
 #additional_stats_container{
@@ -3934,6 +3943,32 @@ html.no-webp #error_box_wrapper{
 
     .rank-tag .rank-plus{
         padding-right: 5px;
+    }
+}
+
+@media (max-device-width: 480px) {
+    div#wrapper {
+        width: 400px;
+    }
+
+    div#header {
+        background-image: url(media-queries-phone.jpg);
+        height: 93px;
+        position: relative;
+    }
+
+    div#header h1 {
+        font-size: 140%;
+    }
+
+    #content {
+        float: none;
+        width: 100%;
+    }
+
+    #navigation {
+        float:none;
+        width: auto;
     }
 }
 

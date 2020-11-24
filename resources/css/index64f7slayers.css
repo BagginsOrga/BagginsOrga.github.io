@@ -5,11 +5,30 @@
 
 html{
     background-color: black;
-    background: url(../img/fonddragons.webp) no-repeat center center fixed;
+    background: url(../img/slayerhub.webp) no-repeat center center fixed;
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
     color: white;
     overflow-x: hidden;
+    scrollbar-color: rgb(0, 202, 67) rgb(45,45,45);
+}
+
+
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: rgb(45,45,45);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 202, 67);
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgb(45,45,45);
+}
+
+::-webkit-scrollbar-corner {
+    background: rgb(40,40,40);
 }
 
 .grecaptcha-badge{
@@ -26,7 +45,7 @@ html{
 
 
 html.no-webp{
-    background-image: url(../img/fonddragons.png);
+    background-image: url(../img/slayerhub.png);
 }
 
 a.no-underline{
@@ -665,7 +684,7 @@ header{
 }
 
 #bg_blur{
-    background: url(../img/fonddragonsblur.webp?v2) no-repeat center center fixed;
+    background: url(../img/slayerhubblur.webp?v2) no-repeat center center fixed;
     background-size: cover;
     position: fixed;
     left: 30vw;
@@ -676,7 +695,7 @@ header{
 }
 
 html.no-webp #bg_blur{
-    background-image: url(../img/fonddragonsblur.png?v2)
+    background-image: url(../img/slayerhubblur.png?v2)
 }
 
 #wrapper{
@@ -2025,6 +2044,7 @@ a.additional-player-stat:hover{
     padding-bottom: 20px;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.56);
+    border-radius: 35px;
 }
 
 #basic_stats_health{
@@ -3457,7 +3477,7 @@ a.additional-player-stat:hover{
     margin-top: calc(50vh - 130px);
     width: 700px;
     height: 300px;
-    background: url(../img/fonddragonsblur.webp?v2) no-repeat center center fixed;
+    background: url(../img/slayerhubblur.webp?v2) no-repeat center center fixed;
     background-size: cover;
     border-radius: 10px;
     overflow: hidden;
@@ -3470,7 +3490,7 @@ a.additional-player-stat:hover{
 }
 
 html.no-webp #enter_player_box_wrapper{
-    background-image: url(../img/fonddragonsblur.png?v2);
+    background-image: url(../img/slayerhubblur.png?v2);
 }
 
 #enter_player_box{
@@ -3726,7 +3746,7 @@ html.no-webp #enter_player_box_wrapper{
     margin: 0 auto;
     margin-top: 20px;
     width: 700px;
-    background: url(../img/fonddragonsblur.webp?v2) no-repeat center center fixed;
+    background: url(../img/slayerhubblur.webp?v2) no-repeat center center fixed;
     background-size: cover;
     border-radius: 10px;
     overflow: hidden;
@@ -3748,7 +3768,7 @@ html.no-webp #enter_player_box_wrapper{
 .top-profile{
     position: relative;
     display: inline-block;
-    background: url(../img/fonddragonsblur.webp?v2) no-repeat center center fixed;
+    background: url(../img/slayerhubblur.webp?v2) no-repeat center center fixed;
     background-size: cover;
     width: calc(100% / 2 - 10px);
     margin-bottom: 20px;
@@ -3763,7 +3783,7 @@ html.no-webp #enter_player_box_wrapper{
 .top-profile2{
     position: relative;
     display: inline-block;
-    background: url(../img/fonddragonsblur.webp?v2) no-repeat center center fixed;
+    background: url(../img/slayerhubblur.webp?v2) no-repeat center center fixed;
     background-size: cover;
     width: calc(70% / 2 - 10px);
     margin-bottom: 20px;
@@ -3778,7 +3798,7 @@ html.no-webp #enter_player_box_wrapper{
 .top-profile3{
     position: relative;
     display: inline-block;
-    background: url(../img/fonddragonsblur.webp?v2) no-repeat center center fixed;
+    background: url(../img/slayerhubblur.webp?v2) no-repeat center center fixed;
     background-size: cover;
     width: calc(70% / 2 - 10px);
     margin-bottom: 20px;
@@ -3791,7 +3811,7 @@ html.no-webp #enter_player_box_wrapper{
 }
 
 html.no-webp .top-profile{
-    background-image: url(../img/fonddragonsblur.png?v2);
+    background-image: url(../img/slayerhubblur.png?v2);
 }
 
 .top-profile:hover{
@@ -3851,7 +3871,7 @@ html.no-webp .top-profile{
 }
 
 html.no-webp #error_box_wrapper{
-    background-image: url(../img/fonddragonsblur.png?v2);
+    background-image: url(../img/slayerhubblur.png?v2);
 }
 
 #error_box, #top_profiles_box{
