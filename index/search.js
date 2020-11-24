@@ -164,7 +164,7 @@ $(document).ready(function(){
       console.log(data)
       videostatslol = data
       for (let i = 0; i < 8; i++) {
-        document.getElementById("ytplayer"+i).src = "http://www.youtube.com/embed/" + videostatslol.items[i].id.videoId
+        document.getElementById("ytplayer"+i).src = "https://www.youtube.com/embed/" + videostatslol.items[i].id.videoId
       }
       
 
