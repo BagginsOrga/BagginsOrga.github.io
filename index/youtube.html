@@ -88,7 +88,7 @@
                                     
 
                                 
-                            <iframe id="ytplayer0" type="text/html" src="" width="640" height="360" frameborder="0" allowfullscreen>
+                            <iframe id="ytplayer0" type="text/html" src="" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 </iframe>
 
 
@@ -96,7 +96,7 @@
 
 
     
-    <iframe type="text/html" src="" id="ytplayer1" style="position: absolute;/*! padding-left: unset; */left: 730;top: 108;" width="640" height="360" frameborder="0" allowfullscreen>
+    <iframe type="text/html" src="" id="ytplayer1" style="position: absolute;/*! padding-left: unset; */left: 730;top: 108;" width="640" height="360" frameborder="0" allow="encrypted-media" allowfullscreen>
 </iframe>
     
     <iframe type="text/html" src="" id="ytplayer2" style="position: absolute;/*! padding-left: unset; */left: 1430;top: 108;" width="640" height="360" frameborder="0" allowfullscreen>
@@ -162,7 +162,7 @@
 <script src="https://apis.google.com/js/api.js"></script>
 <script>
 
-    
+
 fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=live&maxResults=8&q=hypixel&type=video&key=AIzaSyA72M7JIiArW_bLyw0lPbdKY9bTF-BSJws")
 .then(result => result.json())
 .then((yt)=> {
