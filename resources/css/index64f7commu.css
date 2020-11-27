@@ -2436,16 +2436,36 @@ a.additional-player-stat:hover{
     line-height: 40px;
     /*! text-transform: uppercase; */
     font-weight: 600;
-    text-align: left;
+    text-align: center;
     font-size: 21px;
     text-shadow: 0px 0px 7px rgba(0,0,0,0.3);
     position: relative;
-    padding-left: 35px;
+    padding-right: 5;
     margin-bottom: 15px;
+    /*! padding-block: revert; */
+}
+
+.stat-header2{
+    height: 40px;
+    line-height: 40px;
+    /*! text-transform: uppercase; */
+    font-weight: 600;
+    text-align: center;
+    font-size: 21px;
+    text-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+    position: relative;
+    padding-right: 5;
+    margin-bottom: 15px;
+    /*! padding-block: revert; */
 }
 
 .stat-header span{
     border-bottom: 4px solid #BF282A;
+    font-weight: bold;
+}
+
+.stat-header2 span{
+    border-bottom: 4px solid #6440A5;
     font-weight: bold;
 }
 
@@ -3564,7 +3584,7 @@ html.no-webp #enter_player_box_wrapper{
     top: 520;
     left: 60;
     border: 0 !important;
-    background-color: #bf282a;
+    background-color: #6440a5;
     color: white;
     height: 36px;
     width: 175px;

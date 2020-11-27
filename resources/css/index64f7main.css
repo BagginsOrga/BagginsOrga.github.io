@@ -2885,7 +2885,7 @@ a.additional-player-stat:hover{
 }
 
 #enter_player_box_wrapper p:last-child{
-    font-size: 16px;
+    font-size: px;
     color: rgba(255,255,255,0.8);
 }
 

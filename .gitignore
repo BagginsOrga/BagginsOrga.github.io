@@ -1,2 +1,5 @@
 node_modules
 .vscode/launch.json
+
+# api keys
+.env   

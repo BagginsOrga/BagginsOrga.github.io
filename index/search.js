@@ -88,7 +88,7 @@ $(document).ready(function(){
   hide = document.getElementById("search")
   hide.style.display = "none";
   
-  var API_KEY = "AIzaSyA72M7JIiArW_bLyw0lPbdKY9bTF-BSJws"
+  var API_KEY = "AIzaSyD8i_0JMyLJJQOBuib4dIdWA9q7-mFG1NU"
   var video = ""
   var videos = $("#videos")
 
@@ -163,8 +163,9 @@ $(document).ready(function(){
       console.log('1')
       console.log(data)
       videostatslol = data
+
       for (let i = 0; i < 8; i++) {
-        document.getElementById("ytplayer"+i).src = "https://www.youtube.com/embed/" + videostatslol.items[i].id.videoId
+        document.getElementById("widget"+(i+1)).src = "https://www.youtube.com/embed/" + videostatslol.items[i].id.videoId + "?html5=1&enablejsapi=1&autoplay=0&rel=0&showinfo=0&modestbranding=1&controls=1&autohide=0&vq=large"
       }
       
 

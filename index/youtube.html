@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="../resources/css/youtube.css">
     <link rel="stylesheet" href="../resources/css/inventory8e9a.css?v13">
 
+    <script src="http://www.youtube.com/player_api"></script>
+
+
     <script type="text/javascript" src="../resources/js/dragon.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
@@ -29,7 +32,7 @@
     
     <img src="../icone2.png" class="pride-flag">
     <a href="community.html" id="site_name">KonoCalculator - Youtube videos</a>
-    
+    <script src="http://www.youtube.com/player_api"></script> 
     
     
 </header>
@@ -88,7 +91,7 @@
                                     
 
                                 
-                            <iframe id="ytplayer0" type="text/html" src="" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                            <iframe id="widget1" type="text/html" src="" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" onload="player0=new YT.Player(this)" >
 </iframe>
 
 
@@ -96,25 +99,25 @@
 
 
     
-    <iframe type="text/html" src="" id="ytplayer1" style="position: absolute;/*! padding-left: unset; */left: 730;top: 108;" width="640" height="360" frameborder="0" allow="encrypted-media" allowfullscreen>
+    <iframe type="text/html" src="" id="widget2" style="position: absolute;/*! padding-left: unset; */left: 730;top: 108;" width="640" height="360" frameborder="0" allow="encrypted-media" allowfullscreen="" onload="player1=new YT.Player(this)">
 </iframe>
     
-    <iframe type="text/html" src="" id="ytplayer2" style="position: absolute;/*! padding-left: unset; */left: 1430;top: 108;" width="640" height="360" frameborder="0" allowfullscreen>
+    <iframe type="text/html" src="" id="widget3" style="position: absolute;/*! padding-left: unset; */left: 1430;top: 108;" width="640" height="360" frameborder="0" allowfullscreen="" onload="player2=new YT.Player(this)">
 </iframe>
     
-    <iframe type="text/html" src="" id="ytplayer3" style="position: absolute;/*! padding-left: unset; */left: 2130;top: 108;" width="640" height="360" frameborder="0" allowfullscreen>
+    <iframe type="text/html" src="" id="widget4" style="position: absolute;/*! padding-left: unset; */left: 2130;top: 108;" width="640" height="360" frameborder="0" allowfullscreen="" onload="player3=new YT.Player(this)">
 </iframe>
     
-    <iframe type="text/html" src="" id="ytplayer4" style="position: absolute;/*! padding-left: unset; */left: 2830;top: 108;" width="640" height="360" frameborder="0" allowfullscreen>
+    <iframe type="text/html" src="" id="widget5" style="position: absolute;/*! padding-left: unset; */left: 2830;top: 108;" width="640" height="360" frameborder="0" allowfullscreen="" onload="player4=new YT.Player(this)">
 </iframe>
     
-    <iframe type="text/html" src="" id="ytplayer5" style="position: absolute;/*! padding-left: unset; */left: 3530;top: 108;" width="640" height="360" frameborder="0" allowfullscreen>
+    <iframe type="text/html" src="" id="widget6" style="position: absolute;/*! padding-left: unset; */left: 3530;top: 108;" width="640" height="360" frameborder="0" allowfullscreen="" onload="player5=new YT.Player(this)">
 </iframe>
     
-    <iframe type="text/html" src="" id="ytplayer6" style="position: absolute;/*! padding-left: unset; */left: 4230;top: 108;" width="640" height="360" frameborder="0" allowfullscreen>
+    <iframe type="text/html" src="" id="widget7" style="position: absolute;/*! padding-left: unset; */left: 4230;top: 108;" width="640" height="360" frameborder="0" allowfullscreen="" onload="player6=new YT.Player(this)">
 </iframe>
     
-    <iframe type="text/html" src="" id="ytplayer7" style="position: absolute;/*! padding-left: unset; */left: 4930;top: 108;" width="640" height="360" frameborder="0" allowfullscreen>
+    <iframe type="text/html" src="" id="widget8" style="position: absolute;/*! padding-left: unset; */left: 4930;top: 108;" width="640" height="360" frameborder="0" allowfullscreen="" onload="player7=new YT.Player(this)">
 </iframe>
     
     
@@ -163,15 +166,187 @@
 <script>
 
 
-fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=live&maxResults=8&q=hypixel&type=video&key=AIzaSyA72M7JIiArW_bLyw0lPbdKY9bTF-BSJws")
+/*fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=live&maxResults=8&q=hypixel&type=video&key=AIzaSyA72M7JIiArW_bLyw0lPbdKY9bTF-BSJws")
 .then(result => result.json())
 .then((yt)=> {
   
 liveitems = yt.items
-})
+})*/
+
+
+setInterval(multiclose, 1000)
+function multiclose() {
+
+    
+
+cplayer0 = player0.playerInfo.currentTimeLastUpdated_
+cplayer1 = player1.playerInfo.currentTimeLastUpdated_
+cplayer2 = player2.playerInfo.currentTimeLastUpdated_
+cplayer3 = player3.playerInfo.currentTimeLastUpdated_
+cplayer4 = player4.playerInfo.currentTimeLastUpdated_
+cplayer5 = player5.playerInfo.currentTimeLastUpdated_
+cplayer6 = player6.playerInfo.currentTimeLastUpdated_
+cplayer7 = player7.playerInfo.currentTimeLastUpdated_
+
+acplayer0 = player0.playerInfo.currentTime
+acplayer1 = player1.playerInfo.currentTime
+acplayer2 = player2.playerInfo.currentTime
+acplayer3 = player3.playerInfo.currentTime
+acplayer4 = player4.playerInfo.currentTime
+acplayer5 = player5.playerInfo.currentTime
+acplayer6 = player6.playerInfo.currentTime
+acplayer7 = player7.playerInfo.currentTime
+
+console.log(cplayer0)
+console.log(acplayer0)
+
+
+
+cplayermax = Math.max(cplayer0, cplayer1, cplayer2, cplayer3, cplayer4, cplayer5, cplayer6, cplayer7)
+acplayermax = Math.min(acplayer0, acplayer1, acplayer2, acplayer3, acplayer4, acplayer5, acplayer6, acplayer7)
+console.log(cplayermax)
+
+
+  if (cplayer0 == cplayermax) {
+      if (acplayer0 > 0 ) {
+
+        playeropen = "playe0" 
+        console.log(playeropen)
+
+        
+        player1.pauseVideo()
+        player2.pauseVideo()
+        player3.pauseVideo()
+        player4.pauseVideo()
+        player5.pauseVideo()
+        player6.pauseVideo()
+        player7.pauseVideo()
+        
+      }
+
+}
+
+if (cplayer1 == cplayermax) {
+    if (acplayer1 > 0 ) {
+playeropen = "playe1" 
+console.log(playeropen)
+player0.pauseVideo()
+        
+        player2.pauseVideo()
+        player3.pauseVideo()
+        player4.pauseVideo()
+        player5.pauseVideo()
+        player6.pauseVideo()
+        player7.pauseVideo()
+    }
+}
+
+if (cplayer2 == cplayermax) {
+    if (acplayer2 > 0 ) {
+playeropen = "playe2"  
+console.log(playeropen)
+player0.pauseVideo()
+        player1.pauseVideo()
+       
+        player3.pauseVideo()
+        player4.pauseVideo()
+        player5.pauseVideo()
+        player6.pauseVideo()
+        player7.pauseVideo()
+    }
+}
+
+if (cplayer3 == cplayermax) {
+    if (acplayer3 > 0 ) {
+playeropen = "playe3"  
+console.log(playeropen)
+player0.pauseVideo()
+        player1.pauseVideo()
+        player2.pauseVideo()
+      
+        player4.pauseVideo()
+        player5.pauseVideo()
+        player6.pauseVideo()
+        player7.pauseVideo()
+    }
+}
+
+if (cplayer4 == cplayermax) {
+    if (acplayer4 > 0 ) {
+playeropen = "playe4"  
+console.log(playeropen)
+player0.pauseVideo()
+        player1.pauseVideo()
+        player2.pauseVideo()
+        player3.pauseVideo()
+      
+        player5.pauseVideo()
+        player6.pauseVideo()
+        player7.pauseVideo()
+    }
+}
+
+if (cplayer5 == cplayermax) {
+    if (acplayer5 > 0 ) {
+playeropen = "playe5"  
+console.log(playeropen)
+player0.pauseVideo()
+        player1.pauseVideo()
+        player2.pauseVideo()
+        player3.pauseVideo()
+        player4.pauseVideo()
+        
+        player6.pauseVideo()
+        player7.pauseVideo()
+    }
+}
+
+if (cplayer6 == cplayermax) {
+    if (acplayer6 > 0 ) {
+playeropen = "playe6"  
+console.log(playeropen)
+player0.pauseVideo()
+        player1.pauseVideo()
+        player2.pauseVideo()
+        player3.pauseVideo()
+        player4.pauseVideo()
+        player5.pauseVideo()
+       
+        player7.pauseVideo()
+    }
+}
+
+if (cplayer7 == cplayermax) {
+    if (acplayer7 > 0 ) {
+playeropen = "playe7"  
+console.log(playeropen)
+player0.pauseVideo()
+        player1.pauseVideo()
+        player2.pauseVideo()
+        player3.pauseVideo()
+        player4.pauseVideo()
+        player5.pauseVideo()
+        player6.pauseVideo()
+     
+    }
+}
+
+
+
+
+
+
+
+}
+
+
+
 
 
 </script>
+
+
+
 
 
 
