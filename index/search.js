@@ -165,7 +165,7 @@ $(document).ready(function(){
       videostatslol = data
 
       for (let i = 0; i < 8; i++) {
-        document.getElementById("widget"+(i+1)).src = "https://www.youtube.com/embed/" + videostatslol.items[i].id.videoId + "?html5=1&enablejsapi=1&autoplay=0&rel=0&showinfo=0&modestbranding=1&controls=1&autohide=0&vq=large&origin=https://bagginsorga.github.io/index/youtube.html"
+        document.getElementById("widget"+(i+1)).src = "https://www.youtube.com/embed/" + videostatslol.items[i].id.videoId + "?html5=1&enablejsapi=1&autoplay=0&rel=0&showinfo=0&modestbranding=1&controls=1&autohide=0&vq=large"
       }
       
 
