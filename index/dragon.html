@@ -47,7 +47,7 @@
             
 
 
-            <input id="goto_target_username" type="button" value="Summon the Dragon" onclick="drag(), compter()" >
+            <input id="goto_target_username" type="button" value="Summon the Dragon" onclick="drag()" >
             <img src="9ce934d59ae58d5216f218ccdf064770.png" id="dragimg1">
 
             <div data-stat="kills" class="stat-container stat-kills">
@@ -683,7 +683,7 @@
               <br/>
               <br/>
                 
-              <input id="goto_target_username2" type="button" value="Summon the Dragon" onclick="drag(), compter()" >
+              <input id="goto_target_username2" type="button" value="Summon the Dragon" onclick="drag()" >
               <img src="9ce934d59ae58d5216f218ccdf064770.png" id="dragimg2">
 
               <input id="goto_target_username3" type="button" value="Start Record" onclick="rec1()" >
@@ -4075,9 +4075,10 @@ player2.play();
 function drag() {
 
   
-  
-  document.getElementById("totdrag").innerHTML=totdrag + 1 ;
-  document.getElementById("totdragsummtab").innerHTML=totdrag + 1
+  totdrag = totdrag + 1
+  document.getElementById("totdrag").innerHTML=totdrag
+
+  document.getElementById("totdragsummtab").innerHTML=totdrag 
  
 
 
