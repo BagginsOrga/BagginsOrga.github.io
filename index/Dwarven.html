@@ -25,11 +25,11 @@
 
 
 
-<body onload="document.getElementById('audioPlayer2').volume='0.2';">
+<body onload="document.getElementById('audioPlayer2').volume='0.2', hideviv()">
 <header class="page-stats">
 
     <img src="../icone2.png" class="pride-flag">
-    <a href="../index.html" id="site_name">KonoCalculator - Slayer simulator</a>
+    <a href="../index.html" id="site_name">KonoCalculator - Dwarven simulator</a>
 
 
 
@@ -37,7 +37,7 @@
 
 <div id="wrapper" data-sticky-container="" >
 
-    <div id="player_profile"><span class="text-stats-for">             Slayer simulator</span></div>
+    <div id="player_profile"><span class="text-stats-for">             Dwarven simulator</span></div>
 
 
     <div id="basic_stats">
@@ -51,7 +51,17 @@
         <br><br>
 
 
-        <img  src="../resources/img/Pioche_en_pierre.png" id="actualpix" style="left: 50;position: absolute;top: 152;/* size: 100px; */height: 200;" onclick="clickhealth()">
+        <a>
+
+            <img
+                    src="../resources/img/Pioche_en_pierre.png"
+                    onclick="clickhealth();"
+                    role="button"
+                    id="actualpix"
+                    style="left: 50;position: absolute;top: 152;/* size: 100px; */height: 200;"
+            />
+
+        </a>
 
 
         <br><br>
@@ -61,13 +71,29 @@
         <br><br>
 
 
-        <input id="goto_target_username2" type="button" value="Revenant Horror" onclick="drag(), compter()">
+        <a href="#basic_stats_health"><input id="goto_target_username2" type="button" value="Pickaxe" onclick="clickhealth()" ></a>
+
+
+        <a>
+
+            <img
+                    src="../resources/img/Heart_of_the_Mountain.png"
+                    onclick="clickhealth();"
+                    role="button"
+                    id="hotm"
+                    style="left: 40;position: absolute;top: 552;/* size: 100px; */height: 220;"
+            />
+
+        </a>
+
 
         <br><br>
         <br><br>
         <br><br>
         <br><br>
         <br><br>
+
+        <a href="#basic_stats_str"><input id="goto_target_username" type="button" value="Hotm" onclick="clickstr()" ></a>
 
         <br><br>
         <br><br>
